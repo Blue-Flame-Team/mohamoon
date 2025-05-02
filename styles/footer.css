@@ -1,0 +1,202 @@
+/* Footer */
+.main-footer {
+    background-color: #00827a;
+    color: #fff;
+    font-family: 'Cairo', sans-serif;
+}
+
+.footer-top {
+    padding: 40px 0 30px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    position: relative;
+    text-align: right;
+    color: #fff;
+}
+
+.footer-text {
+    line-height: 1.6;
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: right;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-item {
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-align: right;
+    direction: rtl;
+}
+
+/* Social Icons */
+.social-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.social-icons {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+/* تم إزالة أنماط الأيقونات القديمة واستبدالها بأنماط الصور */
+
+.contact-btn-container {
+    width: 100%;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.contact-btn:hover {
+    background-color: #fff;
+    color: #00827a;
+}
+
+/* Copyright Section */
+.copyright {
+    background-color: #00665f;
+    padding: 10px 0;
+    font-size: 13px;
+}
+
+.copyright-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.copyright-text {
+    margin: 0;
+    font-weight: 400;
+}
+
+.policy-links {
+    display: flex;
+}
+
+.policy-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.policy-links a:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    margin: 0 10px;
+    color: #fff;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-column {
+        min-width: 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-column {
+        width: 100%;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    
+    .footer-title, .footer-text, .footer-links, .contact-item {
+        text-align: center;
+    }
+    
+    .social-column {
+        align-items: center;
+    }
+    
+    .copyright-content {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,601 @@
+/* بداية تنسيقات شريط التنقل */
+.navbar {
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    padding: 10px 0;
+    direction: rtl;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* قائمة التنقل الرئيسية */
+.main-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-right: 15px;
+    gap: 150px; /* المسافة بين عناصر القائمة */
+}
+
+/* عناصر القائمة */
+.menu-item {
+    position: relative;
+}
+
+.menu-item a {
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.menu-item a.active {
+    color: var(--primary-color);
+}
+
+.menu-item a:hover {
+    color: var(--primary-color);
+}
+
+/* تنسيقات القائمة المنسدلة */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* القائمة المنسدلة */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    min-width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    padding: 15px 0;
+    z-index: 9999;
+    display: none; /* كان مخفي بشكل افتراضي */
+    margin-top: 5px;
+}
+
+/* العنصر عند التحويم - إزالة !important لمنع التضارب مع JavaScript */
+.dropdown:hover .dropdown-menu {
+    display: block; /* إزالة !important */
+}
+
+.dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* روابط القائمة المنسدلة */
+.dropdown-menu a {
+    color: #4a4a4a !important;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f8f9fa;
+    color: #000 !important;
+    padding-right: 25px;
+}
+
+/* ظهور القوائم عند الضغط (للموبايل) */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* تنسيقات متجاوبة */
+@media (max-width: 992px) {
+    .main-menu {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-menu {
+        gap: 10px;
+    }
+    
+    .menu-item a {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+}
+
+/* إعادة ضبط التنسيقات لأجهزة الكمبيوتر */
+@media (min-width: 992px) {
+    /* تنسيق التوب بار للكمبيوتر */
+    .top-actions {
+        display: flex;
+        gap: 15px;
+        position: static;
+    }
+    
+    /* تنسيق رموز التوب بار */
+    .main-icons-group {
+        position: static;
+        transform: none;
+    }
+    
+    /* تنسيق النافبار للكمبيوتر */
+    .navbar {
+        position: relative;
+        background-color: transparent;
+        padding: 10px 0;
+    }
+    
+    .navbar-content {
+        justify-content: flex-start;
+    }
+    
+    .main-menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: transparent;
+        height: auto;
+        width: auto;
+        padding: 0;
+        margin: 0;
+        padding-right: 15px;
+        gap: 150px; /* المسافة بين عناصر القائمة */
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .menu-item {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    
+    .menu-item a {
+        padding: 8px 12px;
+        color: #fff;
+        font-weight: 600;
+    }
+    
+    /* إخفاء العناصر الخاصة بالموبايل */
+    .mobile-auth-buttons {
+        display: none;
+    }
+    
+    /* إعادة ضبط القائمة المنسدلة */
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #fff;
+        min-width: 220px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        padding: 15px 0;
+        margin-top: 5px;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-menu a {
+        color: #4a4a4a !important;
+        padding: 12px 20px !important;
+    }
+}
+
+/* تنسيقات أيقونات الموبايل - قواعد عامة */
+.top-icons {
+    position: relative;
+}
+
+/* إخفاء مجموعة الأيقونات الخاصة بالموبايل على الكمبيوتر */
+.mobile-specific-icons,
+.mobile-only-icons {
+    display: none;
+}
+
+/* تنسيقات الأيقونات العامة */
+.icon-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.icon-btn img {
+    width: 16px;
+    height: 16px;
+}
+
+/* تنسيقات أيقونات الموبايل بشكل محدد */
+@media (max-width: 991px) {
+    /* إظهار أيقونات الموبايل فقط */
+    .main-icons-group {
+        display: none !important;
+    }
+    
+    /* إظهار مجموعة محددة من الأيقونات */
+    .mobile-only-icons {
+        display: flex !important;
+        position: fixed !important;
+        top: 15px !important;
+        right: 15px !important;
+        z-index: 9999 !important;
+        gap: 8px;
+    }
+    
+    /* إظهار أيقونات التكبير/التصغير */
+    .zoom-group {
+        display: flex !important;
+        position: fixed !important;
+        top: 15px !important;
+        right: 80px !important;
+        z-index: 9999 !important;
+        gap: 8px;
+    }
+    
+    /* إخفاء الأسئلة الشائعة */
+    .common-questions {
+        display: none !important;
+    }
+    
+    /* إظهار زر اشترك معنا في الموبايل */
+    .top-actions {
+        display: flex !important;
+        position: fixed !important;
+        top: 15px;
+        left: 50px;
+        z-index: 9999;
+    }
+    
+    /* تنسيق الأيقونات في الموبايل */
+    .mobile-only-icons .icon-btn,
+    .zoom-group .icon-btn {
+        width: 30px;
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 2px;
+    }
+    
+    .mobile-only-icons .icon-btn img,
+    .zoom-group .icon-btn img {
+        width: 18px;
+        height: 18px;
+        display: block !important;
+    }
+}
+
+/* إخفاء أزرار القائمة المتنقلة افتراضيًا على جميع الأجهزة */
+.menu-toggler {
+    display: none;
+    z-index: 10001;
+}
+
+.menu-close {
+    display: none;
+    z-index: 10002;
+}
+
+/* إضافة تصميم القائمة المتنقلة للموبايل فقط */
+@media (max-width: 991px) {
+    .navbar-content {
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    .top-bar {
+        padding: 10px 0;
+    }
+
+    .navbar {
+        background-color: transparent;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: 9999;
+    }
+
+    .menu-toggler {
+        display: block; /* إظهار زر القائمة فقط في الموبايل */
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: fixed;
+        left: 15px; /* جعل زر القائمة على اليسار كما في الصورة */
+        top: 15px;
+        z-index: 9999;
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu-toggler img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .main-icons-group {
+        display: flex;
+        gap: 15px;
+        margin-right: auto;
+        order: 2;
+    }
+    
+    .main-icons-group .icon-btn {
+        width: 28px;
+        height: 28px;
+        margin-right: 3px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-icons-group .icon-btn img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .logo-container {
+        order: 3;
+    }
+
+    .site-logo {
+        max-width: 120px;
+    }
+    
+    /* تنسيق القائمة الرئيسية */
+    .main-menu {
+        display: none;
+    }
+    
+    /* عرض القائمة المتنقلة عند تفعيلها */
+    .main-menu.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(26, 26, 26, 0.95);
+        width: 280px;
+        height: 100vh;
+        padding: 60px 20px 20px;
+        z-index: 10000;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .menu-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 10px;
+    }
+    
+    .menu-item a {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+        box-shadow: none;
+        display: none;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 5px;
+        padding: 10px 0;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: none; /* إلغاء تأثير التحوم في الموبايل */
+    }
+    
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+    
+    /* تنسيقات إضافية للقوائم المنسدلة في الموبايل */
+    .dropdown.active > a {
+        color: #00937B !important;
+    }
+    
+    .dropdown.active .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+    
+    .dropdown-menu a {
+        padding: 8px 15px !important;
+        display: block;
+        color: #eee !important;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+    
+    .dropdown-menu a:hover {
+        padding-right: 20px !important;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-content {
+        padding: 20px 15px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 80%;
+    }
+
+        /* تنسيقات أزرار التوب بار للموبايل */
+    .top-actions {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        left: 50px; /* جعل الزر على الشمال بجانب القائمة */
+        z-index: 9998;
+    }
+    
+    .top-actions .login-btn {
+        display: none; /* إخفاء زر تسجيل الدخول وإظهاره فقط في القائمة */
+    }
+    
+    .top-actions .join-btn {
+        font-size: 12px;
+        padding: 5px 10px;
+        background-color: #00937B;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    /* إظهار أيقونات التوب بار على اليمين */
+    .main-icons-group {
+        display: none; /* إخفاء كل الأيقونات للتحكم بها بشكل محدد */
+    }
+    
+    /* إعادة تنسيق الأيقونات للموبايل */
+    
+    /* إخفاء/إظهار المجموعات في الموبايل */
+    .zoom-group,
+    .mobile-specific-icons {
+        display: flex !important;
+    }
+    
+    /* تنسيق مجموعة التكبير/التصغير */
+    .zoom-group {
+        position: absolute !important;
+        top: 15px !important;
+        right: 65px !important;
+        gap: 5px;
+        z-index: 9998;
+    }
+    
+    /* تنسيق مجموعة البحث والإعدادات */
+    .mobile-specific-icons {
+        position: absolute !important;
+        top: 15px !important;
+        right: 15px !important;
+        gap: 5px;
+        z-index: 9998;
+    }
+    
+    /* تنسيق الأيقونات بشكل عام */
+    .zoom-group .icon-btn,
+    .mobile-specific-icons .icon-btn {
+        width: 28px;
+        height: 28px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .zoom-group .icon-btn img,
+    .mobile-specific-icons .icon-btn img {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .common-questions {
+        display: none; /* إخفاء الأسئلة الشائعة في الموبايل */
+    }
+    
+    /* تنسيق أزرار تسجيل الدخول والاشتراك في القائمة المتنقلة */
+    .mobile-auth-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 0;
+        padding: 15px 20px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-auth-buttons .join-btn {
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+        background-color: #00937B;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    
+    .mobile-auth-buttons .login-btn {
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+        background-color: transparent;
+        color: white;
+        border: 1px solid #00937B;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .menu-close {
+        display: none; /* أخفى افتراضياً */
+    }
+    
+    .main-menu.active .menu-close {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        font-weight: bold;
+        z-index: 10002;
+    }
+}

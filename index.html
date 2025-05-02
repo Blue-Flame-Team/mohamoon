@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البوابة القانونية السعودية الشاملة</title>
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome لأيقونات التواصل الاجتماعي -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- أوراق الأنماط -->
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/topbar.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/services.css">
+    <link rel="stylesheet" href="styles/latest-updates.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/subscribe.css">
+    <link rel="stylesheet" href="styles/partners.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    
+    <!-- Latest Updates styles are now in external file updates-new.css -->
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="محامون المملكة">
+                    </a>
+                </div>
+                <div class="top-elements">
+                    <div class="top-icons">
+                        <!-- الأسئلة الشائعة - تظهر فقط في نسخة الكمبيوتر -->
+                        <div class="common-questions">
+                            <span class="question-mark">?</span>
+                            <span class="questions-text">الأسئلة الشائعة</span>
+                        </div>
+                        
+                        <!-- مجموعة أيقونات التكبير/التصغير -->
+                        <div class="zoom-group">
+                            <button class="icon-btn search-btn">
+                                <img src="assets/icons/search-zoom-in.png" alt="تكبير">
+                            </button>
+                            <button class="icon-btn search-btn">
+                                <img src="assets/icons/search-zoom-out.png" alt="تصغير">
+                            </button>
+                        </div>
+                        
+                        <!-- الأيقونات الرئيسية لنسخة الكمبيوتر -->
+                        <div class="main-icons-group">
+                            <button class="icon-btn search-btn">
+                                <img src="assets/icons/search.png" alt="بحث">
+                            </button>
+                            <button class="icon-btn">
+                                <img src="assets/icons/location.png" alt="الموقع">
+                            </button>
+                            <button class="icon-btn">
+                                <img src="assets/icons/call.png" alt="اتصال">
+                            </button>
+                            <button class="icon-btn">
+                                <img src="assets/icons/setting-2.png" alt="الإعدادات">
+                            </button>
+                        </div>
+                        
+                        <!-- أيقونات مخصصة للموبايل -->
+                        <div class="mobile-only-icons">
+                            <button class="icon-btn search-btn">
+                                <img src="assets/icons/search.png" alt="بحث">
+                            </button>
+                            <button class="icon-btn">
+                                <img src="assets/icons/setting-2.png" alt="الإعدادات">
+                            </button>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="top-actions">
+                    <button class="join-btn">إشترك معنا</button>
+                    <button class="login-btn">تسجيل الدخول</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <!-- زر القائمة للموبايل -->
+                <button type="button" class="menu-toggler" aria-label="فتح القائمة">
+                    <img src="assets/icons/menu.png" alt="قائمة">
+                </button>
+                <ul class="main-menu">
+                    <!-- زر إغلاق القائمة للموبايل -->
+                    <button type="button" class="menu-close" aria-label="إغلاق القائمة">&times;</button>
+                    
+                    <!-- أزرار تسجيل الدخول والاشتراك في القائمة المتنقلة -->
+                    <div class="mobile-auth-buttons">
+                        <button class="join-btn mobile-btn">إشترك معنا</button>
+                        <button class="login-btn mobile-btn">تسجيل الدخول</button>
+                    </div>
+                    <li class="menu-item"><a href="#" class="active">الرئيسية</a></li>
+                    <li class="menu-item dropdown">
+                        <a href="javascript:void(0);">نبذة عنا <img src="assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                        <div class="dropdown-hover-area"></div>
+                        <div class="dropdown-menu">
+                            <a href="#">عن الموقع</a>
+                            <a href="#">عن الشبكة</a>
+                        </div>
+                    </li>
+                    <li class="menu-item dropdown">
+                        <a href="javascript:void(0);">سياستنا <img src="assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                        <div class="dropdown-hover-area"></div>
+                        <div class="dropdown-menu">
+                            <a href="#">سياسة الخصوصية</a>
+                            <a href="#">شروط الإشتراك</a>
+                        </div>
+                    </li>
+                    <li class="menu-item"><a href="#">جريدة أم القرى</a></li>
+                    <li class="menu-item"><a href="#">خدمة الأسانيد</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero-section">
+        <div class="slider-container">
+            <div class="slider-track">
+                <div class="slide active">
+                    <img src="assets/images/hero.png" class="slide-img" alt="البوابة القانونية السعودية">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="hero-title">البوابة القانونية السعودية الشاملة</h1>
+                            <p class="hero-text">اكتشف الأحكام والفتاوى والأنظمة القانونية في المملكة العربية السعودية</p>
+                            <div class="hero-buttons">
+                                <a href="#" class="btn primary-btn">سجل الآن</a>
+                                <a href="#" class="btn secondary-btn">تعرف على المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/Component 33.png" class="slide-img" alt="البوابة القانونية السعودية">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="hero-title">البوابة القانونية السعودية الشاملة</h1>
+                            <p class="hero-text">اكتشف الأحكام والفتاوى والأنظمة القانونية في المملكة العربية السعودية</p>
+                            <div class="hero-buttons">
+                                <a href="#" class="btn primary-btn">سجل الآن</a>
+                                <a href="#" class="btn secondary-btn">تعرف على المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/Frame 2139.png" class="slide-img" alt="البوابة القانونية السعودية">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="hero-title">البوابة القانونية السعودية الشاملة</h1>
+                            <p class="hero-text">اكتشف الأحكام والفتاوى والأنظمة القانونية في المملكة العربية السعودية</p>
+                            <div class="hero-buttons">
+                                <a href="#" class="btn primary-btn">سجل الآن</a>
+                                <a href="#" class="btn secondary-btn">تعرف على المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </div>
+        <div class="details-button">
+            <img src="assets/icons/Vector.png" alt="للتفاصيل">
+            <span>للتفاصيل</span>
+        </div>
+        <div class="slider-controls">
+            <button class="next-btn">&gt;</button>
+            <button class="prev-btn">&lt;</button>
+        </div>
+    </header>
+
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <!-- قسم الخدمات -->
+        <section class="services-section">
+            <div class="container">
+                <div class="services-header">
+                    <h2 class="section-title">خدماتنا</h2>
+                </div>
+                
+                <!-- العنوان الفرعي -->
+                <div class="sub-header">
+                    <h3>الأكثر استخداماً</h3>
+                </div>
+                
+                <div class="services-content">
+                    <!-- القائمة الجانبية (أفقية في الموبايل) -->
+                    <div class="sidebar-menu">
+                        <button class="sidebar-btn active">خدمة الأسانيد</button>
+                        <button class="sidebar-btn">الفتاوى الشرعية</button>
+                        <button class="sidebar-btn">جلسات مجلس الوزراء</button>
+                    </div>
+
+                    <div class="main-content-wrapper">
+                        <!-- شريط التبويب -->
+                        <div class="tab-container">
+                            <button class="tab-publish active">نشر الأنظمة</button>
+                            <button class="tab-portal">بوابة الأحكام السعودية</button>
+                        </div>
+                        
+                        <!-- شريط السلايدر -->
+                        <div class="services-slider">
+                        <!-- سهم التنقل لليسار -->
+                        <div class="slider-arrow prev">
+                            <span class="arrow-icon">&lt;</span>
+                        </div>
+
+                        <!-- بطاقات الخدمات -->
+                        <div class="services-cards">
+                            <!-- بطاقة 1 - أنظمة سارية -->
+                            <div class="service-card">
+                                <div class="card-icon">
+                                    <img src="assets/icons/Group 2057.png" alt="أنظمة سارية">
+                                </div>
+                                <h3 class="service-title">أنظمة سارية</h3>
+                                <p class="card-desc">الأنظمة والقوانين التي تم إقرارها لتصبح لائحة التعديلات</p>
+                                <a href="#" class="more-btn">التعرف على المزيد</a>
+                            </div>
+                            
+                            <!-- بطاقة 2 - أنظمة سارية جزئياً -->
+                            <div class="service-card">
+                                <div class="card-icon">
+                                    <img src="assets/icons/timer.png" alt="أنظمة سارية جزئياً">
+                                </div>
+                                <h3 class="service-title">أنظمة سارية جزئياً</h3>
+                                <p class="card-desc">الأنظمة والقوانين التي تم إقرارها لتصبح لائحة التعديلات</p>
+                                <a href="#" class="more-btn">التعرف على المزيد</a>
+                            </div>
+                            
+                            <!-- بطاقة 3 - أنظمة وثيقة الصلة -->
+                            <div class="service-card">
+                                <div class="card-icon">
+                                    <img src="assets/icons/close-square.png" alt="أنظمة وثيقة الصلة">
+                                </div>
+                                <h3 class="service-title">أنظمة وثيقة الصلة</h3>
+                                <p class="card-desc">الأنظمة والقوانين التي تم إقرارها لتصبح لائحة التعديلات</p>
+                                <a href="#" class="more-btn">التعرف على المزيد</a>
+                            </div>
+                            
+                            <!-- بطاقة 4 - أنظمة صدرت ولم تنشر بعد -->
+                            <div class="service-card">
+                                <div class="card-icon">
+                                    <img src="assets/icons/book.png" alt="أنظمة صدرت ولم تنشر بعد">
+                                </div>
+                                <h3 class="service-title">أنظمة صدرت ولم تنشر بعد بالجريدة الرسمية</h3>
+                                <p class="card-desc">الأنظمة والقوانين التي تم إقرارها لتصبح لائحة التعديلات</p>
+                                <a href="#" class="more-btn">التعرف على المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- العنوان السفلي -->
+            <section class="community-programs-section">
+                <h3>برامج ومبادرات دعم وتمكين فئات المجتمع</h3>
+            </section>
+        </section>
+
+        
+        <section class="latest-updates-section">
+            <div class="container">
+                <div class="updates-header">
+                    <h2 class="section-title text-center">أحدث التحديثات</h2>
+                    <a href="#" class="all-news-link">
+                        <span class="list-icon">☰</span>
+                        <span>جميع الأخبار</span>
+                    </a>
+                </div>
+                
+                <div class="updates-content">
+                    <div class="updates-cards-slider" id="updatesSlider">
+                        <div class="slider-container">
+                            <!-- بطاقة التحديث الأولى -->
+                            <div class="update-card">
+                                <div class="card-image">
+                                    <img src="assets/images/Component 33.png" alt="تشريعات الاستثمار">
+                                    <div class="card-title">تشريعات الاستثمار في المملكة العربية السعودية</div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">تشريعات الاستثمار في المملكة العربية السعودية ودول الخليج.</p>
+                                    <div class="card-info">
+                                        <div class="info-item">
+                                            <img src="assets/icons/calendar.png" alt="التاريخ">
+                                            <span>21 شعبان 1446</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <img src="assets/icons/time.png" alt="الوقت">
+                                            <span>1:40 م</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <img src="assets/icons/view.png" alt="المشاهدات">
+                                            <span>1234</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- بطاقة التحديث الثانية -->
+                            <div class="update-card">
+                                <div class="card-image">
+                                    <img src="assets/images/Component 33.png" alt="تشريعات الاستثمار">
+                                    <div class="card-title">تشريعات الاستثمار في المملكة العربية السعودية</div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">تشريعات الاستثمار في المملكة العربية السعودية ودول الخليج.</p>
+                                    <div class="card-info">
+                                        <div class="info-item">
+                                            <img src="assets/icons/calendar.png" alt="التاريخ">
+                                            <span>21 شعبان 1446</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <img src="assets/icons/time.png" alt="الوقت">
+                                            <span>1:40 م</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <img src="assets/icons/view.png" alt="المشاهدات">
+                                            <span>1234</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- بطاقة التحديث الثالثة -->
+                            <div class="update-card">
+                                <div class="card-image">
+                                    <img src="assets/images/Component 33.png" alt="تشريعات الاستثمار">
+                                    <div class="card-title">تشريعات الاستثمار في المملكة العربية السعودية</div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">تشريعات الاستثمار في المملكة العربية السعودية ودول الخليج.</p>
+                                    <div class="card-info">
+                                        <div class="info-item">
+                                            <img src="assets/icons/calendar.png" alt="التاريخ">
+                                            <span>21 شعبان 1446</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <img src="assets/icons/time.png" alt="الوقت">
+                                            <span>1:40 م</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <img src="assets/icons/view.png" alt="المشاهدات">
+                                            <span>1234</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- بطاقة التحديث الرابعة -->
+                            <div class="update-card">
+                                <div class="card-image">
+                                    <img src="assets/images/Component 33.png" alt="تشريعات الاستثمار">
+                                    <div class="card-title">تشريعات الاستثمار في المملكة العربية السعودية</div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">تشريعات الاستثمار في المملكة العربية السعودية ودول الخليج.</p>
+                                    <div class="card-info">
+                                        <div class="info-item">
+                                            <img src="assets/icons/calendar.png" alt="التاريخ">
+                                            <span>21 شعبان 1446</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <img src="assets/icons/time.png" alt="الوقت">
+                                            <span>1:40 م</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <img src="assets/icons/view.png" alt="المشاهدات">
+                                            <span>1234</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- بطاقة التحديث الخامسة -->
+                            <div class="update-card">
+                                <div class="card-image">
+                                    <img src="assets/images/Component 33.png" alt="تشريعات الاستثمار">
+                                    <div class="card-title">تشريعات الاستثمار في المملكة العربية السعودية</div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">تشريعات الاستثمار في المملكة العربية السعودية ودول الخليج.</p>
+                                    <div class="card-info">
+                                        <div class="info-item">
+                                            <img src="assets/icons/calendar.png" alt="التاريخ">
+                                            <span>21 شعبان 1446</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <img src="assets/icons/time.png" alt="الوقت">
+                                            <span>1:40 م</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <img src="assets/icons/view.png" alt="المشاهدات">
+                                            <span>1234</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- النقاط السفلية -->
+                    <div class="slider-controls">
+                        <div class="slider-navigation">
+                            <button class="slider-prev" id="sliderPrev"><i class="fa fa-chevron-right"></i></button>
+                            <div class="updates-nav-dots" id="sliderDots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <button class="slider-next" id="sliderNext"><i class="fa fa-chevron-left"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- تواصل معنا -->    
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2 class="contact-title">تواصل معنا</h2>
+            
+            <div class="contact-content">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.674457248269!2d46.63011271540214!3d24.713454784128518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee3e0a9ec8f49%3A0x765429237f37278!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1653377670055!5m2!1sen!2ssa" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="info-right">
+                        <div class="info-section">
+                            <h3 class="info-title">العنوان</h3>
+                            <p class="info-text">المملكة العربية السعودية</p>
+                            <p class="info-text">الرياض - القيروان</p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h3 class="info-title">أوقات الدوام</h3>
+                            <p class="info-text">من الأحد إلى الخميس من</p>
+                            <p class="info-text">الساعة 08:00 صباحاً -</p>
+                            <p class="info-text">وحتى الساعة 5:00 مساء</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-left">
+                        <div class="info-section email-info">
+                            <h3 class="info-title">البريد الإلكتروني</h3>
+                            <a href="mailto:contact@mohamoon.com" class="email-link">
+                                <span class="contact-email">contact@mohamoon.com</span>
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="info-section contact-info">
+                            <h3 class="info-title">معلومات الاتصال</h3>
+                            <a href="tel:+00966115620477" class="phone-link">
+                                <span class="contact-phone">+00966115620477</span>
+                                <i class="fas fa-phone-alt"></i>
+                            </a>
+                            <a href="https://wa.me/966555080349" class="whatsapp-link">
+                                <span class="contact-whatsapp">+00966555080349</span>
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h3 class="follow-us-title">تابعنا</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-footer"></div>
+        </div>
+    </section>
+    <!-- قسم اشترك معنا -->
+    <section class="subscribe-section">
+        <div class="container">
+            <div class="subscribe-box">
+                <h2 class="subscribe-title">اشتـرك معنـا</h2>
+                <div class="title-line"></div>
+                
+                <form class="subscribe-form">
+                    <input type="text" class="form-input" placeholder="أسم المستخدم">
+                    <input type="email" class="form-input" placeholder="البريد الالكتروني">
+                    <button type="submit" class="subscribe-btn">اشتراك</button>
+                </form>
+                
+                <div class="register-text">
+                    <span>هل انت مشترك جديد؟</span>
+                    <a href="#" class="register-link">اشترك الآن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم عملائنا -->
+    <section class="partners-section">
+        <div class="partners-container">
+            <h2 class="partners-title">عملائنا</h2>
+            <div class="partners-slider-wrapper">
+                <div class="partners-slider">
+                    <!-- مجموعة الشعارات الأولى -->
+                    <div class="partner-logo">
+                        <img src="assets/clients/1.png" alt="وزارة الداخلية">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="assets/clients/2.png" alt="وزارة الإسكان">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="assets/clients/3.png" alt="مجموعة السعودية">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="assets/clients/4.png" alt="شعار حكومي">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="assets/clients/5.png" alt="البنك الأهلي">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="assets/clients/6.png" alt="عملائنا">
+                    </div>
+                    
+                    <!-- تكرار نفس الشعارات لتجعل الأنيميشن سلس -->
+                    <div class="partner-logo">
+                        <img src="assets/clients/1.png" alt="وزارة الداخلية">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="assets/clients/2.png" alt="وزارة الإسكان">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="assets/clients/3.png" alt="مجموعة السعودية">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="assets/clients/4.png" alt="شعار حكومي">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="assets/clients/5.png" alt="البنك الأهلي">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="assets/clients/6.png" alt="عملائنا">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="container footer-content">
+                <!-- عن محامي المملكة -->
+                <div class="footer-column about-column">
+                    <h3 class="footer-title">عن محامي المملكة</h3>
+                    <p class="footer-text">
+                        الهيئة القانونية الشاملة للمحامين<br>
+                        والمهتمين بالشأن القانوني في المملكة<br>
+                        العربية السعودية
+                    </p>
+                </div>
+
+                <!-- روابط سريعة -->
+                <div class="footer-column links-column">
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">عن الموقع</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+
+                <!-- تواصل معنا -->
+                <div class="footer-column contact-column">
+                    <h3 class="footer-title">تواصل معنا</h3>
+                    <p class="contact-item">info@mohamoon-ksa.com</p>
+                    <p class="contact-item">الهاتف: xxx xxxx 11 +966</p>
+                    <p class="contact-item">العنوان: الرياض، المملكة العربية السعودية</p>
+                </div>
+
+                <!-- التواصل الاجتماعي -->
+                <div class="footer-column social-column">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook">
+                            <img src="assets/icons/facebook.png" alt="facebook">
+                        </a>
+                        <a href="#" class="social-icon instagram">
+                            <img src="assets/icons/insta.png" alt="instagram">
+                        </a>
+                        <a href="#" class="social-icon twitter">
+                            <img src="assets/icons/x.png" alt="twitter">
+                        </a>
+                        <a href="#" class="social-icon linkedin">
+                            <img src="assets/icons/ln.png" alt="linkedin">
+                        </a>
+                    </div>
+                    <div class="contact-btn-container">
+                        <a href="#" class="contact-btn">اتصل بنا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="container">
+                <div class="copyright-content">
+                    <p class="copyright-text">جميع الحقوق محفوظة © 2024 محامي المملكة</p>
+                    <div class="policy-links">
+                        <a href="#">الشروط والأحكام</a>
+                        <span class="separator">|</span>
+                        <a href="#">سياسة الخصوصية</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="scripts/main.js"></script>
+
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/updates-slider.js"></script>
+    <script src="scripts/services-slider.js"></script>
+    <script src="scripts/header-slider.js"></script>
+    <script src="scripts/mobile-menu.js"></script>
+</body>
+</html>

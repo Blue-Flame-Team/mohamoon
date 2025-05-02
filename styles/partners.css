@@ -1,0 +1,109 @@
+/* قسم الشركاء */
+.partners-section {
+    padding: 20px 0;
+    background-color: #f5f5f5;
+    direction: rtl;
+    overflow: hidden;
+    position: relative;
+}
+
+.partners-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    height: 105px;
+    display: flex;
+    flex-direction: column;
+}
+
+.partners-title {
+    color: #17a891;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    text-align: right;
+    padding: 0 15px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.partners-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    height: 105px;
+}
+
+.partners-slider {
+    display: flex;
+    align-items: center;
+    animation: slidePartners 20s linear infinite;
+    width: max-content;
+    padding: 0;
+    height: 105px;
+}
+
+.partners-slider:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slidePartners {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-180px * 6)); /* تحريك بمقدار عرض 6 شعارات بالضبط لضمان التكرار السلس */
+    }
+}
+
+.partner-logo {
+    flex: 0 0 auto;
+    width: 180px;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 105px;
+}
+
+.partner-logo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 60px;
+    object-fit: contain;
+    filter: grayscale(0);
+    transition: transform 0.3s ease;
+}
+
+.partner-logo:hover img {
+    transform: scale(1.05);
+}
+
+/* تصميم متجاوب */
+@media (max-width: 992px) {
+    .partner-logo {
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .partners-slider {
+        justify-content: center;
+    }
+    
+    .partner-logo {
+        flex: 0 0 33.333%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .partner-logo {
+        flex: 0 0 50%;
+    }
+}

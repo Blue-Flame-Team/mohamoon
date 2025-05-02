@@ -1,0 +1,239 @@
+/* Contact Section Styles */
+.contact-section {
+    padding: 50px 0 40px;
+    background-color: #fff;
+    direction: rtl;
+    position: relative;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+.contact-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #17a891;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.contact-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #f7913d;
+    margin: 8px auto 0;
+    border-radius: 1.5px;
+}
+
+.contact-content {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    width: 100%;
+    height: 380px;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.contact-info-card {
+    width: 95%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    margin: -70px auto 0;
+    position: relative;
+    z-index: 2;
+}
+
+.info-right, .info-left {
+    width: 50%;
+    padding: 35px 40px;
+}
+
+.info-section {
+    margin-bottom: 25px;
+}
+
+.info-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.info-text {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 4px;
+    line-height: 1.4;
+    text-align: right;
+}
+
+.email-link, .phone-link, .whatsapp-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.email-link i, .phone-link i, .whatsapp-link i {
+    color: #666;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.email-link:hover, .phone-link:hover, .whatsapp-link:hover {
+    color: #17a891;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-link {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.social-link:hover {
+    background-color: #17a891;
+    color: white;
+}
+
+.contact-footer {
+    height: 3px;
+    background-color: #f7913d;
+    width: 40px;
+    margin: 25px auto 0;
+    border-radius: 1.5px;
+}
+
+/* تخصيص البريد الإلكتروني */
+.email-info {
+    margin-bottom: 25px;
+}
+
+.contact-email {
+    font-size: 15px;
+    color: #333;
+    direction: ltr;
+    text-align: right;
+    font-weight: 500;
+}
+
+/* تخصيص معلومات الاتصال */
+.contact-info {
+    margin-bottom: 25px;
+}
+
+.contact-phone, .contact-whatsapp {
+    direction: ltr; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* تخصيص تابعنا */
+.follow-us-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 12px;
+    text-align: right;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .contact-info-card {
+        flex-direction: column;
+        margin-top: -40px;
+    }
+    
+    .info-right, .info-left {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        height: 350px;
+    }
+    
+    .contact-title {
+        font-size: 28px;
+    }
+    
+    .info-title {
+        font-size: 20px;
+    }
+    
+    .info-text {
+        font-size: 15px;
+    }
+    
+    .contact-info-card {
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .map-container {
+        height: 300px;
+    }
+    
+    .contact-info-card {
+        width: 95%;
+        margin: -25px auto 0;
+    }
+    
+    .info-right, .info-left {
+        padding: 15px;
+    }
+    
+    .social-links {
+        gap: 12px;
+    }
+    
+    .info-title {
+        font-size: 18px;
+    }
+}

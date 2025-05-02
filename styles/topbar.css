@@ -1,0 +1,218 @@
+/* Top Bar Styles */
+
+.top-bar {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 12px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1001;
+    direction: rtl;
+}
+
+.top-bar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    direction: rtl;
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-bar {
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0;
+    order: 1;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.top-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    direction: rtl;
+    order: 3;
+    margin-left: 30px;
+}
+
+.common-questions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    direction: rtl;
+    color: #fff;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.question-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.questions-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.top-elements {
+    display: flex;
+    align-items: center;
+    direction: rtl;
+    order: 2;
+    margin-left: auto;
+}
+
+.top-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    direction: rtl;
+}
+
+.top-icons .icon-btn {
+    background: transparent;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    margin: 0;
+}
+
+.top-icons .search-btn {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.zoom-group {
+    display: flex;
+    gap: 5px;
+    margin-left: 40px;
+}
+
+.main-icons-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.top-icons .icon-btn:hover {
+    opacity: 1;
+}
+
+.top-icons .icon-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* تنسيقات الأزرار الخاصة بالتوبار - أكثر تحديداً من الأزرار العامة */
+.join-btn {
+    background-color: transparent;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 1px solid #fff;
+    min-width: 150px;
+    text-align: center;
+    box-shadow: none;
+    outline: none;
+}
+
+.login-btn {
+    background-color: rgba(235, 242, 245, 0.95);
+    color: #333;
+    padding: 12px 30px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: var(--transition);
+    margin-right: 15px;
+    min-width: 150px;
+    text-align: center;
+    border: none;
+}
+
+.join-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.login-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .search-common span {
+        display: none;
+    }
+    
+    .top-icons {
+        gap: 8px;
+    }
+    
+    .top-actions {
+        gap: 10px;
+    }
+    
+    .join-btn, .login-btn {
+        padding: 8px 20px;
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-icons {
+        display: none;
+    }
+    
+    .search-common {
+        display: none;
+    }
+    
+    .top-actions {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo img {
+        height: 32px;
+    }
+    
+    .join-btn, .login-btn {
+        padding: 5px 10px;
+        font-size: 12px;
+        min-width: auto;
+    }
+    
+    .top-bar {
+        padding: 10px 0;
+    }
+}
