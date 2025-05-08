@@ -1,0 +1,391 @@
+/* أنماط العرض للهاتف المحمول */
+
+/* إخفاء عناصر معينة افتراضيًا في وضع سطح المكتب */
+/* العناصر التي تظهر فقط في نسخة الموبايل */
+.mobile-subscribe-btn,
+.logo .zoom-group,
+.logo .icon-btn,
+.logo .settings-toggle-btn,
+.logo .search-btn,
+.logo .zoom-in-btn,
+.logo .zoom-out-btn,
+.logo .settings-menu {
+    display: none;
+}
+
+/* افتراضيًا، نخفي بعض العناصر في نمط الهاتف المحمول */
+@media (max-width: 767px) {
+    /* إظهار العناصر الخاصة بنسخة الموبايل فقط */
+    .mobile-subscribe-btn,
+    .logo .zoom-group,
+    .logo .icon-btn,
+    .logo .settings-toggle-btn,
+    .logo .search-btn,
+    .logo .zoom-in-btn,
+    .logo .zoom-out-btn {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .logo .settings-menu {
+        display: none; /* مخفي افتراضياً حتى يتم تفعيله بالنقر على الإعدادات */
+    }
+    
+    /* تنسيق الشريط العلوي للجوال */
+    .top-bar {
+        background-color: #000 !important;
+        padding: 0 !important;
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1001;
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* تعديل المحتوى الداخلي للشريط العلوي */
+    .top-bar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        width: 100%;
+    }
+    
+    /* إخفاء العناصر غير المطلوبة في واجهة الجوال */
+    .top-elements > *:not(.top-icons),
+    .common-questions,
+    .main-navbar,
+    .language-selector {
+        display: none !important;
+    }
+    
+    /* إخفاء زر إشترك معنا الأصلي في نسخة الموبايل */
+    .top-actions .join-btn,
+    a.join-btn,
+    .join-btn {
+        display: none !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        position: absolute !important;
+        pointer-events: none !important;
+    }
+    
+    .top-actions {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    /* شريط العلامات وأزرار التمرير في الموبايل */
+    .top-bar-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .logo {
+        display: flex;
+        flex-wrap: nowrap; /* منع نزول العناصر لسطر جديد */
+        align-items: center;
+        position: relative;
+        padding: 5px 8px;
+        width: 100%;
+        max-height: 50px;
+        min-height: 50px;
+        gap: 8px;
+        background-color: #000;
+    }
+    
+    /* تنسيق ترتيب العناصر داخل اللوجو */
+        /* 1. اللوجو على اليمين */
+    .logo .logo-link {
+        order: 1;
+        margin: 0;
+        z-index: 2;
+        flex-shrink: 1;
+        margin-right: auto; /* يدفع اللوجو لليمين */
+    }
+    
+    /* 2. زر اشترك معنا بعد اللوجو */
+    .logo .mobile-subscribe-btn {
+        order: 2;
+        z-index: 2;
+        flex-shrink: 0;
+        margin-right: 8px;
+    }
+    
+    /* 3. حاوية الأيقونات */
+    .logo .mobile-icons {
+        order: 3;
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        z-index: 2;
+        margin-right: 8px;
+        flex-shrink: 0;
+        background: transparent;
+        border-radius: 4px;
+        padding: 2px;
+    }
+    
+    /* 4. قائمة الهامبرغر بجانب الأيقونات على اليسار */
+    .hamburger-menu {
+        z-index: 1000;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        margin-left: 8px;
+    }
+    
+    .hamburger-menu span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+    
+    /* تجميع الأيقونات في منطقة واحدة */
+    .mobile-buttons-group {
+        display: flex !important;
+        align-items: center !important;
+        gap: 5px !important;
+        z-index: 2;
+    }
+    
+    /* زر اشترك معنا بعد اللوجو مباشرة */
+    .logo .mobile-subscribe-btn {
+        order: 2; /* بعد اللوجو مباشرة */
+        z-index: 2;
+        padding: 4px 8px !important;
+        font-size: 11px !important;
+        white-space: nowrap;
+        min-width: auto !important;
+        line-height: 1;
+        height: 26px;
+        background-color: #00a19a !important;
+        color: white !important;
+        border-radius: 4px;
+        text-decoration: none;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        border: none;
+        margin: 0 2px;
+    }
+    
+    /* الأيقونات بعد زر اشترك معنا */
+    .logo .icon-btn, 
+    .logo .zoom-group,
+    .logo .settings-toggle-btn,
+    .logo .search-btn {
+        z-index: 2;
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+    
+    /* تنسيق الأزرار والأيقونات */
+    .logo .mobile-icons .icon-btn {
+        padding: 5px !important;
+        margin: 0 !important;
+        height: 28px !important;
+        width: 28px !important;
+        min-width: auto !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        background: transparent !important;
+        border-radius: 0;
+    }
+    
+    .logo .mobile-icons .icon-btn img {
+        width: 16px !important;
+        height: 16px !important;
+        object-fit: contain;
+    }
+    
+    /* تنسيق مجموعة التكبير/التصغير */
+    .logo .mobile-icons .zoom-group {
+        display: flex;
+        gap: 1px;
+        background: transparent;
+        border-radius: 4px;
+        padding: 2px;
+        margin-right: 2px;
+    }
+    
+    .logo .mobile-icons .zoom-group .icon-btn {
+        margin: 0 !important;
+    }
+    
+    .logo .zoom-group {
+        gap: 1px !important;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* حجم اللوجو */
+    .logo .logo-link img {
+        max-width: 80px;
+        height: auto;
+        max-height: 32px;
+    }
+    
+    /* تنسيق قائمة الهامبرغر */
+    .logo .hamburger-menu {
+        width: 30px;
+        height: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 5px;
+        margin-right: 5px;
+    }
+    
+    .logo .hamburger-menu span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+    
+    /* إضافة نص الشعار تحت الصورة */
+    .logo::after {
+        content: "محامو المملكة\aaMOHAMOON.KSA\00a0\00a0\التقنية والتدريب في خدمة المحامي";
+        display: block;
+        text-align: right;
+        white-space: pre;
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    
+    /* زر إشترك معنا */
+    .join-btn, .login-btn, .mobile-subscribe-btn {
+        background-color: white !important;
+        color: #00a59a !important;
+        border: none !important;
+        border-radius: 20px !important;
+        padding: 8px 15px !important;
+        font-size: 14px !important;
+        font-weight: bold !important;
+        order: 2;
+        min-width: auto !important;
+        text-decoration: none !important;
+    }
+    
+        /* حاوية الأزرار للموبايل (اشترك معنا وتسجيل الدخول) */
+    .mobile-buttons-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        margin: 0 8px 0 0;
+        z-index: 2;
+    }
+    
+    /* زر اشترك معنا في شريط اللوجو */
+    .mobile-subscribe-btn {
+        display: flex !important; /* إظهار الزر في نمط الجوال */
+        white-space: nowrap;
+        position: relative;
+        margin: 0;
+        width: 111px !important; /* العرض المطلوب */
+        height: 40px !important; /* الارتفاع المطلوب */
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* زر تسجيل الدخول في شريط اللوجو */
+    .mobile-login-btn {
+        display: flex !important;
+        white-space: nowrap;
+        position: relative;
+        margin: 0;
+        width: 139px !important; /* العرض المطلوب */
+        height: 40px !important; /* الارتفاع المطلوب */
+        align-items: center;
+        justify-content: center;
+        background-color: #00a59a !important;
+        color: white !important;
+        border-radius: 20px !important;
+        font-size: 14px !important;
+        font-weight: bold !important;
+        text-decoration: none !important;
+    }
+    
+    /* تنسيق أيقونات التكبير والبحث */
+    .top-icons {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        order: 1;
+    }
+    
+    .zoom-group {
+        display: flex !important;
+        gap: 10px !important;
+    }
+    
+    /* أيقونات التكبير والتصغير */
+    .zoom-in-btn, .zoom-out-btn {
+        margin: 0 !important;
+    }
+    
+    /* أيقونة القائمة (هامبرغر) */
+    .main-icons-group::before {
+        content: "";
+        width: 30px;
+        height: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 10px;
+    }
+    
+    .main-icons-group::before::after,
+    .main-icons-group::before::before,
+    .main-icons-group::before {
+        content: "";
+        height: 3px;
+        background-color: white;
+        border-radius: 3px;
+        display: block;
+    }
+    
+    /* تعديل تموضع العناصر */
+    body {
+        padding-top: 64px; /* إضافة مساحة للشريط المثبت */
+    }
+    
+    /* تنسيق أزرار الأيقونات */
+    .icon-btn {
+        background: none !important;
+        border: none !important;
+        cursor: pointer !important;
+        padding: 0 !important;
+        margin: 0 5px !important;
+    }
+    
+    .icon-btn img {
+        width: 24px !important;
+        height: 24px !important;
+    }
+}

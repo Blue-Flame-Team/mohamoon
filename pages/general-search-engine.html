@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محرك البحث العام - محامون المملكة</title>
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    
+    <!-- أوراق الأنماط -->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/subscribe/header.css">
+    <link rel="stylesheet" href="../styles/subscribe/footer.css">
+    <link rel="stylesheet" href="../styles/search-engine.css">
+    <link rel="stylesheet" href="../styles/login-modal.css">
+    <link rel="stylesheet" href="../styles/user-dashboard.css">
+    <link rel="stylesheet" href="../styles/subpage.css">
+    <link rel="stylesheet" href="../styles/home/settings.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+        <div class="top-bar-content">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="محامون المملكة" class="logo-image">
+                </a>
+            </div>
+            <div class="top-elements">
+                <div class="top-icons">
+                    <!-- الأسئلة الشائعة -->
+                    <a href="faq.html" class="common-questions-link">
+                        <div class="common-questions">
+                            <span class="questions-text">الأسئلة الشائعة</span>
+                            <span class="question-mark">?</span>
+                        </div>
+                    </a>
+                    
+                    <!-- الأيقونات الرئيسية -->
+                    <div class="main-icons-group">
+                        <button class="icon-btn zoom-out-btn" onclick="changeFontSize(-10)" title="تصغير النص">
+                            <img src="../assets/icons/search-zoom-out.png" alt="تصغير">
+                        </button>
+                        <button class="icon-btn zoom-in-btn" onclick="changeFontSize(10)" title="تكبير النص">
+                            <img src="../assets/icons/search-zoom-in.png" alt="تكبير">
+                        </button>
+                        <button class="icon-btn search-btn">
+                            <img src="../assets/icons/search.png" alt="بحث">
+                        </button>
+                        <button class="icon-btn location-btn">
+                            <img src="../assets/icons/location.png" alt="الموقع">
+                        </button>
+                        <button class="icon-btn call-btn">
+                            <img src="../assets/icons/call.png" alt="اتصال">
+                        </button>
+                        
+                        <button class="icon-btn settings-toggle-btn">
+                            <img src="../assets/icons/setting-2.png" alt="الإعدادات">
+                        </button>
+                        <div class="settings-menu">
+                            <a href="#" class="settings-option contrast-option">
+                                <span>تباين</span>
+                                <i class="fas fa-eye-slash"></i>
+                            </a>
+                            <!-- قائمة خيارات التباين الفرعية -->
+                            <div class="contrast-submenu">
+                                <a href="#" class="settings-option contrast-light">
+                                    <span>تباين</span>
+                                    <i class="fas fa-eye-slash"></i>
+                                </a>
+                                <a href="#" class="settings-option contrast-dark">
+                                    <span>تباين</span>
+                                    <i class="fas fa-eye-slash"></i>
+                                </a>
+                            </div>
+                            <a href="#" class="settings-option stats-option">
+                                <span>الاحصائيات</span>
+                                <i class="fas fa-chart-line"></i>
+                            </a>
+                            <a href="#" class="settings-option logout-option">
+                                <span>خروج</span>
+                                <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-actions">
+                <button class="join-btn">إشترك معنا</button>
+                <button class="login-btn">تسجيل الدخول</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="menu-item"><a href="../index.html">الرئيسية</a></li>
+                <li class="menu-item dropdown">
+                    <a href="javascript:void(0);">نبذة عنا <img src="../assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                    <div class="dropdown-hover-area"></div>
+                    <div class="dropdown-menu">
+                        <a href="#">عن الموقع</a>
+                        <a href="#">عن الشبكة</a>
+                    </div>
+                </li>
+                <li class="menu-item dropdown">
+                    <a href="javascript:void(0);">سياساتنا <img src="../assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                    <div class="dropdown-hover-area"></div>
+                    <div class="dropdown-menu">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="../pages/terms.html">شروط الإشتراك</a>
+                    </div>
+                </li>
+                <li class="menu-item"><a href="#">جريدة أم القرى</a></li>
+                <li class="menu-item"><a href="#">خدمة الأسانيد</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">محامي المملكة</a></li>
+                <li><span>محرك البحث</span></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- محرك البحث العام -->
+    
+    <div class="search-engine-container">
+        <div class="title-underline"></div>
+        <h1 class="search-engine-title">محرك البحث العام</h1>
+        
+        <!-- تعليمات البحث -->
+        <div class="search-instructions">
+            <h3>تعليمات البحث</h3>
+            <p class="contact-help">في حال الحاجة للمساعدة يمكنكم التواصل بقسم خدمات العملاء</p>
+        </div>
+        
+        <!-- شرح البحث -->
+        <div class="search-explanation">
+            <p>تم تطوير طريقة البحث لتساعدك على الحصول على نتائج أكثر دقة</p>
+            <p>الآن يمكنك إضافة علامة الجمع + بين الكلمات أو الجمل للحصول على نتائج تحتوي على جميع الكلمات أو الجمل البديلة</p>
+            <p>عند استخدام علامة الجمع + في البحث سيقوم النظام بالبحث عن المحتوى الذي يضم جميع الكلمات مجتمعة دون النظر للترتيب كامل</p>
+            <p>الجملة وبحث بكل كلمة.</p>
+        </div>
+        
+        <!-- محتوى الباحث العام -->
+        <div id="general-search-content" class="tab-content active"></div>
+        
+        <!-- تبويبات البحث - تبقى ثابتة في جميع الصفحات -->
+        <div class="search-tabs">
+            <button class="search-tab active">الباحث العام</button>
+            <button class="search-tab">باحث التعاميم</button>
+            <button class="search-tab">باحث أرقام الوثائق</button>
+            <button class="search-tab">باحث الأحكام السعودية</button>
+            <button class="search-tab">باحث الملف الصحفي</button>
+        </div>
+        
+   
+        <!-- محتوى باحث التعاميم -->
+        <div id="circulars-search-content" class="tab-content">
+            <!-- محتوى باحث التعاميم هنا -->
+        </div>
+        
+        <!-- محتوى باحث أرقام الوثائق -->
+        <div id="document-numbers-search-content" class="tab-content">
+            
+            <!-- نص الملاحظة -->
+            <div class="document-number-note">
+                <p>(يرجى استخدام الأرقام بصيغة (1,2,3) عند كتابة رقم التنظيم في محرك البحث)</p>
+            </div>
+            
+            <!-- حقل إدخال رقم الوثيقة -->
+            <div class="document-number-input-container">
+                <input type="text" class="document-number-input" placeholder="رقم الوثيقة...">
+            </div>
+            
+            <!-- قائمة نوع الوثيقة -->
+            <div class="document-type-container">
+                <div class="dropdown-select">
+                    <div class="dropdown-selected">
+                        <span>نوع الوثيقة</span>
+                        <i class="dropdown-arrow"></i>
+                    </div>
+                    <div class="dropdown-options">
+                        <div class="dropdown-option">مرسوم ملكي</div>
+                        <div class="dropdown-option">أمر ملكي</div>
+                        <div class="dropdown-option">قرار مجلس الوزراء</div>
+                        <div class="dropdown-option">قرار إداري</div>
+                        <div class="dropdown-option">قرار وزاري</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- محتوى باحث الأحكام السعودية -->
+        <div id="saudi-judgments-search-content" class="tab-content">
+            <div class="search-instructions">
+                <h1>بوابة الأحكام السعودية</h1>
+                <h3>البحث في الأحكام و القرارات</h3>
+                <p class="help-text">في حال الحاجة للمساعدة يمكنكم التواصل بقسم خدمات العملاء</p>
+            </div>
+            
+            <!-- حقول البحث الخاصة بباحث الأحكام السعودية -->
+            <div class="saudi-judgments-search-form">
+                <div class="search-field">
+                    <input type="text" class="form-input" placeholder="كلمات البحث...">
+                </div>
+                
+                <div class="search-field">
+                    <div class="dropdown">
+                        <div class="dropdown-selected">
+                            <span>البحث عن...</span>
+                            <i class="dropdown-arrow"></i>
+                        </div>
+                        <div class="dropdown-options search-type-options">
+                            <div class="dropdown-option">النص الكامل للحكم</div>
+                            <div class="dropdown-option">المبادئ</div>
+                            <div class="dropdown-option">الحيثيات</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="search-field">
+                    <div class="dropdown">
+                        <div class="dropdown-selected">
+                            <span>المحكمة...</span>
+                            <i class="dropdown-arrow"></i>
+                        </div>
+                        <div class="dropdown-options court-options">
+                            <div class="dropdown-option">المحكمة العليا</div>
+                            <div class="dropdown-option">محكمة الاستئناف</div>
+                            <div class="dropdown-option">المحكمة الإدارية</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="search-field">
+                    <input type="text" class="form-input" placeholder="رقم الحكم/القرار...">
+                </div>
+                
+                <div class="search-field">
+                    <div class="dropdown">
+                        <div class="dropdown-selected">
+                            <span>سنة الحكم/القرار...</span>
+                            <i class="dropdown-arrow"></i>
+                        </div>
+                        <div class="dropdown-options year-options">
+                            <div class="dropdown-option">1445</div>
+                            <div class="dropdown-option">1444</div>
+                            <div class="dropdown-option">1443</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="search-field">
+                    <input type="text" class="form-input" placeholder="رقم القضية...">
+                </div>
+                
+                <div class="search-field">
+                    <div class="dropdown">
+                        <div class="dropdown-selected">
+                            <span>سنة القضية...</span>
+                            <i class="dropdown-arrow"></i>
+                        </div>
+                        <div class="dropdown-options year-options">
+                            <div class="dropdown-option">1445</div>
+                            <div class="dropdown-option">1444</div>
+                            <div class="dropdown-option">1443</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="search-field">
+                    <input type="text" class="form-input" placeholder="تاريخ الجلسة (بالتقويم الهجري)">
+                </div>
+                
+                <div class="search-field">
+                    <input type="text" class="form-input" placeholder="تاريخ الجلسة (بالتقويم الميلادي)">
+                </div>
+                
+                <div class="search-field">
+                    <!-- <button class="search-button">بحث</button> -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- محتوى باحث الملف الصحفي -->
+        <div id="press-file-search-content" class="tab-content">
+         
+            
+            <!-- تم حذف أزرار التبويبات الإضافية للحفاظ على الاتساق مع بقية التبويبات -->
+            
+            <!-- حقل البحث المخصص -->
+            <div class="press-file-search-input">
+                <input type="text" placeholder="كلمات البحث..." class="search-field">
+            </div>
+            
+            <!-- خيارات البحث المخصصة -->
+            <div class="search-options-horizontal">
+                <div class="search-options-row">
+                    <label class="radio-label">
+                        <input type="radio" name="search-type-press" class="radio-input" checked>
+                        <span class="radio-text">كامل الجملة</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="search-type-press" class="radio-input">
+                        <span class="radio-text">بحث بكل كلمة</span>
+                    </label>
+                </div>
+                <div class="search-options-row">
+                    <label class="radio-label">
+                        <input type="radio" name="search-location-press" class="radio-input" checked>
+                        <span class="radio-text">البحث في العناوين</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="search-location-press" class="radio-input">
+                        <span class="radio-text">البحث في الموضوعات</span>
+                    </label>
+                </div>
+            </div>
+            
+            <
+            
+            <!-- زر البحث -->
+            <!-- <div class="search-button-container">
+                <button class="search-button press-search-button">بحث</button>
+            </div> -->
+        </div>
+        
+        <!-- تبويبات البحث -->
+        <!-- <div class="search-tabs">
+            <button class="search-tab active">الباحث العام</button>
+            <button class="search-tab">باحث التعاميم</button>
+            <button class="search-tab">باحث أرقام الوثائق</button>
+            <button class="search-tab">باحث الأحكام السعودية</button>
+            <button class="search-tab">باحث الملف الصحفي</button>
+        </div> -->
+        
+        <!-- حقل البحث -->
+        <div class="search-input-container">
+            <input type="text" class="search-input" placeholder="ابحث في الاحكام والانظمة...">
+        </div>
+        
+        <!-- خيارات البحث -->
+        <div class="search-options">
+            <div class="search-option-group right-options">
+                <label>
+                    <input type="radio" name="search-type" class="search-radio" checked>
+                    كامل الجملة
+                </label>
+                <label>
+                    <input type="radio" name="search-location" class="search-radio" checked>
+                    البحث في العناوين
+                </label>
+            </div>
+            
+            <div class="search-option-group left-options">
+                <label>
+                    <input type="radio" name="search-type" class="search-radio">
+                    بحث بكل كلمة
+                </label>
+                <label>
+                    <input type="radio" name="search-location" class="search-radio">
+                    البحث في الموضوعات
+                </label>
+            </div>
+        </div>
+        
+        <!-- مجال البحث -->
+        <div class="search-scope">
+            <h3 class="search-scope-title">مجال البحث</h3>
+            <div class="search-scope-options">
+                <div class="search-scope-row">
+                    <div class="search-scope-option right-column">
+                        <label>
+                            <input type="checkbox" class="search-checkbox" checked>
+                            موسوعة الأنظمة
+                        </label>
+                    </div>
+                    <div class="search-scope-option left-column">
+                        <label>
+                            <input type="checkbox" class="search-checkbox" checked>
+                            أنظمة سارية
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="search-scope-row">
+                    <div class="search-scope-option right-column">
+                        <label>
+                            <input type="checkbox" class="search-checkbox" checked>
+                            أنظمة موقوفة
+                        </label>
+                    </div>
+                    <div class="search-scope-option left-column">
+                        <label>
+                            <input type="checkbox" class="search-checkbox" checked>
+                            أنظمة ملغاة
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="search-scope-row">
+                    <div class="search-scope-option right-column">
+                        <label>
+                            <input type="checkbox" class="search-checkbox">
+                            أنظمة صدرت ولم تنشر بعد بالجريدة الرسمية
+                        </label>
+                    </div>
+                    <div class="search-scope-option left-column">
+                        <label>
+                            <input type="checkbox" class="search-checkbox" checked>
+                            أنظمة موقفة النفاذ
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="search-scope-row">
+                    <div class="search-scope-option right-column">
+                        <label>
+                            <input type="checkbox" class="search-checkbox">
+                            أنظمة صدرت ولم تستدل على نشرها
+                        </label>
+                    </div>
+                    <div class="search-scope-option left-column">
+                        <label>
+                            <input type="checkbox" class="search-checkbox" checked>
+                            أنظمة سارية جزئياً
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- زر البحث -->
+        <div class="search-button-container">
+            <button class="search-button">بحث</button>
+        </div>
+    </div>
+
+    <!-- قسم نتائج البحث -->
+    <div class="search-results-container">
+        <div class="container">
+            <!-- نتائج البحث -->
+            <div class="search-results">
+                <!-- بطاقة نتيجة البحث -->
+                <div class="search-result-card">
+                    <p class="result-text">مرسوم ملكي رقم 22/م وتاريخ 12 /9/1406هـ بالموافقة على نظام الهيئة السعودية للملكية الفكرية (وتعديلاته) الذي بموجب نص المادة 1 من مرسوم ملكي رقم (١٦٥/م) وتاريخ ٢٩ /١١/ ١٤٤١هـ بالموافقة على نظام الهيئة</p>
+                    <div class="result-actions">
+                        <button class="result-btn reference-btn">اطلع على النسخة المرجعية</button>
+                        <button class="result-btn info-btn">اطلع على بطاقة تعريف التشريع</button>
+                    </div>
+                </div>
+                
+                <div class="search-result-card">
+                    <p class="result-text">مرسوم ملكي رقم 22/م وتاريخ 12 /9/1406هـ بالموافقة على نظام الهيئة السعودية للملكية الفكرية (وتعديلاته) الذي بموجب نص المادة 1 من مرسوم ملكي رقم (١٦٥/م) وتاريخ ٢٩ /١١/ ١٤٤١هـ بالموافقة على نظام الهيئة</p>
+                    <div class="result-actions">
+                        <button class="result-btn reference-btn">اطلع على النسخة المرجعية</button>
+                        <button class="result-btn info-btn">اطلع على بطاقة تعريف التشريع</button>
+                    </div>
+                </div>
+                
+                <div class="search-result-card">
+                    <p class="result-text">مرسوم ملكي رقم 22/م وتاريخ 12 /9/1406هـ بالموافقة على نظام الهيئة السعودية للملكية الفكرية (وتعديلاته) الذي بموجب نص المادة 1 من مرسوم ملكي رقم (١٦٥/م) وتاريخ ٢٩ /١١/ ١٤٤١هـ بالموافقة على نظام الهيئة</p>
+                    <div class="result-actions">
+                        <button class="result-btn reference-btn">اطلع على النسخة المرجعية</button>
+                        <button class="result-btn info-btn">اطلع على بطاقة تعريف التشريع</button>
+                    </div>
+                </div>
+                
+                <div class="search-result-card">
+                    <p class="result-text">مرسوم ملكي رقم 22/م وتاريخ 12 /9/1406هـ بالموافقة على نظام الهيئة السعودية للملكية الفكرية (وتعديلاته) الذي بموجب نص المادة 1 من مرسوم ملكي رقم (١٦٥/م) وتاريخ ٢٩ /١١/ ١٤٤١هـ بالموافقة على نظام الهيئة</p>
+                    <div class="result-actions">
+                        <button class="result-btn reference-btn">اطلع على النسخة المرجعية</button>
+                        <button class="result-btn info-btn">اطلع على بطاقة تعريف التشريع</button>
+                    </div>
+                </div>
+                
+                <div class="search-result-card">
+                    <p class="result-text">مرسوم ملكي رقم 22/م وتاريخ 12 /9/1406هـ بالموافقة على نظام الهيئة السعودية للملكية الفكرية (وتعديلاته) الذي بموجب نص المادة 1 من مرسوم ملكي رقم (١٦٥/م) وتاريخ ٢٩ /١١/ ١٤٤١هـ بالموافقة على نظام الهيئة</p>
+                    <div class="result-actions">
+                        <button class="result-btn reference-btn">اطلع على النسخة المرجعية</button>
+                        <button class="result-btn info-btn">اطلع على بطاقة تعريف التشريع</button>
+                    </div>
+                </div>
+                
+                <div class="search-result-card">
+                    <p class="result-text">مرسوم ملكي رقم 22/م وتاريخ 12 /9/1406هـ بالموافقة على نظام الهيئة السعودية للملكية الفكرية (وتعديلاته) الذي بموجب نص المادة 1 من مرسوم ملكي رقم (١٦٥/م) وتاريخ ٢٩ /١١/ ١٤٤١هـ بالموافقة على نظام الهيئة</p>
+                    <div class="result-actions">
+                        <button class="result-btn reference-btn">اطلع على النسخة المرجعية</button>
+                        <button class="result-btn info-btn">اطلع على بطاقة تعريف التشريع</button>
+                    </div>
+                </div>
+                
+                <!-- رقم الصفحات -->
+                <div class="pagination">
+                    <span class="results-count">6 نتيجة</span>
+                    <div class="pagination-controls">
+                        <a href="#" class="pagination-control last">»</a>
+                        <a href="#" class="pagination-control next">›</a>
+                        <a href="#" class="pagination-control">5</a>
+                        <a href="#" class="pagination-control">4</a>
+                        <a href="#" class="pagination-control">3</a>
+                        <a href="#" class="pagination-control">2</a>
+                        <a href="#" class="pagination-control active">1</a>
+                        <a href="#" class="pagination-control prev">‹</a>
+                        <a href="#" class="pagination-control first">«</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+          <!-- Footer Social - Redesigned to match image -->
+          <div style="display: flex; align-items: center; justify-content: space-between; background-color: #f5f5f5; border-radius: 30px; padding: 10px 20px; margin: 40px 0 20px;">
+            <!-- Social Media Sharing - Left Side -->
+                <!-- Last Update - Right Side -->
+                <div style="display: flex; align-items: center; color: #666; font-size: 14px;">
+                    <span>آخر تعديل 19 ذو القعدة 1444</span>
+                    <img src="../assets/icons/clock 1.png" alt="الساعة" width="16" height="16" style="margin-right: 5px;">
+                </div>
+                       <!-- Rating - Middle Right -->
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <span style="font-size: 14px; color: #333;">تقييم المحتوى</span>
+                <div style="display: flex; gap: 2px;">
+                    <img src="../assets/icons/star.png" alt="نجمة غير مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star.png" alt="نجمة غير مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                </div>
+            </div>
+            <!-- Followers Count - Middle -->
+            <div style="display: flex; align-items: center; color: #333; font-size: 14px;">
+                <span style="font-weight: bold; margin-left: 5px;">عدد المتابعين:</span>
+                <span>9130</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <span style="margin-right: 5px; font-size: 14px; color: #00a19a;">شارك على</span>
+                <a href="#" style="color: #00a19a;">                
+                    <img src="../assets/icons/f3.png" alt="فيسبوك" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/in2.png" alt="انستغرام" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/x2.png" alt="تويتر" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/ln1.png" alt="لينكد إن" width="26" height="26">
+                </a>
+            </div>   
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <!-- Main Footer -->
+        <div class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column about-column">
+                        <h3 class="footer-title">عن محامي المملكة</h3>
+                        <p class="footer-text">البوابة القانونية الشاملة للمحامين والمستشارين القانونيين بالسعودية</p>
+                        <p class="footer-text">العربية السعوية</p>
+                    </div>
+                    <div class="footer-column links-column">
+                        <h3 class="footer-title">روابط سريعة</h3>
+                        <ul class="footer-links">
+                            <li><a href="../index.html">الرئيسية</a></li>
+                            <li><a href="#">عن الموقع</a></li>
+                            <li><a href="#">الأسئلة الشائعة</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column contact-column">
+                        <h3 class="footer-title">تواصل معنا</h3>
+                        <p class="contact-item email">info@mohamoon-ksa.com</p>
+                        <p class="contact-item phone">الهاتف: xxx xxxx 11 966+</p>
+                        <p class="contact-item address">العنوان: الرياض, المملكة العربية السعودية</p>
+                    </div>
+                    <div class="footer-column social-column">
+                        <h3 class="footer-title">تابعنا</h3>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/facebook.png" alt="فيس بوك"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/insta.png" alt="إنستجرام"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/x.png" alt="تويتر"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/ln.png" alt="لينكد إن"></a>
+                        </div>
+                        <a href="#" class="contact-btn">اتصل بنا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright-text">جميع الحقوق محفوظة © 2024 محامي المملكة</div>
+                <div class="footer-bottom-links">
+                    <a href="../pages/terms.html">الشروط والأحكام</a> | 
+                    <a href="#">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/settings.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/icons-functionality.js"></script>
+    <script src="../scripts/settings.js"></script>
+    <script src="../scripts/search-engine.js"></script>
+    <script src="../scripts/auth-system.js"></script>
+
+    <!-- نافذة تسجيل الدخول المنبثقة -->
+    <div class="login-modal" id="login-modal">
+        <div class="login-modal-content">
+            <div class="login-modal-header">
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="login-modal-body">
+                <h2 class="login-title">الوصول السريع</h2>
+                
+                <div class="phone-login-section">
+                    <div class="phone-input-row">
+                        <div class="country-code-select">
+                            <div class="country-flag">
+                                <img src="../assets/icons/flag-for-flag-egypt-svgrepo-com 1.png" alt="مصر" class="flag-img">
+                            </div>
+                            <span class="code">+20</span>
+                        </div>
+                        <div class="phone-field">
+                            <input type="tel" placeholder="رقم الهاتف" class="login-input">
+                        </div>
+                    </div>
+                    
+                    <button class="send-code-btn">ارسل رمز التحقق</button>
+                    <p class="error-msg">يجب إدخال رقم الهاتف</p>
+                </div>
+                
+                <div class="separator">
+                    <span>أو يمكنك تسجيل الدخول باسم المستخدم وكلمة المرور</span>
+                </div>
+                
+                <div class="credentials-login-section">
+                    <input type="text" placeholder="اسم المستخدم" class="login-input">
+                    <div class="password-field">
+                        <input type="password" placeholder="كلمة المرور" class="login-input">
+                        <button class="toggle-password">
+                            <img src="../assets/icons/eye.png" alt="إظهار" class="eye-icon">
+                        </button>
+                    </div>
+                    <button class="login-submit-btn">دخول</button>
+                    <a href="#" class="forgot-password">هل نسيت كلمة السر؟</a>
+                </div>
+                
+                <div class="help-section">
+                    <a href="#" class="help-btn customer-service">
+                        <span>خدمة العملاء</span>
+                        <img src="../assets/icons/support.png" alt="خدمة" class="help-icon">
+                    </a>
+                    <a href="#" class="help-btn self-help">
+                        <span>المساعدة الذاتية</span>
+                        <img src="../assets/icons/message-search.png" alt="مساعدة" class="help-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تم دمج وظائف تسجيل الدخول في auth-system.js -->
+
+
+    <script src="../scripts/font-resize.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,151 @@
+ /* أنماط المقال لجعله مطابقاً للصورة المرجعية */
+ body {
+    background-color: #f8f8f8;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.breadcrumb-nav a {
+    color: #00a59a;
+    text-decoration: none;
+}
+
+.journal-article-container {
+    max-width: 950px;
+    margin: 20px auto 50px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.article-header::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #ff7a45;
+    margin: 10px auto 0;
+}
+
+.article-title {
+    color: #00a59a;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.article-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.article-image {
+    flex: 0 0 250px;
+    margin-right: 25px;
+    margin-left: 0;
+}
+
+.article-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.article-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.article-source {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.article-source .source-name {
+    color: #ff7a45;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.article-date {
+    text-align: left;
+    color: #00a59a;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.article-date img {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+}
+
+.article-full-date {
+    text-align: left;
+    color: #00a59a;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.article-paragraphs {
+    color: #00a59a;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: right;
+}
+
+.article-paragraphs p {
+    margin-bottom: 15px;
+}
+
+.article-footer {
+    text-align: left;
+    color: #00a59a;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.related-content-section {
+    max-width: 950px;
+    margin: 30px auto;
+}
+
+.related-title {
+    color: #ff7a45;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.related-items {
+    color: #00a59a;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.related-items p {
+    margin-bottom: 10px;
+}
+
+.article-divider {
+    width: 80px; 
+    height: 3px; 
+    background-color: #ff7a45; 
+    margin: 35px auto;
+}

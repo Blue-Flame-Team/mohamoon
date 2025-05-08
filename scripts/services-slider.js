@@ -21,14 +21,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to update active card
     function updateActiveCard(index) {
-        // Remove active class from all cards
-        serviceCards.forEach(card => card.classList.remove('active'));
-        // Add active class to selected card
-        serviceCards[index].classList.add('active');
+        // Make sure service cards exist
+        if (serviceCards && serviceCards.length > 0) {
+            // Remove active class from all cards
+            serviceCards.forEach(card => card.classList.remove('active'));
+            // Add active class to selected card
+            serviceCards[index].classList.add('active');
+        }
         
-        // Update dots
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[index].classList.add('active');
+        // Update dots only if they exist
+        if (dots && dots.length > 0 && index < dots.length) {
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
         
         // Scroll to active card (smooth scroll effect)
         const cardsContainer = document.querySelector('.services-cards');
@@ -41,8 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Set initial active card
-    updateActiveCard(activeIndex);
+    // Set initial active card only if service cards exist
+    if (serviceCards && serviceCards.length > 0 && dots && dots.length > 0) {
+        updateActiveCard(activeIndex);
+    }
     
     // Previous arrow click
     if (prevArrow) {
@@ -78,9 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Auto slide every 5 seconds (optional)
     /* 
-    setInterval(function() {
-        activeIndex = (activeIndex === serviceCards.length - 1) ? 0 : activeIndex + 1;
-        updateActiveCard(activeIndex);
-    }, 5000);
+    if (serviceCards && serviceCards.length > 0) {
+        setInterval(function() {
+            activeIndex = (activeIndex === serviceCards.length - 1) ? 0 : activeIndex + 1;
+            updateActiveCard(activeIndex);
+        }, 5000);
+    }
     */
 });

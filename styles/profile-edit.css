@@ -1,0 +1,153 @@
+/**
+ * أنماط صفحة تعديل بيانات المستخدم
+ */
+
+.profile-edit-modal {
+  display: none;
+  position: fixed;
+  z-index: 1200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  direction: rtl;
+}
+
+.profile-edit-modal.show {
+  display: block;
+}
+
+.profile-edit-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 550px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.profile-edit-title {
+  color: #00a59a;
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.profile-edit-section {
+  margin-bottom: 25px;
+}
+
+.profile-edit-section-title {
+  color: #00a59a;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.profile-edit-form .form-group {
+  margin-bottom: 15px;
+}
+
+.profile-edit-input, 
+.profile-edit-select {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  direction: rtl;
+}
+
+.profile-edit-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 0.75rem center;
+  background-size: 16px 12px;
+  padding-left: 30px;
+}
+
+.profile-edit-label {
+  display: block;
+  text-align: right;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.phone-row {
+  display: flex;
+  gap: 10px;
+}
+
+.country-code {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.country-code img {
+  width: 24px;
+  height: auto;
+  margin-left: 5px;
+}
+
+.phone-input {
+  width: 70%;
+}
+
+.subscription-note {
+  color: #00a59a;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+
+.subscription-expiry {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+}
+
+.profile-edit-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.profile-password-btn {
+  flex: 1;
+  background-color: #ff7a45;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.profile-update-btn {
+  flex: 1;
+  background-color: #00a59a;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.profile-edit-close {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #888;
+  font-size: 24px;
+  cursor: pointer;
+}

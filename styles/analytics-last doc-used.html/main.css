@@ -1,0 +1,109 @@
+/* نمط صفحة الإحصائيات - آخر المستندات استخداماً */
+/* إعادة تصميم كاملة لتطابق الصورة المرجعية */
+
+.analytics-content {
+    padding: 20px 0;
+    max-width: 90%;
+    margin: 30px auto;
+}
+
+.analytics-section {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.analytics-title {
+    color: #25B8C1;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* نمط جدول المستندات */
+.table-responsive {
+    overflow-x: visible;
+}
+
+.analytics-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.documents-table {
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.documents-table td {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+    color: #333;
+}
+
+.documents-table td:first-child {
+    width: 10px;
+    border-left: none;
+}
+
+.documents-table td:nth-child(2) {
+    font-size: 15px;
+}
+
+.documents-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* أسماء الدول */
+.country-name {
+    display: block;
+    font-size: 13px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* أيقونة المستخدم */
+.user-icon-container {
+    position: absolute;
+    left: -60px;
+    top: 0;
+}
+
+.user-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #25B8C1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-icon img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1);
+}
+
+/* تنسيق الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .analytics-content {
+        max-width: 100%;
+        padding: 20px 15px;
+    }
+    
+    .user-icon-container {
+        left: -5px;
+    }
+    
+    .documents-table td {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}

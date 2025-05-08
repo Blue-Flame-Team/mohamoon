@@ -14,47 +14,151 @@
     
     <!-- أوراق الأنماط -->
     <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/topbar.css">
-    <link rel="stylesheet" href="styles/navbar.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/services.css">
-    <link rel="stylesheet" href="styles/latest-updates.css">
-    <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="styles/subscribe.css">
-    <link rel="stylesheet" href="styles/partners.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    
+    <link rel="stylesheet" href="styles/home/topbar.css">
+    <link rel="stylesheet" href="styles/home/navbar.css">
+    <link rel="stylesheet" href="styles/home/header.css">
+    <link rel="stylesheet" href="styles/home/services.css">
+    <link rel="stylesheet" href="styles/login-modal.css">
+    <link rel="stylesheet" href="styles/home/latest-updates.css">
+    <link rel="stylesheet" href="styles/home/contact.css">
+    <link rel="stylesheet" href="styles/home/subscribe.css">
+    <link rel="stylesheet" href="styles/home/partners.css">
+    <link rel="stylesheet" href="styles/home/footer.css">
+    <link rel="stylesheet" href="styles/home/settings.css">
+    <link rel="stylesheet" href="styles/home/mobile-settings.css">
+    <link rel="stylesheet" href="styles/search-popup.css">
+    <link rel="stylesheet" href="styles/mobile-navbar.css">
+    <link rel="stylesheet" href="styles/mobile-view.css">
+    <link rel="stylesheet" href="styles/mobile-menu.css">
     <!-- Latest Updates styles are now in external file updates-new.css -->
 </head>
 <body>
+    <!-- القائمة الجانبية للموبايل -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-side-menu">
+            <div class="mobile-side-menu-links">
+                <a href="index.html">الرئيسية</a>
+                
+                <!-- زر نبذة عنا -->
+                <button type="button" id="about-toggle" class="dropdown-button">نبذة عنا &#9662;</button>
+                
+                <!-- القائمة المنسدلة لنبذة عنا -->
+                <div id="about-submenu" class="submenu-container">
+                    <a href="pages/about-site.html">عن الموقع</a>
+                    <a href="#">عن الشبكة</a>
+                </div>
+                
+                <!-- زر سياستنا -->
+                <button type="button" id="policies-toggle" class="dropdown-button">سياستنا &#9662;</button>
+                
+                <!-- القائمة المنسدلة لسياستنا -->
+                <div id="policies-submenu" class="submenu-container">
+                    <a href="pages/privacy-policy.html">سياسة الخصوصية</a>
+                    <a href="pages/terms.html">الشروط والأحكام</a>
+                </div>
+                
+                <a href="pages/jornal-profile-view.html">جريدة أم القرى</a>
+                <a href="pages/asanid-service.html">خدمة الأسانيد</a>
+                <a href="pages/faq.html" class="colored-link">الأسئلة الشائعة</a>
+            </div>
+            <div class="mobile-side-menu-buttons">
+                <a href="pages/subscribe.html" class="subscribe-btn">اشترك معنا</a>
+                <a href="#" class="login-btn" id="mobile-login-btn">تسجيل الدخول</a>
+            </div>
+        </div>
+    </div>
+    
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-content">
                 <div class="logo">
-                    <a href="index.html">
+                    <!-- 1. اللوجو على اليمين -->
+                    <a href="index.html" class="logo-link">
                         <img src="assets/images/logo.png" alt="محامون المملكة">
                     </a>
-                </div>
-                <div class="top-elements">
-                    <div class="top-icons">
-                        <!-- الأسئلة الشائعة - تظهر فقط في نسخة الكمبيوتر -->
-                        <div class="common-questions">
-                            <span class="question-mark">?</span>
-                            <span class="questions-text">الأسئلة الشائعة</span>
+                    
+                    <!-- 2. زر اشترك معنا -->
+                    <a href="pages/subscribe.html" class="mobile-subscribe-btn">اشترك معنا</a>
+                    
+                    <!-- 3. جميع الأيقونات معاً -->
+                    <div class="mobile-icons">
+                        <!-- 4. قائمة الهامبرغر في البداية (على اليسار) -->
+                        <div class="hamburger-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                         
-                        <!-- مجموعة أيقونات التكبير/التصغير -->
+                        <!-- أيقونات التكبير والتصغير -->
                         <div class="zoom-group">
-                            <button class="icon-btn search-btn">
+                            <button class="icon-btn zoom-in-btn" onclick="changeFontSize(10)" title="تكبير النص">
                                 <img src="assets/icons/search-zoom-in.png" alt="تكبير">
                             </button>
-                            <button class="icon-btn search-btn">
+                            <button class="icon-btn zoom-out-btn" onclick="changeFontSize(-10)" title="تصغير النص">
                                 <img src="assets/icons/search-zoom-out.png" alt="تصغير">
                             </button>
                         </div>
                         
-                        <!-- الأيقونات الرئيسية لنسخة الكمبيوتر -->
+                        <!-- أيقونة البحث -->
+                        <button class="icon-btn search-btn">
+                            <img src="assets/icons/search.png" alt="بحث">
+                        </button>
+                        
+                        <!-- أيقونة الإعدادات -->
+                        <button class="icon-btn settings-toggle-btn">
+                            <img src="assets/icons/setting-2.png" alt="الإعدادات">
+                        </button>
+                    </div>
+                    
+               
+                    
+                    <!-- قائمة الإعدادات -->
+                    <div class="settings-menu">
+                        <a href="#" class="settings-option contrast-option">
+                            <span>تباين</span>
+                            <i class="fas fa-eye-slash"></i>
+                        </a>
+                        <!-- قائمة فرعية لخيارات التباين -->
+                        <div class="contrast-submenu">
+                            <a href="#" class="settings-option contrast-light">
+                                <span>تباين فاتح</span>
+                                <i class="fas fa-sun"></i>
+                            </a>
+                            <a href="#" class="settings-option contrast-dark">
+                                <span>تباين داكن</span>
+                                <i class="fas fa-moon"></i>
+                            </a>
+                        </div>
+                        <a href="#" class="settings-option stats-option">
+                            <span>الاحصائيات</span>
+                            <i class="fas fa-chart-line"></i>
+                        </a>
+                        <a href="#" class="settings-option logout-option">
+                            <span>خروج</span>
+                            <i class="fas fa-sign-out-alt"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="top-elements">           
+                    <!-- Elementos originales para vista desktop -->
+                    <div class="top-icons">
+                        <a href="pages/faq.html" class="common-questions">
+                            <span class="question-mark">?</span>
+                            <span class="questions-text">الأسئلة الشائعة</span>
+                        </a>
+                        <div class="zoom-group">
+                            <button class="icon-btn zoom-in-btn" onclick="changeFontSize(10)" title="تكبير النص">
+                                <img src="assets/icons/search-zoom-in.png" alt="تكبير">
+                            </button>
+                            <button class="icon-btn zoom-out-btn" onclick="changeFontSize(-10)" title="تصغير النص">
+                                <img src="assets/icons/search-zoom-out.png" alt="تصغير">
+                            </button>
+                        </div>
+                        
                         <div class="main-icons-group">
                             <button class="icon-btn search-btn">
                                 <img src="assets/icons/search.png" alt="بحث">
@@ -65,26 +169,40 @@
                             <button class="icon-btn">
                                 <img src="assets/icons/call.png" alt="اتصال">
                             </button>
-                            <button class="icon-btn">
+                            <button class="icon-btn settings-toggle-btn">
                                 <img src="assets/icons/setting-2.png" alt="الإعدادات">
                             </button>
+                            <div class="settings-menu">
+                                <a href="#" class="settings-option contrast-option">
+                                    <span>تباين</span>
+                                    <i class="fas fa-eye-slash"></i>
+                                </a>
+                                <!-- Submenú de opciones de contraste -->
+                                <div class="contrast-submenu">
+                                    <a href="#" class="settings-option contrast-light">
+                                        <span>تباين</span>
+                                        <i class="fas fa-eye-slash"></i>
+                                    </a>
+                                    <a href="#" class="settings-option contrast-dark">
+                                        <span>تباين</span>
+                                        <i class="fas fa-eye-slash"></i>
+                                    </a>
+                                </div>
+                                <a href="#" class="settings-option stats-option">
+                                    <span>الاحصائيات</span>
+                                    <i class="fas fa-chart-line"></i>
+                                </a>
+                                <a href="#" class="settings-option logout-option">
+                                    <span>خروج</span>
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </a>
+                            </div>
                         </div>
-                        
-                        <!-- أيقونات مخصصة للموبايل -->
-                        <div class="mobile-only-icons">
-                            <button class="icon-btn search-btn">
-                                <img src="assets/icons/search.png" alt="بحث">
-                            </button>
-                            <button class="icon-btn">
-                                <img src="assets/icons/setting-2.png" alt="الإعدادات">
-                            </button>
-                        </div>
-                       
                     </div>
                 </div>
                 <div class="top-actions">
-                    <button class="join-btn">إشترك معنا</button>
-                    <button class="login-btn">تسجيل الدخول</button>
+                    <a href="pages/subscribe.html" class="join-btn">إشترك معنا</a>
+                    <a href="#" class="login-btn" id="login-btn">تسجيل الدخول</a>
                 </div>
             </div>
         </div>
@@ -94,25 +212,13 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-content">
-                <!-- زر القائمة للموبايل -->
-                <button type="button" class="menu-toggler" aria-label="فتح القائمة">
-                    <img src="assets/icons/menu.png" alt="قائمة">
-                </button>
                 <ul class="main-menu">
-                    <!-- زر إغلاق القائمة للموبايل -->
-                    <button type="button" class="menu-close" aria-label="إغلاق القائمة">&times;</button>
-                    
-                    <!-- أزرار تسجيل الدخول والاشتراك في القائمة المتنقلة -->
-                    <div class="mobile-auth-buttons">
-                        <button class="join-btn mobile-btn">إشترك معنا</button>
-                        <button class="login-btn mobile-btn">تسجيل الدخول</button>
-                    </div>
                     <li class="menu-item"><a href="#" class="active">الرئيسية</a></li>
                     <li class="menu-item dropdown">
                         <a href="javascript:void(0);">نبذة عنا <img src="assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
                         <div class="dropdown-hover-area"></div>
                         <div class="dropdown-menu">
-                            <a href="#">عن الموقع</a>
+                            <a href="pages/about-site.html">عن الموقع</a>
                             <a href="#">عن الشبكة</a>
                         </div>
                     </li>
@@ -120,12 +226,12 @@
                         <a href="javascript:void(0);">سياستنا <img src="assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
                         <div class="dropdown-hover-area"></div>
                         <div class="dropdown-menu">
-                            <a href="#">سياسة الخصوصية</a>
-                            <a href="#">شروط الإشتراك</a>
+                            <a href="pages/privacy-policy.html">سياسة الخصوصية</a>
+                            <a href="pages/terms.html">شروط الإشتراك</a>
                         </div>
                     </li>
-                    <li class="menu-item"><a href="#">جريدة أم القرى</a></li>
-                    <li class="menu-item"><a href="#">خدمة الأسانيد</a></li>
+                    <li class="menu-item"><a href="pages/jornal-profile-view.html">جريدة أم القرى</a></li>
+                    <li class="menu-item"><a href="pages/asanid-service.html">خدمة الأسانيد</a></li>
                 </ul>
             </div>
         </div>
@@ -191,7 +297,6 @@
         </div>
     </header>
 
-
     <!-- Main Content Section -->
     <main class="main-content">
         <!-- قسم الخدمات -->
@@ -207,26 +312,32 @@
                 </div>
                 
                 <div class="services-content">
-                    <!-- القائمة الجانبية (أفقية في الموبايل) -->
+                    <!-- القائمة الجانبية -->
                     <div class="sidebar-menu">
-                        <button class="sidebar-btn active">خدمة الأسانيد</button>
-                        <button class="sidebar-btn">الفتاوى الشرعية</button>
-                        <button class="sidebar-btn">جلسات مجلس الوزراء</button>
+                        <a href="pages/asanid-service.html" class="sidebar-link">
+                            <div class="sidebar-btn">خدمة الأسانيد</div>
+                        </a>
+                        <a href="pages/installment-sale.html" class="sidebar-link">
+                            <div class="sidebar-btn">الفتاوى الشرعية</div>
+                        </a>
+                        <a href="pages/council-sessions.html" class="sidebar-link">
+                            <div class="sidebar-btn">جلسات مجلس الوزراء</div>
+                        </a>
                     </div>
 
                     <div class="main-content-wrapper">
                         <!-- شريط التبويب -->
                         <div class="tab-container">
                             <button class="tab-publish active">نشر الأنظمة</button>
-                            <button class="tab-portal">بوابة الأحكام السعودية</button>
+                            <button onclick="window.location.href='pages/judgments-display.html'" class="tab-portal">بوابة الأحكام السعودية</button>
                         </div>
                         
                         <!-- شريط السلايدر -->
                         <div class="services-slider">
                         <!-- سهم التنقل لليسار -->
-                        <div class="slider-arrow prev">
-                            <span class="arrow-icon">&lt;</span>
-                        </div>
+                        <a href="pages/our-services.html" class="slider-arrow prev">
+                            <img src="assets/icons/services-arrow.png" alt="السابق" class="arrow-icon">
+                        </a>
 
                         <!-- بطاقات الخدمات -->
                         <div class="services-cards">
@@ -652,11 +763,242 @@
 
     <!-- JavaScript Files -->
     <script src="scripts/main.js"></script>
-
     <script src="scripts/slider.js"></script>
-    <script src="scripts/updates-slider.js"></script>
+    <script src="scripts/navbar.js"></script>
+    <script src="scripts/zoom-text.js"></script>
+    <script src="scripts/services-menu.js"></script>
     <script src="scripts/services-slider.js"></script>
-    <script src="scripts/header-slider.js"></script>
-    <script src="scripts/mobile-menu.js"></script>
+    <script src="scripts/login-modal.js"></script>
+    <script src="scripts/auth-demo.js"></script>
+    <script src="scripts/unified-icons.js"></script>
+    
+    <!-- نافذة تسجيل الدخول المنبثقة -->
+    <div class="login-modal" id="login-modal">
+        <div class="login-modal-content">
+            <div class="login-modal-header">
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="login-modal-body">
+                <h2 class="login-title">الوصول السريع</h2>
+                
+                <div class="phone-login-section">
+                    <div class="phone-input-row">
+                        <div class="country-code-select">
+                            <div class="country-flag">
+                                <img src="../assets/icons/flag-for-flag-egypt-svgrepo-com 1.png" alt="مصر" class="flag-img">
+                            </div>
+                            <span class="code">+20</span>
+                        </div>
+                        <div class="phone-field">
+                            <input type="tel" placeholder="رقم الهاتف" class="login-input">
+                        </div>
+                    </div>
+                    
+                    <button class="send-code-btn">ارسل رمز التحقق</button>
+                    <p class="error-msg">يجب إدخال رقم الهاتف</p>
+                </div>
+                
+                <div class="separator">
+                    <span>أو يمكنك تسجيل الدخول باسم المستخدم وكلمة المرور</span>
+                </div>
+                
+                <div class="credentials-login-section">
+                    <input type="text" placeholder="اسم المستخدم" class="login-input">
+                    <div class="password-field">
+                        <input type="password" placeholder="كلمة المرور" class="login-input">
+                        <button class="toggle-password">
+                            <img src="../assets/icons/eye.png" alt="إظهار" class="eye-icon">
+                        </button>
+                    </div>
+                    <button class="login-submit-btn">دخول</button>
+                    <a href="#" class="forgot-password">هل نسيت كلمة السر؟</a>
+                </div>
+                
+                <div class="help-section">
+                    <a href="#" class="help-btn customer-service">
+                        <span>خدمة العملاء</span>
+                        <img src="../assets/icons/support.png" alt="خدمة" class="help-icon">
+                    </a>
+                    <a href="#" class="help-btn self-help">
+                        <span>المساعدة الذاتية</span>
+                        <img src="../assets/icons/message-search.png" alt="مساعدة" class="help-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- نافذة استرداد كلمة المرور المنبثقة -->
+<div class="forgot-password-modal" id="forgot-password-modal">
+    <div class="forgot-password-modal-content">
+        <div class="forgot-password-modal-header">
+            <span class="close-forgot-modal">&times;</span>
+        </div>
+        <div class="forgot-password-modal-body">
+            <h2 class="forgot-password-title">استرداد كلمة المرور</h2>
+            
+            <div class="forgot-password-section">
+                <input type="text" placeholder="اسم المستخدم" class="forgot-password-input">
+                <button class="forgot-password-submit-btn">أرسل</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="scripts/main.js"></script>
+<script src="scripts/login-modal.js"></script>
+<script src="scripts/auth-demo.js"></script>
+<script src="scripts/mobile-icons-functionality.js"></script>
+<script src="scripts/font-resize.js"></script>
+<script src="scripts/mobile-menu.js"></script>
+
+<!-- مباشرة للقائمة المنسدلة -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // تنفيذ مباشر للقائمة الفرعية لنبذة عنا
+    const aboutToggle = document.getElementById('about-toggle');
+    const aboutSubmenu = document.getElementById('about-submenu');
+    
+    if (aboutToggle && aboutSubmenu) {
+        aboutToggle.onclick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('تم النقر على زر نبذة عنا');
+            // فتح/إغلاق القائمة الفرعية
+            aboutSubmenu.classList.toggle('open');
+            // تبديل حالة الزر
+            aboutToggle.classList.toggle('active');
+        };
+    }
+});
+</script>
+
+<!-- تصليح قائمة الموبايل مباشرة -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // عناصر القائمة المتنقلة
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileSideMenu = document.querySelector('.mobile-side-menu');
+    
+    // التحقق من وجود العناصر
+    if (!hamburgerMenu) console.error('لم يتم العثور على hamburger-menu');
+    if (!mobileMenuOverlay) console.error('لم يتم العثور على mobile-menu-overlay');
+    if (!mobileSideMenu) console.error('لم يتم العثور على mobile-side-menu');
+    
+    // فتح القائمة عند النقر على زر الهامبرغر
+    if (hamburgerMenu) {
+        hamburgerMenu.onclick = function(e) {
+            e.preventDefault();
+            mobileMenuOverlay.classList.add('show');
+            mobileSideMenu.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        };
+    }
+    
+    // إغلاق القائمة عند النقر على الخلفية
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.onclick = function(e) {
+            if (e.target === mobileMenuOverlay) {
+                mobileMenuOverlay.classList.remove('show');
+                mobileSideMenu.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        };
+    }
+});
+</script>
+<!-- كود قائمة نبذة عنا المنسدلة -->
+<!-- ملف السلايدر لعرض صورتين فقط في كل صفحة -->
+<script src="scripts/updates-slider.js"></script>
+
+<script>
+    // كود مباشر لتفعيل القوائم المنسدلة في القائمة الجانبية
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('تفعيل القوائم المنسدلة');
+        
+        // الحصول على عناصر القوائم
+        var aboutToggle = document.getElementById('about-toggle');
+        var aboutSubmenu = document.getElementById('about-submenu');
+        var policiesToggle = document.getElementById('policies-toggle');
+        var policiesSubmenu = document.getElementById('policies-submenu');
+        
+        console.log('عناصر نبذة عنا:', aboutToggle, aboutSubmenu);
+        console.log('عناصر سياستنا:', policiesToggle, policiesSubmenu);
+        
+        // تفعيل قائمة نبذة عنا
+        if (aboutToggle && aboutSubmenu) {
+            aboutSubmenu.style.display = 'none';
+            
+            aboutToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (aboutSubmenu.style.display === 'none' || aboutSubmenu.style.display === '') {
+                    aboutSubmenu.style.display = 'block';
+                    // إغلاق القائمة الأخرى إذا كانت مفتوحة
+                    if (policiesSubmenu) policiesSubmenu.style.display = 'none';
+                } else {
+                    aboutSubmenu.style.display = 'none';
+                }
+            });
+        }
+        
+        // تفعيل قائمة سياستنا
+        if (policiesToggle && policiesSubmenu) {
+            policiesSubmenu.style.display = 'none';
+            
+            policiesToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('تم النقر على سياستنا');
+                if (policiesSubmenu.style.display === 'none' || policiesSubmenu.style.display === '') {
+                    policiesSubmenu.style.display = 'block';
+                    // إغلاق القائمة الأخرى إذا كانت مفتوحة
+                    if (aboutSubmenu) aboutSubmenu.style.display = 'none';
+                } else {
+                    policiesSubmenu.style.display = 'none';
+                }
+            });
+        }
+        
+        // إضافة معالج نقر على المستند لإغلاق القوائم عند النقر خارجها
+        document.addEventListener('click', function(e) {
+            // إذا كان النقر خارج القوائم والأزرار
+            if (aboutSubmenu && !aboutSubmenu.contains(e.target) && aboutToggle && !aboutToggle.contains(e.target)) {
+                aboutSubmenu.style.display = 'none';
+            }
+            
+            if (policiesSubmenu && !policiesSubmenu.contains(e.target) && policiesToggle && !policiesToggle.contains(e.target)) {
+                policiesSubmenu.style.display = 'none';
+            }
+        });
+        
+        // تعديل أسلوب CSS مباشر للتأكد من أن القوائم تعمل بشكل صحيح
+        var style = document.createElement('style');
+        style.textContent = `
+            .submenu-container {
+                display: none;
+                position: relative;
+                z-index: 10;
+            }
+            .submenu-container.show {
+                display: block !important;
+            }
+            #policies-submenu {
+                display: none;
+                z-index: 20;
+            }
+            #about-submenu {
+                display: none;
+                z-index: 20;
+            }
+        `;
+        document.head.appendChild(style);
+    });
+</script>
+
+<!-- ملف لحل مشكلة قسم الخدمات في وضع التباين الداكن -->
+<script src="scripts/services-darkmode-fix.js"></script>
+<!-- سكريبت تصحيح الروابط وربط الأزرار -->
+<script src="scripts/link-fixer.js"></script>
 </body>
 </html>

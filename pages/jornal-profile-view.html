@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الصحفي - محامون المملكة</title>
+    
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- أوراق الأنماط -->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/jornal-profile-view/header.css">
+    <link rel="stylesheet" href="../styles/jornal-profile-view/main.css">
+    <link rel="stylesheet" href="../styles/jornal-profile-view/footer.css">
+    <link rel="stylesheet" href="../styles/login-modal.css">
+    <link rel="stylesheet" href="../styles/home/settings.css">
+    <link rel="stylesheet" href="../styles/subpage.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+        <div class="top-bar-content">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="محامون المملكة" class="logo-image">
+                </a>
+            </div>
+            <div class="top-elements">
+                <div class="top-icons">
+                    <!-- الأسئلة الشائعة -->
+                    <a href="faq.html" class="common-questions-link">
+                        <div class="common-questions">
+                            <span class="questions-text">الأسئلة الشائعة</span>
+                            <span class="question-mark">?</span>
+                        </div>
+                    </a>
+                    
+                    <!-- الأيقونات الرئيسية -->
+                    <div class="main-icons-group">
+                        <button class="icon-btn zoom-out-btn" onclick="changeFontSize(-10)" title="تصغير النص">
+                            <img src="../assets/icons/search-zoom-out.png" alt="تصغير">
+                        </button>
+                        <button class="icon-btn zoom-in-btn" onclick="changeFontSize(10)" title="تكبير النص">
+                            <img src="../assets/icons/search-zoom-in.png" alt="تكبير">
+                        </button>
+                        <button class="icon-btn search-btn">
+                            <img src="../assets/icons/search.png" alt="بحث">
+                        </button>
+                        <button class="icon-btn location-btn">
+                            <img src="../assets/icons/location.png" alt="الموقع">
+                        </button>
+                        <button class="icon-btn call-btn">
+                            <img src="../assets/icons/call.png" alt="اتصال">
+                        </button>
+                        
+                        <button class="icon-btn settings-toggle-btn">
+                            <img src="../assets/icons/setting-2.png" alt="الإعدادات">
+                        </button>
+                        <div class="settings-menu">
+                            <a href="#" class="settings-option contrast-option">
+                                <span>تباين</span>
+                                <i class="fas fa-eye-slash"></i>
+                            </a>
+                            <!-- قائمة خيارات التباين الفرعية -->
+                            <div class="contrast-submenu">
+                                <a href="#" class="settings-option contrast-light">
+                                    <span>تباين</span>
+                                    <i class="fas fa-eye-slash"></i>
+                                </a>
+                                <a href="#" class="settings-option contrast-dark">
+                                    <span>تباين</span>
+                                    <i class="fas fa-eye-slash"></i>
+                                </a>
+                            </div>
+                            <a href="#" class="settings-option stats-option">
+                                <span>الاحصائيات</span>
+                                <i class="fas fa-chart-line"></i>
+                            </a>
+                            <a href="#" class="settings-option logout-option">
+                                <span>خروج</span>
+                                <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-actions">
+                <button class="join-btn">إشترك معنا</button>
+                <button class="login-btn">تسجيل الدخول</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+        <ul class="nav-menu">
+            <li class="menu-item"><a href="../index.html">الرئيسية</a></li>
+            <li class="menu-item dropdown">
+                <a href="javascript:void(0);">نبذة عنا <img src="../assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                <div class="dropdown-hover-area"></div>
+                <div class="dropdown-menu">
+                    <a href="#">عن الموقع</a>
+                    <a href="#">عن الشبكة</a>
+                </div>
+            </li>
+            <li class="menu-item dropdown">
+                <a href="javascript:void(0);">سياساتنا <img src="../assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                <div class="dropdown-hover-area"></div>
+                <div class="dropdown-menu">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="../pages/terms.html">شروط الإشتراك</a>
+                </div>
+            </li>
+            <li class="menu-item"><a href="#">جريدة أم القرى</a></li>
+            <li class="menu-item"><a href="#">خدمة الأسانيد</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+
+
+    
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <div class="container">
+            <!-- مسار التنقل -->
+            <div class="breadcrumb-nav">
+                <a href="../index.html">محامو المملكة</a>
+                <span style="margin: 0 5px;">›</span>
+                <span style="color: #00a59a;">الملف الصحفي</span>
+            </div>
+            
+            <!-- المقال الصحفي - نسخة طبق الأصل للصورة المرجعية -->
+            <div class="journal-article-container">
+                <div class="article-header">
+                    <h1 class="article-title">بتوجيه الملك وبناء على ما عرضه ولي العهد.. صرف أكثر من ثلاثة مليارات ريال معونة رمضان لمستفيدي الضمان الاجتماعي</h1>
+                </div>
+                
+                <div class="article-content">
+                    <!-- صورة المقال على اليسار -->
+                    <div class="article-image">
+                        <img src="../assets/images/image 66.png" alt="خادم الحرمين الشريفين" onerror="this.src='../assets/logo.png'">
+                    </div>
+                    
+                    <!-- محتوى المقال النصي على اليمين -->
+                    <div class="article-text">
+                        <div class="article-source">
+                            <span class="source-name">جريدة الرياض</span>
+                        </div>
+                        
+                        <div class="article-date">
+                            <img src="../assets/icons/calendar.svg" alt="تاريخ" onerror="this.style.display='none'">
+                            <span>الثلاثاء 18 رمضان 1446 - 18 مارس 2025</span>
+                        </div>
+                        
+                        <div class="article-full-date">
+                            جريدة الرياض - الثلاثاء 18 رمضان 1446هـ - 18 مارس 2025
+                        </div>
+                        
+                        <div class="article-paragraphs">
+                            <p>بتوجيه كريم من خادم الحرمين الشريفين الملك سلمان بن عبدالعزيز آل سعود -أيده الله-، وبناء على ما عرضه صاحب السمو الملكي الأمير محمد بن سلمان بن عبدالعزيز آل سعود ولي العهد رئيس مجلس الوزراء -حفظه الله-، صدرت الموافقة على صرف أكثر من ثلاثة مليارات ريال معونة رمضان لمستفيدي الضمان الاجتماعي، وذلك في إطار حرص القيادة الرشيدة على تلمس احتياجات الأسر المستفيدة، وتأمين متطلباتهم خلال شهر رمضان.</p>
+                            
+                            <p>وتتضمن المعونة الكريمة صرف 1000 ريال للعائل، و500 ريال لكل تابع، حيث سيتم إيداعها مباشرة في الحسابات البنكية للمستفيدين اليوم الثلاثاء الموافق 18 رمضان.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- باقي نص المقال بعرض كامل -->
+                <div style="margin-top: 25px;">
+                    <div class="article-paragraphs">
+                        <p>ويأتي هذا الدعم استمرارا لنهج القيادة الحكيمة -أيدها الله- في رعاية الفئات المستحقة، وامتدادا لما توليه حكومة خادم الحرمين الشريفين وسمو ولي العهد -حفظهما الله- من اهتمام بالغ بتحسين جودة الحياة، وتعزيز مستوى المعيشة لمستفيدي الضمان الاجتماعي، لا سيما في هذا الشهر الفضيل.</p>
+                        
+                        <p>وعبر معالي وزير الموارد البشرية والتنمية الاجتماعية المهندس أحمد بن سليمان الراجحي، الشكر والتقدير لخادم الحرمين الشريفين وسمو ولي عهده -حفظهما الله- على هذه المكرمة الكريمة، التي تجسد شراكتهم في دعم المواطنين، وتوفير سبل العيش الكريم لهم، داعيا الله -عز وجل- أن يحفظ القيادة الحكيمة وان يديمها خيرا للبلاد، وان يجزيهم على بذلهم لدعم الأمن والرخاء.</p>
+                        
+                        <div class="article-footer">جدة - واس</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ذات صلة -->
+            <div class="related-content-section">
+                <h3 class="related-title">ذات صلة</h3>
+                
+                <div class="related-items">
+                    <p>النظام وفقاً لآخر تعديل - مرسوم رقم م/ 45 بتاريخ 7/7/1427 هـ بالموافقة على نظام الضمان الاجتماعي</p>
+                    <p>قرار وزير الموارد البشرية والتنمية الاجتماعية رقم (192891) وتاريخ 25/ 10 /1442هـ بشأن اللائحة التنفيذية لنظام الضمان الاجتماعي الصادر بالمرسوم الملكي رقم (32 /) وتاريخ 4/ 4 /1442هـ</p>
+                </div>
+            </div>
+            
+            <div class="article-divider"></div>
+            
+            <!-- أخبار متشابهة -->
+            <div style="max-width: 950px; margin: 0 auto 50px;">
+                <h3 style="color: #00a59a; font-size: 22px; text-align: center; margin-bottom: 30px; font-weight: 600;">
+                    أخبار متشابهة
+                    <span style="display: block; width: 80px; height: 3px; background-color: #ff7a45; margin: 10px auto 0;"></span>
+                </h3>
+                
+                <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+                    <!-- الخبر الأول -->
+                    <div style="flex: 1; min-width: 280px; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+                        <img src="../assets/images/image 67.png" alt="الملك سلمان" style="width: 100%; height: 200px; object-fit: cover;" onerror="this.src='../assets/logo.png'">
+                        <div style="padding: 15px;">
+                            <a href="#" style="text-decoration: none; color: #00a59a; font-size: 15px; font-weight: 500;">الملك يوجه بصرف معونة رمضان لمستفيدي "الضمان"</a>
+                        </div>
+                    </div>
+                    
+                    <!-- الخبر الثاني -->
+                    <div style="flex: 1; min-width: 280px; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+                        <img src="../assets/images/image 68.png" alt="الملك سلمان" style="width: 100%; height: 200px; object-fit: cover;" onerror="this.src='../assets/logo.png'">
+                        <div style="padding: 15px;">
+                            <a href="#" style="text-decoration: none; color: #00a59a; font-size: 15px; font-weight: 500;">الملك يوجه بصرف معونة شهر رمضان لمستفيدي "الضمان"</a>
+                        </div>
+                    </div>
+                    
+                    <!-- الخبر الثالث -->
+                    <div style="flex: 1; min-width: 280px; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+                        <img src="../assets/images/image 69.png" alt="الملك سلمان" style="width: 100%; height: 200px; object-fit: cover;" onerror="this.src='../assets/logo.png'">
+                        <div style="padding: 15px;">
+                            <a href="#" style="text-decoration: none; color: #00a59a; font-size: 15px; font-weight: 500;">الملك يوجه بصرف معونة شهر رمضان لمستفيدي "الضمان"</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+          <!-- Footer Social - Redesigned to match image -->
+          <div style="display: flex; align-items: center; justify-content: space-between; background-color: #f5f5f5; border-radius: 30px; padding: 10px 20px; margin: 40px 0 20px;">
+            <!-- Social Media Sharing - Left Side -->
+                <!-- Last Update - Right Side -->
+                <div style="display: flex; align-items: center; color: #666; font-size: 14px;">
+                    <span>آخر تعديل 19 ذو القعدة 1444</span>
+                    <img src="../assets/icons/clock 1.png" alt="الساعة" width="16" height="16" style="margin-right: 5px;">
+                </div>
+                       <!-- Rating - Middle Right -->
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <span style="font-size: 14px; color: #333;">تقييم المحتوى</span>
+                <div style="display: flex; gap: 2px;">
+                    <img src="../assets/icons/star.png" alt="نجمة غير مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star.png" alt="نجمة غير مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                </div>
+            </div>
+            <!-- Followers Count - Middle -->
+            <div style="display: flex; align-items: center; color: #333; font-size: 14px;">
+                <span style="font-weight: bold; margin-left: 5px;">عدد المتابعين:</span>
+                <span>9130</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <span style="margin-right: 5px; font-size: 14px; color: #00a19a;">شارك على</span>
+                <a href="#" style="color: #00a19a;">                
+                    <img src="../assets/icons/f3.png" alt="فيسبوك" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/in2.png" alt="انستغرام" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/x2.png" alt="تويتر" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/ln1.png" alt="لينكد إن" width="26" height="26">
+                </a>
+            </div>   
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <!-- Main Footer -->
+        <div class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column about-column">
+                        <h3 class="footer-title">عن محامي المملكة</h3>
+                        <p class="footer-text">البوابة القانونية الشاملة للمحامين والمستشارين القانونيين بالسعودية</p>
+                        <p class="footer-text">العربية السعوية</p>
+                    </div>
+                    <div class="footer-column links-column">
+                        <h3 class="footer-title">روابط سريعة</h3>
+                        <ul class="footer-links">
+                            <li><a href="../index.html">الرئيسية</a></li>
+                            <li><a href="#">عن الموقع</a></li>
+                            <li><a href="#">الأسئلة الشائعة</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column contact-column">
+                        <h3 class="footer-title">تواصل معنا</h3>
+                        <p class="contact-item email">info@mohamoon-ksa.com</p>
+                        <p class="contact-item phone">الهاتف: xxx xxxx 11 966+</p>
+                        <p class="contact-item address">العنوان: الرياض, المملكة العربية السعودية</p>
+                    </div>
+                    <div class="footer-column social-column">
+                        <h3 class="footer-title">تابعنا</h3>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/facebook.png" alt="فيس بوك"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/insta.png" alt="إنستجرام"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/x.png" alt="تويتر"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/ln.png" alt="لينكد إن"></a>
+                        </div>
+                        <a href="#" class="contact-btn">اتصل بنا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright-text">جميع الحقوق محفوظة © 2024 محامي المملكة</div>
+                <div class="footer-bottom-links">
+                    <a href="../pages/terms.html">الشروط والأحكام</a> | 
+                    <a href="#">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/settings.js"></script>
+
+    <script src="../scripts/font-resize.js"></script>
+</body>
+</html>

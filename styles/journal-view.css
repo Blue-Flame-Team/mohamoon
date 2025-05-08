@@ -1,0 +1,103 @@
+/* أنماط صفحة الملف الصحفي */
+
+.article-main {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.article-title {
+    color: #00a59a;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.article-divider {
+    width: 80px;
+    height: 3px;
+    background-color: #ff7a45;
+    margin: 10px auto 0;
+}
+
+.article-image {
+    float: right;
+    width: 250px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.article-meta {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.article-source {
+    color: #ff7a45;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.article-date {
+    color: #00a59a;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.article-full-date {
+    color: #00a59a;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.article-content {
+    color: #00a59a;
+    line-height: 1.7;
+    font-size: 15px;
+    text-align: right;
+}
+
+.article-content p {
+    margin-bottom: 15px;
+}
+
+.article-footer {
+    color: #00a59a;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 20px;
+    clear: both;
+}
+
+.related-section {
+    margin-top: 40px;
+}
+
+.related-title {
+    color: #ff7a45;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.related-items {
+    color: #00a59a;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.related-items p {
+    margin-bottom: 12px;
+}
+
+.separator {
+    width: 80px;
+    height: 3px;
+    background-color: #ff7a45;
+    margin: 40px auto;
+}

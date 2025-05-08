@@ -1,0 +1,48 @@
+/* تنسيقات خاصة بقائمة الإعدادات في نسخة الموبايل */
+
+/* إعادة تموضع قائمة الإعدادات بالنسبة لنسخة الموبايل */
+@media (max-width: 767px) {
+    /* تنسيق قائمة الإعدادات الرئيسية في نسخة الموبايل */
+    .mobile-settings-menu {
+        position: fixed;
+        top: 60px;
+        right: 10px;
+        z-index: 1001;
+        width: 180px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        background-color: white;
+        padding: 10px;
+        display: none;
+    }
+
+    /* تنسيق القائمة الفرعية للتباين */
+    .contrast-submenu {
+        background-color: white;
+        border-radius: 8px;
+        padding: 5px;
+    }
+
+    /* تنسيق خيارات التباين في نسخة الموبايل */
+    .settings-option {
+        padding: 10px 12px;
+        margin: 3px 0;
+    }
+
+    /* مؤثرات حركية عند النقر على زر الإعدادات */
+    .logo .mobile-icons .settings-toggle-btn.active {
+        transform: rotate(45deg);
+        transition: transform 0.3s ease;
+    }
+
+    /* إظهار وإخفاء قائمة الإعدادات */
+    .mobile-settings-menu.show {
+        display: block;
+        animation: fadeIn 0.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+}

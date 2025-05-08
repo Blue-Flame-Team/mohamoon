@@ -1,0 +1,101 @@
+/* أنماط لتغيير حجم الخط */
+:root {
+    --text-size: 100%;
+}
+
+body {
+    /* حجم الخط الافتراضي سيتم تعديله بواسطة JavaScript */
+    transition: font-size 0.3s ease;
+    font-size: var(--text-size);
+}
+
+/* ضمان استجابة جميع العناصر لتغيير حجم الخط */
+p, span, h1, h2, h3, h4, h5, h6, a, li, button, input, textarea, table, td, th, label, div {
+    transition: all 0.3s ease;
+}
+
+/* التأثير البصري للتنبيه عند تغيير حجم الخط */
+.font-size-changed {
+    animation: fontSizeChange 0.3s ease;
+}
+
+/* تحريك العناصر قليلاً لتنبيه المستخدم بالتغيير */
+@keyframes fontSizeChange {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.01); }
+    100% { transform: scale(1); }
+}
+
+/* تعديل أحجام النصوص بناءً على نسبة التكبير */
+/* النص العادي في الموقع */
+p, .card-desc, li, td, th, span, a, div, label, button, input {
+    font-size: calc(var(--text-size) * 0.16em);
+}
+
+/* العناوين الرئيسية */
+h1, .hero-title, .section-title {
+    font-size: calc(var(--text-size) * 0.3em);
+}
+
+/* العناوين الفرعية */
+h2, .sub-title, .service-title {
+    font-size: calc(var(--text-size) * 0.25em);
+}
+
+/* العناوين الفرعية الأصغر */
+h3, h4, h5, h6 {
+    font-size: calc(var(--text-size) * 0.2em);
+}
+
+/* تعطيل أزرار التكبير/التصغير عند الوصول للحدود */
+.zoom-in-btn.disabled,
+.zoom-out-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.zoom-in-btn.disabled img,
+.zoom-out-btn.disabled img {
+    opacity: 0.5;
+}
+
+/* تأثير التحويم على أزرار التكبير/التصغير */
+.zoom-in-btn:hover img,
+.zoom-out-btn:hover img {
+    transform: scale(1.1);
+}
+
+/* تأثير النقر على أزرار التكبير/التصغير */
+.zoom-in-btn:active img,
+.zoom-out-btn:active img {
+    transform: scale(0.95);
+}
+
+/* تنسيقات لزيادة وضوح أيقونات التكبير/التصغير */
+.zoom-in-btn, .zoom-out-btn {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.zoom-in-btn:hover, .zoom-out-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ضبط ارتفاع السطر للنصوص المستخدمة في بطاقات الخدمات */
+.card-desc {
+    line-height: 1.6;
+}
+
+/* تحسين قراءة النصوص الكبيرة */
+body[data-font-size="130"] p,
+body[data-font-size="140"] p,
+body[data-font-size="150"] p {
+    line-height: 1.8;
+}
+
+/* للتأكد من أن النصوص لا تتجاوز عرض مكوناتها */
+.card-desc, .service-title, p, .hero-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}

@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdownLinks = document.querySelectorAll('.mobile-side-menu-links a.has-dropdown');
     const mobileLoginBtn = document.getElementById('mobile-login-btn');
     const loginModal = document.getElementById('login-modal');
-    const aboutDropdown = document.querySelector('.dropdown-toggle');
-    const aboutSubmenu = document.getElementById('about-submenu');
     
     // التحقق من وجود العناصر الأساسية
     if (!hamburgerMenu || !mobileMenuOverlay || !mobileSideMenu) {
@@ -42,32 +40,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // تبسيط معالجة قائمة نبذة عنا المنسدلة
-    if (aboutDropdown && aboutSubmenu) {
-        aboutDropdown.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            // تبديل حالة القائمة الفرعية
-            aboutSubmenu.classList.toggle('open');
-            // تبديل حالة الزر المنسدل
-            this.classList.toggle('active');
-        });
-    }
-    
-    // معالجة بقية القوائم المنسدلة
+    // معالجة القوائم المنسدلة
     if (dropdownLinks && dropdownLinks.length > 0) {
-        // إضافة معالج أحداث لكل رابط منسدل ما عدا نبذة عنا
+        // إضافة معالج أحداث لكل رابط منسدل
         dropdownLinks.forEach(function(link) {
-            if (!link.classList.contains('dropdown-toggle')) {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    // تبديل حالة السهم
-                    this.classList.toggle('open');
-                });
-            }
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // تبديل حالة السهم
+                this.classList.toggle('open');
+            });
         });
     }
     
@@ -76,15 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
     menuLinks.forEach(function(link) {
         link.addEventListener('click', function() {
             // إغلاق القائمة عند النقر على رابط
-            setTimeout(closeMenu, 100);
-        });
-    });
-    
-    // ربط أحداث النقر على عناصر القائمة الفرعية
-    const submenuItems = document.querySelectorAll('.mobile-submenu .submenu-item');
-    submenuItems.forEach(function(item) {
-        item.addEventListener('click', function() {
-            // إغلاق القائمة عند النقر على عنصر القائمة الفرعية
             setTimeout(closeMenu, 100);
         });
     });

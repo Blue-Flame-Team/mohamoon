@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البيع بالتقسيط - محامون المملكة</title>
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- أوراق الأنماط -->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/installment-sale/header.css">
+    <link rel="stylesheet" href="../styles/installment-sale/footer.css">
+    <link rel="stylesheet" href="../styles/login-modal.css">
+    <link rel="stylesheet" href="../styles/home/settings.css">
+    <link rel="stylesheet" href="../styles/subpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles/mobile-view.css">
+    <link rel="stylesheet" href="../styles/mobile-navbar.css">
+    <style>
+        .main-content {
+            padding: 40px 0;
+            min-height: 70vh;
+        }
+        .page-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .installment-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .installment-header h1 {
+            color: #00a59a;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .divider {
+            width: 50px;
+            height: 3px;
+            background-color: #ff7a45;
+            margin: 0 auto 30px;
+        }
+        .installment-content {
+            line-height: 1.8;
+            font-size: 16px;
+            color: #333;
+        }
+        .section-heading {
+            color: #ff7a45;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .installment-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        /* Estilos para el contenido jurídico islámico */
+        .islamic-ruling {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin-top: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .ruling-toggle {
+            background-color: #fff;
+            padding: 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .toggle-title {
+            color: #00a59a;
+            font-size: 18px;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .ruling-content {
+            padding: 20px;
+        }
+        
+        .ruling-title {
+            color: #ff7a45;
+            font-size: 22px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .islamic-greeting {
+            text-align: center;
+            font-size: 17px;
+            margin-bottom: 15px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .resolution-number {
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .ruling-intro {
+            margin-bottom: 20px;
+        }
+        
+        .ruling-intro p {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        .ruling-decision h3 {
+            color: #00a59a;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .ruling-points {
+            padding-right: 25px;
+        }
+        
+        .ruling-points li {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .sub-point {
+            margin-top: 10px;
+            padding-right: 15px;
+            font-size: 15px;
+            color: #555;
+        }
+        
+        /* Estilos para la sección de interacción */
+        .interaction-section {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 30px 0;
+        }
+        
+        .share-opinion {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .share-opinion p {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 15px;
+        }
+        
+        .report-btn {
+            background-color: #00a59a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        
+        .report-btn:hover {
+            background-color: #008c82;
+        }
+        
+        .protection-actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .protection-actions h3 {
+            color: #00a59a;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .copy-btn, .print-btn {
+            background-color: #00a59a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            min-width: 100px;
+        }
+        
+        .copy-btn:hover, .print-btn:hover {
+            background-color: #008c82;
+        }
+    </style>
+</head>
+<body>
+   <!-- Top Bar -->
+   <div class="top-bar">
+    <div class="container">
+        <div class="top-bar-content">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="محامون المملكة" class="logo-image">
+                </a>
+            </div>
+            <div class="top-elements">
+                <div class="top-icons">
+                    <!-- الأسئلة الشائعة -->
+                    <a href="faq.html" class="common-questions-link">
+                        <div class="common-questions">
+                            <span class="questions-text">الأسئلة الشائعة</span>
+                            <span class="question-mark">?</span>
+                        </div>
+                    </a>
+                    
+                    <!-- الأيقونات الرئيسية -->
+                    <div class="main-icons-group">
+                        <button class="icon-btn zoom-out-btn" onclick="changeFontSize(-10)" title="تصغير النص">
+                            <img src="../assets/icons/search-zoom-out.png" alt="تصغير">
+                        </button>
+                        <button class="icon-btn zoom-in-btn" onclick="changeFontSize(10)" title="تكبير النص">
+                            <img src="../assets/icons/search-zoom-in.png" alt="تكبير">
+                        </button>
+                        <button class="icon-btn search-btn">
+                            <img src="../assets/icons/search.png" alt="بحث">
+                        </button>
+                        <button class="icon-btn location-btn">
+                            <img src="../assets/icons/location.png" alt="الموقع">
+                        </button>
+                        <button class="icon-btn call-btn">
+                            <img src="../assets/icons/call.png" alt="اتصال">
+                        </button>
+                        
+                        <button class="icon-btn settings-toggle-btn">
+                            <img src="../assets/icons/setting-2.png" alt="الإعدادات">
+                        </button>
+                        <div class="settings-menu">
+                            <a href="#" class="settings-option contrast-option">
+                                <span>تباين</span>
+                                <i class="fas fa-eye-slash"></i>
+                            </a>
+                            <!-- قائمة خيارات التباين الفرعية -->
+                            <div class="contrast-submenu">
+                                <a href="#" class="settings-option contrast-light">
+                                    <span>تباين</span>
+                                    <i class="fas fa-eye-slash"></i>
+                                </a>
+                                <a href="#" class="settings-option contrast-dark">
+                                    <span>تباين</span>
+                                    <i class="fas fa-eye-slash"></i>
+                                </a>
+                            </div>
+                            <a href="#" class="settings-option stats-option">
+                                <span>الاحصائيات</span>
+                                <i class="fas fa-chart-line"></i>
+                            </a>
+                            <a href="#" class="settings-option logout-option">
+                                <span>خروج</span>
+                                <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-actions">
+                <button class="join-btn">إشترك معنا</button>
+                <button class="login-btn">تسجيل الدخول</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="menu-item"><a href="../index.html">الرئيسية</a></li>
+                <li class="menu-item dropdown">
+                    <a href="javascript:void(0);">نبذة عنا <img src="../assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                    <div class="dropdown-hover-area"></div>
+                    <div class="dropdown-menu">
+                        <a href="#">عن الموقع</a>
+                        <a href="#">عن الشبكة</a>
+                    </div>
+                </li>
+                <li class="menu-item dropdown">
+                    <a href="javascript:void(0);">سياساتنا <img src="../assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                    <div class="dropdown-hover-area"></div>
+                    <div class="dropdown-menu">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="../pages/terms.html">شروط الإشتراك</a>
+                    </div>
+                </li>
+                <li class="menu-item"><a href="#">جريدة أم القرى</a></li>
+                <li class="menu-item"><a href="#">خدمة الأسانيد</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">محامو المملكة</a></li>
+                <li><a href="#">مبادئ شرعية</a></li>
+                <li><a href="#">تجمع الفقه الإسلامي</a></li>
+                <li><a href="#">البيوع</a></li>
+                <li><span>البيع بالتقسيط</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="page-container">
+            <div class="installment-header">
+                <h1>البيع بالتقسيط</h1>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="installment-content">
+                <h2 class="section-heading">عميلنا العزيز:</h2>
+                <p>رجاء العلم انه في حالة عدم ظهور المحتوى يرجى مسح بيانات المتصفح من المتصفح الخاص بك وإعادة المحاولة، والدعم يسعدنا تواصلكم مباشرة مع قسم خدمة العملاء.</p>
+                
+                <h2 class="section-heading">عفوا:</h2>
+                <p>تفضلنا وضع بعض الحروف الزائدة أو الناقصة أو بعض علامات الترقيم في مواضع خاطئة في كل وثيقة بمعدل مدروس بهدف تميير النص الخاص بالموقع... حيث أن كافة الحقوق محفوظة.</p>
+                
+                <!-- المحتوى القانوني للبيع بالتقسيط -->
+                <div class="islamic-ruling">
+                    <div class="ruling-toggle">
+                        <h3 class="toggle-title">نص التشريع <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                    
+                    <div class="ruling-content">
+                        <h2 class="ruling-title">بشأن البيع بالتقسيط</h2>
+                        
+                        <div class="islamic-greeting">
+                            الحمد لله رب العالمين والصلاة والسلام على سيدنا محمد خاتم النبيين وعلى آله وصحبه
+                        </div>
+                        
+                        <div class="resolution-number">قرار رقم (7/2/16)</div>
+                        
+                        <div class="ruling-intro">
+                            <p>أما بعد:</p>
+                            <p>فإن مجلس مجمع الفقه الإسلامي في دورة مؤتمره السابع بجدة في المملكة العربية السعودية من 7-12 ذو القعدة 1412هـ الموافق 9-14 مايو 1992م.</p>
+                            <p>بعد اطلاعه على البحوث الواردة إلى المجمع بخصوص موضوع البيع بالتقسيط، وبعد استماعه إلى المناقشات التي دارت حوله.</p>
+                        </div>
+                        
+                        <div class="ruling-decision">
+                            <h3>قرر</h3>
+                            <ol class="ruling-points">
+                                <li>البيع بالتقسيط جائز شرعاً، ولا أثر لزيادة الثمن على المبيع.</li>
+                                <li>الأوراق التجارية ( الشيكات - السند لأمر - سندات السحب ) من أنواع التوثيق المشروع للدين بالكتابة.</li>
+                                <li>حسم ( خصم ) الأوراق التجارية غير جائز شرعاً، لأنه يؤول إلى ربا النسيئة المحرم.
+                                    <div class="sub-point">الشيكات من الديون الموجل، لأجل تحصيله، سواء أكانت بطلب الدائن أو المدين ( مع وتعتبر) جائزة شرعاً. لا تدخل في الربا المحرم إذا لم تكن بناء على اتفاق مسبق، وقد ثبتت العلاقة بين الدائن والمدين ثابتة، فإذا دخل بينهما طرف ثالث لم تجز، فإنها تأخذ عندئذ حكم حسم الأوراق التجارية.</div>
+                                </li>
+                                <li>يجوز اتفاق المتعاقدين على حلول سائر الأقساط عند امتناع المدين عن وفاء أي قسط من الأقساط المستحقة عليه ما لم يكن معسراً.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- قسم التفاعل والمشاركة -->
+                <div class="interaction-section">
+                    <div class="share-opinion">
+                        <p>شارك في إبداء رأي فقهي أو ملاحظة أو تصويب خطأ أو تعليق على مادة منشورة...</p>
+                        <p>شارك في موسوعة قانونية تزيد كل يوم بمشاركة ذوي الاختصاص...</p>
+                        <button class="report-btn">شارك بتعقيب أو ملاحظة أو إبلاغ عن خطأ</button>
+                    </div>
+                    
+                    <div class="protection-actions">
+                        <h3>تجاوز الحماية</h3>
+                        <div class="action-buttons">
+                            <button class="copy-btn">نسخ</button>
+                            <button class="print-btn">طباعة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+           <!-- Footer Social - Redesigned to match image -->
+           <div style="display: flex; align-items: center; justify-content: space-between; background-color: #f5f5f5; border-radius: 30px; padding: 10px 20px; margin: 40px 0 20px;">
+            <!-- Social Media Sharing - Left Side -->
+                <!-- Last Update - Right Side -->
+                <div style="display: flex; align-items: center; color: #666; font-size: 14px;">
+                    <span>آخر تعديل 19 ذو القعدة 1444</span>
+                    <img src="../assets/icons/clock 1.png" alt="الساعة" width="16" height="16" style="margin-right: 5px;">
+                </div>
+                       <!-- Rating - Middle Right -->
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <span style="font-size: 14px; color: #333;">تقييم المحتوى</span>
+                <div style="display: flex; gap: 2px;">
+                    <img src="../assets/icons/star.png" alt="نجمة غير مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star.png" alt="نجمة غير مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                </div>
+            </div>
+            <!-- Followers Count - Middle -->
+            <div style="display: flex; align-items: center; color: #333; font-size: 14px;">
+                <span style="font-weight: bold; margin-left: 5px;">عدد المتابعين:</span>
+                <span>9130</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <span style="margin-right: 5px; font-size: 14px; color: #00a19a;">شارك على</span>
+                <a href="#" style="color: #00a19a;">                
+                    <img src="../assets/icons/f3.png" alt="فيسبوك" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/in2.png" alt="انستغرام" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/x2.png" alt="تويتر" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/ln1.png" alt="لينكد إن" width="26" height="26">
+                </a>
+            </div>   
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <!-- Main Footer -->
+        <div class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column about-column">
+                        <h3 class="footer-title">عن محامي المملكة</h3>
+                        <p class="footer-text">البوابة القانونية الشاملة للمحامين والمستشارين القانونيين بالسعودية</p>
+                        <p class="footer-text">العربية السعوية</p>
+                    </div>
+                    <div class="footer-column links-column">
+                        <h3 class="footer-title">روابط سريعة</h3>
+                        <ul class="footer-links">
+                            <li><a href="../index.html">الرئيسية</a></li>
+                            <li><a href="#">عن الموقع</a></li>
+                            <li><a href="#">الأسئلة الشائعة</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column contact-column">
+                        <h3 class="footer-title">تواصل معنا</h3>
+                        <p class="contact-item email">info@mohamoon-ksa.com</p>
+                        <p class="contact-item phone">الهاتف: xxx xxxx 11 966+</p>
+                        <p class="contact-item address">العنوان: الرياض, المملكة العربية السعودية</p>
+                    </div>
+                    <div class="footer-column social-column">
+                        <h3 class="footer-title">تابعنا</h3>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/facebook.png" alt="فيس بوك"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/insta.png" alt="إنستجرام"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/x.png" alt="تويتر"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/ln.png" alt="لينكد إن"></a>
+                        </div>
+                        <a href="#" class="contact-btn">اتصل بنا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright-text">جميع الحقوق محفوظة © 2024 محامي المملكة</div>
+                <div class="footer-bottom-links">
+                    <a href="../pages/terms.html">الشروط والأحكام</a> | 
+                    <a href="#">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/settings.js"></script>
+    <script src="../scripts/zoom-text.js"></script>
+    <script src="../scripts/pages-login-modal.js"></script>
+    <script src="../scripts/icons-functionality.js"></script>
+
+    <!-- نافذة تسجيل الدخول المنبثقة -->
+    <div class="login-modal" id="login-modal">
+        <div class="login-modal-content">
+            <div class="login-modal-header">
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="login-modal-body">
+                <h2 class="login-title">الوصول السريع</h2>
+                
+                <div class="phone-login-section">
+                    <div class="phone-input-row">
+                        <div class="country-code-select">
+                            <div class="country-flag">
+                                <img src="../assets/icons/flag-for-flag-egypt-svgrepo-com 1.png" alt="مصر" class="flag-img">
+                            </div>
+                            <span class="code">+20</span>
+                        </div>
+                        <div class="phone-field">
+                            <input type="tel" placeholder="رقم الهاتف" class="login-input">
+                        </div>
+                    </div>
+                    
+                    <button class="send-code-btn">ارسل رمز التحقق</button>
+                    <p class="error-msg">يجب إدخال رقم الهاتف</p>
+                </div>
+                
+                <div class="separator">
+                    <span>أو يمكنك تسجيل الدخول باسم المستخدم وكلمة المرور</span>
+                </div>
+                
+                <div class="credentials-login-section">
+                    <input type="text" placeholder="اسم المستخدم" class="login-input">
+                    <div class="password-field">
+                        <input type="password" placeholder="كلمة المرور" class="login-input">
+                        <button class="toggle-password">
+                            <img src="../assets/icons/eye.png" alt="إظهار" class="eye-icon">
+                        </button>
+                    </div>
+                    <button class="login-submit-btn">دخول</button>
+                    <a href="#" class="forgot-password">هل نسيت كلمة السر؟</a>
+                </div>
+                
+                <div class="help-section">
+                    <a href="#" class="help-btn customer-service">
+                        <span>خدمة العملاء</span>
+                        <img src="../assets/icons/support.png" alt="خدمة" class="help-icon">
+                    </a>
+                    <a href="#" class="help-btn self-help">
+                        <span>المساعدة الذاتية</span>
+                        <img src="../assets/icons/message-search.png" alt="مساعدة" class="help-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- جافاسكريبت للقسم القابل للطي ووظائف الأزرار -->    
+    <script src="../scripts/installment-functions.js"></script>
+
+    <script src="../scripts/font-resize.js"></script>
+</body>
+</html>

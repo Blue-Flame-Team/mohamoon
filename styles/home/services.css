@@ -74,7 +74,6 @@
     display: flex;
     gap: 20px;
     margin-bottom: 30px;
-    position: relative;
 }
 
 /* Sidebar Menu */
@@ -83,6 +82,12 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.sidebar-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
 }
 
 .sidebar-btn {
@@ -96,53 +101,8 @@
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-}
-
-/* تنسيقات سكرول أفقي للخدمات في نسخة الموبايل */
-@media (max-width: 991px) {
-    /* تعديل على صف محتوى الخدمات */
-    .services-content {
-        flex-direction: column;
-    }
-    
-    /* تنسيق قائمة الخدمات الجانبية لتكون أفقية */
-    .sidebar-menu {
-        width: 100%;
-        flex-direction: row;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding: 10px 5px;
-        margin-bottom: 20px;
-        -webkit-overflow-scrolling: touch; /* لتحسين السكرول على نظام iOS */
-        scroll-behavior: smooth; /* لتحسين تجربة السكرول */
-        scrollbar-width: thin; /* للمتصفحات التي تدعم هذه الخاصية */
-    }
-    
-    /* إخفاء سكرول بار في بعض المتصفحات */
-    .sidebar-menu::-webkit-scrollbar {
-        height: 3px;
-    }
-    
-    .sidebar-menu::-webkit-scrollbar-thumb {
-        background-color: #00937B;
-        border-radius: 10px;
-    }
-    
-    /* تنسيق أزرار الخدمات في نسخة الموبايل */
-    .sidebar-btn {
-        flex: 0 0 auto;
-        margin-right: 10px;
-        margin-bottom: 0;
-        min-width: 150px;
-        white-space: nowrap;
-        padding: 12px 15px;
-        font-size: 14px;
-    }
-    
-    /* تعديل المحتوى الرئيسي ليأخذ كامل العرض */
-    .main-content-wrapper {
-        width: 100%;
-    }
+    width: 100%;
+    display: block;
 }
 
 .sidebar-btn:hover {
@@ -150,88 +110,47 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .sidebar-btn.active {
     background-color: #00937B;
     color: #fff;
 }
 
-/* لتنسيق شريط السلايدر */
+/* Services Slider */
 .services-slider {
+    display: flex;
+    align-items: center;
+    flex: 1;
     position: relative;
-    margin-top: 20px;
-    overflow: hidden;
 }
 
-/* أسهم التنقل */
 .slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    background-color: #f1f1f1;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 1;
-    transition: all 0.3s ease;
-}
-
-.slider-arrow.prev {
-    left: -20px;
-}
-
-.slider-arrow.next {
-    right: -20px;
+    position: absolute;
+    left: 0;
+    z-index: 2;
 }
 
 .arrow-icon {
-    font-size: 18px;
     color: #00937B;
+    font-weight: bold;
 }
 
-/* بطاقات الخدمات */
+/* Services Cards */
 .services-cards {
     display: flex;
-    gap: 15px;
-    padding: 10px 20px;
-    transition: transform 0.5s ease;
-}
-
-/* سكرول جانبي لكروت الخدمات في نسخة الموبايل */
-@media (max-width: 991px) {
-    .services-cards {
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
-        padding: 10px 15px 20px;
-        scrollbar-width: thin;
-    }
-    
-    .services-cards::-webkit-scrollbar {
-        height: 3px;
-    }
-    
-    .services-cards::-webkit-scrollbar-thumb {
-        background-color: #00937B;
-        border-radius: 10px;
-    }
-    
-    .service-card {
-        flex: 0 0 80%;
-        min-width: 250px;
-        scroll-snap-align: start;
-    }
-    
-    /* إخفاء أسهم التنقل في الموبايل */
-    .slider-arrow {
-        display: none;
-    }
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: hidden;
+    width: 100%;
+    padding: 0 15px;
 }
 
 .service-card {

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة الشائعة - محامون المملكة</title>
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- أوراق الأنماط -->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/faq/header.css">
+    <link rel="stylesheet" href="../styles/faq/footer.css">
+    <link rel="stylesheet" href="../styles/faq/main.css">
+    <link rel="stylesheet" href="../styles/faq/faq.css">
+    <link rel="stylesheet" href="../styles/login-modal.css">
+    <link rel="stylesheet" href="../styles/home/settings.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+        <div class="top-bar-content">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="محامون المملكة" class="logo-image">
+                </a>
+            </div>
+            <div class="top-elements">
+                <div class="top-icons">
+                    <!-- الأسئلة الشائعة -->
+                    <a href="faq.html" class="common-questions-link">
+                        <div class="common-questions">
+                            <span class="questions-text">الأسئلة الشائعة</span>
+                            <span class="question-mark">?</span>
+                        </div>
+                    </a>
+                    
+                    <!-- الأيقونات الرئيسية -->
+                    <div class="main-icons-group">
+                        <button class="icon-btn zoom-out-btn" onclick="changeFontSize(-10)" title="تصغير النص">
+                            <img src="../assets/icons/search-zoom-out.png" alt="تصغير">
+                        </button>
+                        <button class="icon-btn zoom-in-btn" onclick="changeFontSize(10)" title="تكبير النص">
+                            <img src="../assets/icons/search-zoom-in.png" alt="تكبير">
+                        </button>
+                        <button class="icon-btn search-btn">
+                            <img src="../assets/icons/search.png" alt="بحث">
+                        </button>
+                        <button class="icon-btn location-btn">
+                            <img src="../assets/icons/location.png" alt="الموقع">
+                        </button>
+                        <button class="icon-btn call-btn">
+                            <img src="../assets/icons/call.png" alt="اتصال">
+                        </button>
+                        
+                        <button class="icon-btn settings-toggle-btn">
+                            <img src="../assets/icons/setting-2.png" alt="الإعدادات">
+                        </button>
+                        <div class="settings-menu">
+                            <a href="#" class="settings-option contrast-option">
+                                <span>تباين</span>
+                                <i class="fas fa-eye-slash"></i>
+                            </a>
+                            <!-- قائمة خيارات التباين الفرعية -->
+                            <div class="contrast-submenu">
+                                <a href="#" class="settings-option contrast-light">
+                                    <span>تباين</span>
+                                    <i class="fas fa-eye-slash"></i>
+                                </a>
+                                <a href="#" class="settings-option contrast-dark">
+                                    <span>تباين</span>
+                                    <i class="fas fa-eye-slash"></i>
+                                </a>
+                            </div>
+                            <a href="#" class="settings-option stats-option">
+                                <span>الاحصائيات</span>
+                                <i class="fas fa-chart-line"></i>
+                            </a>
+                            <a href="#" class="settings-option logout-option">
+                                <span>خروج</span>
+                                <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-actions">
+                <button class="join-btn">إشترك معنا</button>
+                <button class="login-btn">تسجيل الدخول</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="menu-item"><a href="../index.html">الرئيسية</a></li>
+                <li class="menu-item dropdown">
+                    <a href="javascript:void(0);">نبذة عنا <img src="../assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                    <div class="dropdown-hover-area"></div>
+                    <div class="dropdown-menu">
+                        <a href="#">عن الموقع</a>
+                        <a href="#">عن الشبكة</a>
+                    </div>
+                </li>
+                <li class="menu-item dropdown">
+                    <a href="javascript:void(0);">سياساتنا <img src="../assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                    <div class="dropdown-hover-area"></div>
+                    <div class="dropdown-menu">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="../pages/terms.html">شروط الإشتراك</a>
+                    </div>
+                </li>
+                <li class="menu-item"><a href="#">جريدة أم القرى</a></li>
+                <li class="menu-item"><a href="#">خدمة الأسانيد</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">محامي المملكة</a></li>
+                <li><span>الأسئلة الشائعة</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="faq-content">
+        <div class="container">
+            <h1 class="faq-title">الأسئلة الشائعة</h1>
+            
+            <div class="orange-divider"></div>
+            
+            <p class="faq-subtitle">الأسئلة الشائعة التي ترد لقسم خدمة العملاء ...</p>
+
+            <div class="faq-items">
+                <!-- الأسئلة والأجوبة -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-number">(1)</span>
+                        <p>ماذا لو أراد إعادة إرفاق الدفع والفواتير من الموسوعة؟</p>
+                    </div>
+                    <div class="faq-answer">
+                        <p>تم إنشاء وإطلاق موسوعة شاملة البحث والفواتير للوثائق، للانات جامعة بإمكانكم الاطلاع عليها من خلال الرابط التالي : <a href="#" class="answer-link">منصة الفواتير والدفع</a></p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-number">(2)</span>
+                        <p>هل يمكن البحث بقاعدة الأحكام القضائية؟</p>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يتم البحث من خلال قسمة الحكم وتحديد المحكمة - إلا أنه لا تسمح كافة محاكمكم الذهنية من خلال التواصل مع خدمة العملاء (on line) عبر مراسلتنا على بريد <a href="mailto:contact@mohamoon.com" class="answer-link">contact@mohamoon.com</a></p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-number">(3)</span>
+                        <p>هل هناك اشتراك شهري؟</p>
+                    </div>
+                    <div class="faq-answer">
+                        <p>الاشتراك في موسوعات شبكة المحامين العرب سنوي ولا يوجد خيار اشتراك شهري.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-number">(4)</span>
+                        <p>هل يوجد عروض على الاشتراكات؟</p>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم ويمكنكم التواصل مع القسم المختص لمعرفة العروض المتاحة في الفترة الحالية.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-number">(5)</span>
+                        <p>هل قيمة الاشتراك للحصول على النشرة القانونية؟</p>
+                    </div>
+                    <div class="faq-answer">
+                        <p>النشرة القانونية هي خدمة مجانية لعملاء لا تحتاج إلى أي اشتراك مدفوع.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-number">(6)</span>
+                        <p>كيف أستطيع الاشتراك في خدمة النشرة القانونية؟</p>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكنكم الاشتراك في خدمة النشرة القانونية من خلال الانضمام إلى جروب الواتس أب على رقم (966533547275)</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-number">(7)</span>
+                        <p>أعاني عند الضغط على أيقونة ه للإنتقال إلى نص التنظيم للتنظيم على اللغة الإنجليزية وينتقل على النص؟</p>
+                    </div>
+                    <div class="faq-answer">
+                        <p>الاحتمال يكون أن التنظيم ليس له نسخة إنجليزية ويمكن الحصول عليها من خلال التواصل، ويمكن العمل على ربط التنظيم بالوثيقة على موقع التشريعات الخليجية باللغة الإنجليزية.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-number">(8)</span>
+                        <p>هل يمكن الحصول على نسخة من التشريع من خلال الاشتراك التجريبي؟</p>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يتيح الاشتراك التجريبي الاطلاع ولا يتيح النسخ أو الطباعة.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-number">(9)</span>
+                        <p>لماذا نطلب علي الدخول ورقم هاتف الموسوعات؟</p>
+                    </div>
+                    <div class="faq-answer">
+                        <p>لإجراء تحقق أكبر من هوية المستخدم، عند حالات الدخول غير المصرح، وعدم حماية توقيع الإلكتروني وكذلك للتأكد من هوية مستخدم الحساب، ويحظر حالة عدم تسجيل هاتفك على الجوال.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-number">(10)</span>
+                        <p>خطوات الاشتراك في المكتبة في حالة الرغبة في تمديد الرابط إذا لم يتم إرسال عقد الاتفاق على التمويل، فما السبب؟</p>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يتم الاستفسار عن ذلك الرجوع للقسم المختص للتواصل معه مباشرة.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-number">(11)</span>
+                        <p>لماذا لا أتمكن من الاطلاع على نص التشريع من خلال موقع كشاف الجريدة الرسمية؟</p>
+                    </div>
+                    <div class="faq-answer">
+                        <p>الموقع يتيح الاطلاع فقط على عناوين التشريعات الصادرة بالجريدة الرسمية والخدمة بالاشتراك يمكنكم الاشتراك للاستفادة من الخدمات.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-number">(12)</span>
+                        <p>هل يمكن البحث بعدد الجريدة الرسمية؟</p>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم يمكن البحث بعدد الجريدة الرسمية من خلال موقع كشاف الجريدة الرسمية ويمكنكم تحميل عناوين التشريعات الواردة بالعدد .. أو الاطلاع على نص التشريع بمختلف الاشتراك.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="orange-divider"></div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+           <!-- Footer Social - Redesigned to match image -->
+           <div style="display: flex; align-items: center; justify-content: space-between; background-color: #f5f5f5; border-radius: 30px; padding: 10px 20px; margin: 40px 0 20px;">
+            <!-- Social Media Sharing - Left Side -->
+                <!-- Last Update - Right Side -->
+                <div style="display: flex; align-items: center; color: #666; font-size: 14px;">
+                    <span>آخر تعديل 19 ذو القعدة 1444</span>
+                    <img src="../assets/icons/clock 1.png" alt="الساعة" width="16" height="16" style="margin-right: 5px;">
+                </div>
+                       <!-- Rating - Middle Right -->
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <span style="font-size: 14px; color: #333;">تقييم المحتوى</span>
+                <div style="display: flex; gap: 2px;">
+                    <img src="../assets/icons/star.png" alt="نجمة غير مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star.png" alt="نجمة غير مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                </div>
+            </div>
+            <!-- Followers Count - Middle -->
+            <div style="display: flex; align-items: center; color: #333; font-size: 14px;">
+                <span style="font-weight: bold; margin-left: 5px;">عدد المتابعين:</span>
+                <span>9130</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <span style="margin-right: 5px; font-size: 14px; color: #00a19a;">شارك على</span>
+                <a href="#" style="color: #00a19a;">                
+                    <img src="../assets/icons/f3.png" alt="فيسبوك" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/in2.png" alt="انستغرام" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/x2.png" alt="تويتر" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/ln1.png" alt="لينكد إن" width="26" height="26">
+                </a>
+            </div>   
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <!-- Main Footer -->
+        <div class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column about-column">
+                        <h3 class="footer-title">عن محامي المملكة</h3>
+                        <p class="footer-text">البوابة القانونية الشاملة للمحامين والمستشارين القانونيين بالسعودية</p>
+                        <p class="footer-text">العربية السعوية</p>
+                    </div>
+                    <div class="footer-column links-column">
+                        <h3 class="footer-title">روابط سريعة</h3>
+                        <ul class="footer-links">
+                            <li><a href="../index.html">الرئيسية</a></li>
+                            <li><a href="#">عن الموقع</a></li>
+                            <li><a href="#">الأسئلة الشائعة</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column contact-column">
+                        <h3 class="footer-title">تواصل معنا</h3>
+                        <p class="contact-item email">info@mohamoon-ksa.com</p>
+                        <p class="contact-item phone">الهاتف: xxx xxxx 11 966+</p>
+                        <p class="contact-item address">العنوان: الرياض, المملكة العربية السعودية</p>
+                    </div>
+                    <div class="footer-column social-column">
+                        <h3 class="footer-title">تابعنا</h3>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/facebook.png" alt="فيس بوك"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/insta.png" alt="إنستجرام"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/x.png" alt="تويتر"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/ln.png" alt="لينكد إن"></a>
+                        </div>
+                        <a href="#" class="contact-btn">اتصل بنا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright-text">جميع الحقوق محفوظة © 2024 محامي المملكة</div>
+                <div class="footer-bottom-links">
+                    <a href="../pages/terms.html">الشروط والأحكام</a> | 
+                    <a href="#">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/settings.js"></script>
+    <script src="../scripts/icons-functionality.js"></script>
+    <script src="../scripts/settings.js"></script>
+
+  
+    <!-- نافذة تسجيل الدخول المنبثقة -->
+    <div class="login-modal" id="login-modal">
+        <div class="login-modal-content">
+            <div class="login-modal-header">
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="login-modal-body">
+                <h2 class="login-title">الوصول السريع</h2>
+                
+                <div class="phone-login-section">
+                    <div class="phone-input-row">
+                        <div class="country-code-select">
+                            <div class="country-flag">
+                                <img src="../assets/icons/flag-for-flag-egypt-svgrepo-com 1.png" alt="مصر" class="flag-img">
+                            </div>
+                            <span class="code">+20</span>
+                        </div>
+                        <div class="phone-field">
+                            <input type="tel" placeholder="رقم الهاتف" class="login-input">
+                        </div>
+                    </div>
+                    
+                    <button class="send-code-btn">ارسل رمز التحقق</button>
+                    <p class="error-msg">يجب إدخال رقم الهاتف</p>
+                </div>
+                
+                <div class="separator">
+                    <span>أو يمكنك تسجيل الدخول باسم المستخدم وكلمة المرور</span>
+                </div>
+                
+                <div class="credentials-login-section">
+                    <input type="text" placeholder="اسم المستخدم" class="login-input">
+                    <div class="password-field">
+                        <input type="password" placeholder="كلمة المرور" class="login-input">
+                        <button class="toggle-password">
+                            <img src="../assets/icons/eye.png" alt="إظهار" class="eye-icon">
+                        </button>
+                    </div>
+                    <button class="login-submit-btn">دخول</button>
+                    <a href="#" class="forgot-password">هل نسيت كلمة السر؟</a>
+                </div>
+                
+                <div class="help-section">
+                    <a href="#" class="help-btn customer-service">
+                        <span>خدمة العملاء</span>
+                        <img src="../assets/icons/support.png" alt="خدمة" class="help-icon">
+                    </a>
+                    <a href="#" class="help-btn self-help">
+                        <span>المساعدة الذاتية</span>
+                        <img src="../assets/icons/message-search.png" alt="مساعدة" class="help-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/pages-login-modal.js"></script>
+
+    <script src="../scripts/font-resize.js"></script>
+</body>
+</html>
+

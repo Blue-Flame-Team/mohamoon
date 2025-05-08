@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب الإشتراك - محامون المملكة</title>
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    
+    <!-- أوراق الأنماط -->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/subscribe/header.css">
+    <link rel="stylesheet" href="../styles/subscribe/footer.css">
+    <link rel="stylesheet" href="../styles/subscribe/main.css">
+    <link rel="stylesheet" href="../styles/faq/faq.css">
+    <link rel="stylesheet" href="../styles/login-modal.css">
+    <link rel="stylesheet" href="../styles/home/settings.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+        <div class="top-bar-content">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="محامون المملكة" class="logo-image">
+                </a>
+            </div>
+            <div class="top-elements">
+                <div class="top-icons">
+                    <!-- الأسئلة الشائعة -->
+                    <a href="faq.html" class="common-questions-link">
+                        <div class="common-questions">
+                            <span class="questions-text">الأسئلة الشائعة</span>
+                            <span class="question-mark">?</span>
+                        </div>
+                    </a>
+                    
+                    <!-- الأيقونات الرئيسية -->
+                    <div class="main-icons-group">
+                        <button class="icon-btn zoom-out-btn" onclick="changeFontSize(-10)" title="تصغير النص">
+                            <img src="../assets/icons/search-zoom-out.png" alt="تصغير">
+                        </button>
+                        <button class="icon-btn zoom-in-btn" onclick="changeFontSize(10)" title="تكبير النص">
+                            <img src="../assets/icons/search-zoom-in.png" alt="تكبير">
+                        </button>
+                        <button class="icon-btn search-btn">
+                            <img src="../assets/icons/search.png" alt="بحث">
+                        </button>
+                        <button class="icon-btn location-btn">
+                            <img src="../assets/icons/location.png" alt="الموقع">
+                        </button>
+                        <button class="icon-btn call-btn">
+                            <img src="../assets/icons/call.png" alt="اتصال">
+                        </button>
+                        
+                        <button class="icon-btn settings-toggle-btn">
+                            <img src="../assets/icons/setting-2.png" alt="الإعدادات">
+                        </button>
+                        <div class="settings-menu">
+                            <a href="#" class="settings-option contrast-option">
+                                <span>تباين</span>
+                                <i class="fas fa-eye-slash"></i>
+                            </a>
+                            <!-- قائمة خيارات التباين الفرعية -->
+                            <div class="contrast-submenu">
+                                <a href="#" class="settings-option contrast-light">
+                                    <span>تباين</span>
+                                    <i class="fas fa-eye-slash"></i>
+                                </a>
+                                <a href="#" class="settings-option contrast-dark">
+                                    <span>تباين</span>
+                                    <i class="fas fa-eye-slash"></i>
+                                </a>
+                            </div>
+                            <a href="#" class="settings-option stats-option">
+                                <span>الاحصائيات</span>
+                                <i class="fas fa-chart-line"></i>
+                            </a>
+                            <a href="#" class="settings-option logout-option">
+                                <span>خروج</span>
+                                <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-actions">
+                <button class="join-btn">إشترك معنا</button>
+                <button class="login-btn">تسجيل الدخول</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="menu-item"><a href="../index.html">الرئيسية</a></li>
+                <li class="menu-item dropdown">
+                    <a href="javascript:void(0);">نبذة عنا <img src="../assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                    <div class="dropdown-hover-area"></div>
+                    <div class="dropdown-menu">
+                        <a href="#">عن الموقع</a>
+                        <a href="#">عن الشبكة</a>
+                    </div>
+                </li>
+                <li class="menu-item dropdown">
+                    <a href="javascript:void(0);">سياساتنا <img src="../assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                    <div class="dropdown-hover-area"></div>
+                    <div class="dropdown-menu">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="../pages/terms.html">شروط الإشتراك</a>
+                    </div>
+                </li>
+                <li class="menu-item"><a href="#">جريدة أم القرى</a></li>
+                <li class="menu-item"><a href="#">خدمة الأسانيد</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">محامي المملكة</a></li>
+                <li><span>الإحصائيات</span></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <main class="subscribe-content">
+        <div class="container">
+            <h1 class="subscribe-title">طلب الاشتراك</h1>
+            
+            <form class="subscribe-form" style="width: 1200px !important; height: 855px !important; margin-right: 0 !important; margin-left: 0 !important; box-sizing: border-box !important;">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="full-name" class="form-control" placeholder="الاسم الكامل / اسم الجهة">
+                    </div>
+                    <div class="form-group">
+                        <div class="select-wrapper">
+                            <select id="subscription-type" class="form-control">
+                                <option value="" selected disabled>نوع الاشتراك</option>
+                                <option value="individual">فردي</option>
+                                <option value="corporate">مؤسسي</option>
+                            </select>
+                            <div class="arrow-icon"></div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="form-group">
+                    <input type="email" id="email" class="form-control" placeholder="البريد الإلكتروني">
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" id="username" class="form-control" placeholder="اسم المستخدم">
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" id="password" class="form-control" placeholder="كلمة السر">
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" id="confirm-password" class="form-control" placeholder="تأكيد كلمة السر">
+                </div>
+                
+
+                <div class="form-row phone-row">
+
+                      
+                    <div class="form-group phone-input">
+                        <input type="tel" id="phone" class="form-control" placeholder="رقم الهاتف">
+                    </div>
+
+                    <div class="form-group country-code">
+                        <div class="country-select">
+                            <div class="flag-circle">
+                                <img src="../assets/icons/flag-for-flag-egypt-svgrepo-com 1.png" alt="مصر" class="flag-img">
+                            </div>
+                            <svg class="heart-icon" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 17C9.71527 17 9.44077 16.9015 9.22684 16.7224C8.41888 16.0475 7.63992 15.4132 6.95267 14.8536L6.94916 14.8507C4.93423 13.2102 3.19427 11.7935 1.98364 10.3979C0.630341 8.83585 0 7.35939 0 5.74649C0 4.17958 0.563507 2.72422 1.58661 1.66195C2.62192 0.587903 4.04251 0 5.58716 0C6.74164 0 7.79892 0.328199 8.72955 0.975406C9.19922 1.3023 9.62494 1.69488 10 2.14286C10.3752 1.69488 10.8008 1.3023 11.2706 0.975406C12.2012 0.328199 13.2585 0 14.413 0C15.9575 0 17.3782 0.587903 18.4135 1.66195C19.4366 2.72422 20 4.17958 20 5.74649C20 7.35939 19.3698 8.83585 18.0165 10.3978C16.8059 11.7935 15.0661 13.2101 13.0515 14.8504C12.363 15.4132 11.5828 16.0487 10.773 16.7238C10.5592 16.9015 10.2846 17 10 17Z" fill="#657685"/>
+                            </svg>
+                            <span class="code">+20</span>
+                        </div>
+                    </div>
+
+                  
+                </div>
+                
+                <h2 class="additional-services-title">خدمات إضافية</h2>
+                
+                <div class="form-check">
+                    <input type="checkbox" id="legal-updates" class="form-check-input" checked>
+                    <label for="legal-updates" class="form-check-label">خدمة الأسانيد القانونية</label>
+                </div>
+
+                <div class="form-group">
+                    <div class="select-wrapper">
+                        <select id="payment-method" class="form-control">
+                            <option value="" selected disabled>نوع الاشتراك</option>
+                            <option value="monthly">شهري</option>
+                            <option value="annual">سنوي</option>
+                        </select>
+                        <div class="arrow-icon"></div>
+                    </div>
+                </div>
+             
+                
+                <div class="form-check terms-check">
+                    <input type="checkbox" id="terms" class="form-check-input" checked>
+                    <label for="terms" class="form-check-label">أوافق على إتفاقية الإستخدام و سياسة الخصوصية معاً</label>
+                </div>
+                
+                <button type="submit" class="submit-btn">تسجيل</button>
+            </form>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+      
+               <!-- Footer Social - Redesigned to match image -->
+               <div style="display: flex; align-items: center; justify-content: space-between; background-color: #f5f5f5; border-radius: 30px; padding: 10px 20px; margin: 40px 0 20px;">
+                <!-- Social Media Sharing - Left Side -->
+                    <!-- Last Update - Right Side -->
+                    <div style="display: flex; align-items: center; color: #666; font-size: 14px;">
+                        <span>آخر تعديل 19 ذو القعدة 1444</span>
+                        <img src="../assets/icons/clock 1.png" alt="الساعة" width="16" height="16" style="margin-right: 5px;">
+                    </div>
+                           <!-- Rating - Middle Right -->
+                <div style="display: flex; align-items: center; gap: 5px;">
+                    <span style="font-size: 14px; color: #333;">تقييم المحتوى</span>
+                    <div style="display: flex; gap: 2px;">
+                        <img src="../assets/icons/star.png" alt="نجمة غير مفعلة" width="16" height="16">
+                        <img src="../assets/icons/star.png" alt="نجمة غير مفعلة" width="16" height="16">
+                        <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                        <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                        <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                    </div>
+                </div>
+                <!-- Followers Count - Middle -->
+                <div style="display: flex; align-items: center; color: #333; font-size: 14px;">
+                    <span style="font-weight: bold; margin-left: 5px;">عدد المتابعين:</span>
+                    <span>9130</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 5px;">
+                    <span style="margin-right: 5px; font-size: 14px; color: #00a19a;">شارك على</span>
+                    <a href="#" style="color: #00a19a;">                
+                        <img src="../assets/icons/f3.png" alt="فيسبوك" width="26" height="26">
+                    </a>
+                    <a href="#" style="color: #00a19a;">
+                        <img src="../assets/icons/in2.png" alt="انستغرام" width="26" height="26">
+                    </a>
+                    <a href="#" style="color: #00a19a;">
+                        <img src="../assets/icons/x2.png" alt="تويتر" width="26" height="26">
+                    </a>
+                    <a href="#" style="color: #00a19a;">
+                        <img src="../assets/icons/ln1.png" alt="لينكد إن" width="26" height="26">
+                    </a>
+                </div>   
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <!-- Main Footer -->
+            <div class="main-footer">
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-column about-column">
+                            <h3 class="footer-title">عن محامي المملكة</h3>
+                            <p class="footer-text">البوابة القانونية الشاملة للمحامين والمستشارين القانونيين بالسعودية</p>
+                            <p class="footer-text">العربية السعوية</p>
+                        </div>
+                        <div class="footer-column links-column">
+                            <h3 class="footer-title">روابط سريعة</h3>
+                            <ul class="footer-links">
+                                <li><a href="../index.html">الرئيسية</a></li>
+                                <li><a href="#">عن الموقع</a></li>
+                                <li><a href="#">الأسئلة الشائعة</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column contact-column">
+                            <h3 class="footer-title">تواصل معنا</h3>
+                            <p class="contact-item email">info@mohamoon-ksa.com</p>
+                            <p class="contact-item phone">الهاتف: xxx xxxx 11 966+</p>
+                            <p class="contact-item address">العنوان: الرياض, المملكة العربية السعودية</p>
+                        </div>
+                        <div class="footer-column social-column">
+                            <h3 class="footer-title">تابعنا</h3>
+                            <div class="footer-social">
+                                <a href="#" class="footer-social-icon"><img src="../assets/icons/facebook.png" alt="فيس بوك"></a>
+                                <a href="#" class="footer-social-icon"><img src="../assets/icons/insta.png" alt="إنستجرام"></a>
+                                <a href="#" class="footer-social-icon"><img src="../assets/icons/x.png" alt="تويتر"></a>
+                                <a href="#" class="footer-social-icon"><img src="../assets/icons/ln.png" alt="لينكد إن"></a>
+                            </div>
+                            <a href="#" class="contact-btn">اتصل بنا</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+           
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="copyright-text">جميع الحقوق محفوظة © 2024 محامي المملكة</div>
+                    <div class="footer-bottom-links">
+                        <a href="../pages/terms.html">الشروط والأحكام</a> | 
+                        <a href="#">سياسة الخصوصية</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <script src="../scripts/main.js"></script>
+        <script src="../scripts/settings.js"></script>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/settings.js"></script>
+
+    <!-- نافذة تسجيل الدخول المنبثقة -->
+    <div class="login-modal" id="login-modal">
+        <div class="login-modal-content">
+            <div class="login-modal-header">
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="login-modal-body">
+                <h2 class="login-title">الوصول السريع</h2>
+                
+                <div class="phone-login-section">
+                    <div class="phone-input-row">
+                        <div class="country-code-select">
+                            <div class="country-flag">
+                                <img src="../assets/icons/flag-for-flag-egypt-svgrepo-com 1.png" alt="مصر" class="flag-img">
+                            </div>
+                            <span class="code">+20</span>
+                        </div>
+                        <div class="phone-field">
+                            <input type="tel" placeholder="رقم الهاتف" class="login-input">
+                        </div>
+                    </div>
+                    
+                    <button class="send-code-btn">ارسل رمز التحقق</button>
+                    <p class="error-msg">يجب إدخال رقم الهاتف</p>
+                </div>
+                
+                <div class="separator">
+                    <span>أو يمكنك تسجيل الدخول باسم المستخدم وكلمة المرور</span>
+                </div>
+                
+                <div class="credentials-login-section">
+                    <input type="text" placeholder="اسم المستخدم" class="login-input">
+                    <div class="password-field">
+                        <input type="password" placeholder="كلمة المرور" class="login-input">
+                        <button class="toggle-password">
+                            <img src="../assets/icons/eye.png" alt="إظهار" class="eye-icon">
+                        </button>
+                    </div>
+                    <button class="login-submit-btn">دخول</button>
+                    <a href="#" class="forgot-password">هل نسيت كلمة السر؟</a>
+                </div>
+                
+                <div class="help-section">
+                    <a href="#" class="help-btn customer-service">
+                        <span>خدمة العملاء</span>
+                        <img src="../assets/icons/support.png" alt="خدمة" class="help-icon">
+                    </a>
+                    <a href="#" class="help-btn self-help">
+                        <span>المساعدة الذاتية</span>
+                        <img src="../assets/icons/message-search.png" alt="مساعدة" class="help-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/pages-login-modal.js"></script>
+
+
+    <script src="../scripts/font-resize.js"></script>
+</body>
+</html>
+

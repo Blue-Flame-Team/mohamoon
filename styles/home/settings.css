@@ -1,0 +1,231 @@
+/* تنسيقات قائمة الإعدادات والتباين */
+
+.settings-menu {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 1000;
+    top: 50px;
+    right: 0;
+    width: 180px;
+    overflow: hidden;
+}
+
+.settings-menu.active {
+    display: block;
+}
+
+.theme-toggle-main, .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d9488;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-main:hover, .theme-toggle:hover {
+    background-color: #0a776b;
+}
+
+.theme-toggle-main img, .theme-toggle img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.theme-options {
+    display: none;
+    flex-direction: column;
+}
+
+.theme-options.active {
+    display: flex;
+}
+
+.theme-toggle-light {
+    background-color: #fff;
+    color: #0d9488;
+    border: 1px solid #0d9488;
+}
+
+.theme-toggle-dark {
+    background-color: #121212;
+    color: #0d9488;
+}
+
+/* Estilos para el menú de configuraciones */
+.settings-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 200px;
+    padding: 10px;
+    display: none;
+}
+
+.settings-toggle-btn {
+    position: relative;
+}
+
+.settings-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin: 5px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.contrast-option {
+    background-color: #00a59a;
+}
+
+.stats-option {
+    background-color: #00bdb6;
+}
+
+.logout-option {
+    background-color: #e05d44;
+}
+
+.settings-option span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.settings-option i {
+    font-size: 18px;
+}
+
+/* Estilos adicionales para la visualización del menú */
+.settings-menu.show {
+    display: block;
+}
+
+/* Estilos para el submenú de contraste */
+.contrast-submenu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.contrast-submenu.show {
+    display: flex;
+}
+
+.contrast-light {
+    background-color: #00a59a;
+}
+
+.contrast-dark {
+    background-color: #000;
+}
+
+/* نمط الوضع الداكن - تبديل المتغيرات */
+body:not(.home-page).dark-mode {
+    /* تحويل جميع الألوان الخضراء بدرجاتها المختلفة إلى اللون الأسود */
+    --primary-color: #000000 !important;
+    --secondary-color: #000000 !important;
+    --dark-blue: #000000 !important;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body:not(.home-page).dark-mode .main-content,
+body:not(.home-page).dark-mode .content-area {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* الناف بار والتوب بار لا يتأثران */
+body.dark-mode .top-bar,
+body.dark-mode .navbar {
+    background: transparent;
+}
+
+/* تحويل جميع الألوان الخضراء بدرجاتها المختلفة إلى اللون الأسود */
+body:not(.home-page).dark-mode [style*="#00937B"],
+body:not(.home-page).dark-mode [style*="#00937b"],
+body:not(.home-page).dark-mode [style*="#17a891"],
+body:not(.home-page).dark-mode [style*="#148f7c"],
+body:not(.home-page).dark-mode [style*="#00827a"],
+body:not(.home-page).dark-mode [style*="#00a19a"],
+body:not(.home-page).dark-mode [style*="#24516c"],
+body:not(.home-page).dark-mode [style*="#0d9488"],
+body:not(.home-page).dark-mode [style*="rgb(0, 147, 123)"],
+body:not(.home-page).dark-mode [style*="rgb(23, 168, 145)"],
+body:not(.home-page).dark-mode [style*="rgb(20, 143, 124)"],
+body:not(.home-page).dark-mode [style*="rgb(0, 130, 122)"],
+body:not(.home-page).dark-mode [style*="rgb(0, 161, 154)"],
+body:not(.home-page).dark-mode [style*="rgb(13, 148, 136)"],
+body:not(.home-page).dark-mode [style*="teal"],
+body:not(.home-page).dark-mode [style*="green"] {
+    color: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* نمط اللون الأسود في CSS */
+body:not(.home-page).dark-mode .main-footer,
+body:not(.home-page).dark-mode .teal-color,
+body:not(.home-page).dark-mode .teal-bg,
+body:not(.home-page).dark-mode .green-color,
+body:not(.home-page).dark-mode .green-bg,
+body:not(.home-page).dark-mode [class*="teal"],
+body:not(.home-page).dark-mode [class*="green"],
+body:not(.home-page).dark-mode .theme-color,
+body:not(.home-page).dark-mode .btn-primary,
+body:not(.home-page).dark-mode .main-heading,
+body:not(.home-page).dark-mode .section-title,
+body:not(.home-page).dark-mode .card-header,
+body:not(.home-page).dark-mode .nav-link.active,
+body:not(.home-page).dark-mode .theme-bg {
+    color: #FFFFFF !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* نمط الوضع الفاتح - تبديل المتغيرات */
+body:not(.home-page).light-mode {
+    --black: #17a891 !important;
+}
+
+body:not(.home-page).light-mode *[style*="black"],
+body:not(.home-page).light-mode *[style*="#000000"],
+body:not(.home-page).light-mode *[style*="rgb(0, 0, 0)"],
+body:not(.home-page).light-mode *[style*="rgb(0,0,0)"] {
+    color: rgb(0, 147, 123) !important;
+    background-color: rgb(0, 147, 123) !important;
+    border-color: rgb(0, 147, 123) !important;
+}
+
+/* نمط اللون الأسود في CSS */
+body:not(.home-page).light-mode .black-bg,
+body:not(.home-page).light-mode .btn-dark,
+body:not(.home-page).light-mode .dark-section,
+body:not(.home-page).light-mode .dark-card,
+body:not(.home-page).light-mode .footer,
+body:not(.home-page).light-mode .black-text {
+    color: #FFFFFF !important;
+    background-color: rgb(0, 147, 123) !important;
+    border-color: rgb(0, 147, 123) !important;
+}

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض الأحكام القضائية - محامون المملكة</title>
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- أوراق الأنماط -->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/judgments-display/header.css">
+    <link rel="stylesheet" href="../styles/judgments-display/footer.css">
+    <link rel="stylesheet" href="../styles/login-modal.css">
+    <link rel="stylesheet" href="../styles/home/settings.css">
+    <link rel="stylesheet" href="../styles/subpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+        <div class="top-bar-content">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="محامون المملكة" class="logo-image">
+                </a>
+            </div>
+            <div class="top-elements">
+                <div class="top-icons">
+                    <!-- الأسئلة الشائعة -->
+                    <a href="faq.html" class="common-questions-link">
+                        <div class="common-questions">
+                            <span class="questions-text">الأسئلة الشائعة</span>
+                            <span class="question-mark">?</span>
+                        </div>
+                    </a>
+                    
+                    <!-- الأيقونات الرئيسية -->
+                    <div class="main-icons-group">
+                        <button class="icon-btn zoom-out-btn" onclick="changeFontSize(-10)" title="تصغير النص">
+                            <img src="../assets/icons/search-zoom-out.png" alt="تصغير">
+                        </button>
+                        <button class="icon-btn zoom-in-btn" onclick="changeFontSize(10)" title="تكبير النص">
+                            <img src="../assets/icons/search-zoom-in.png" alt="تكبير">
+                        </button>
+                        <button class="icon-btn search-btn">
+                            <img src="../assets/icons/search.png" alt="بحث">
+                        </button>
+                        <button class="icon-btn location-btn">
+                            <img src="../assets/icons/location.png" alt="الموقع">
+                        </button>
+                        <button class="icon-btn call-btn">
+                            <img src="../assets/icons/call.png" alt="اتصال">
+                        </button>
+                        
+                        <button class="icon-btn settings-toggle-btn">
+                            <img src="../assets/icons/setting-2.png" alt="الإعدادات">
+                        </button>
+                        <div class="settings-menu">
+                            <a href="#" class="settings-option contrast-option">
+                                <span>تباين</span>
+                                <i class="fas fa-eye-slash"></i>
+                            </a>
+                            <!-- قائمة خيارات التباين الفرعية -->
+                            <div class="contrast-submenu">
+                                <a href="#" class="settings-option contrast-light">
+                                    <span>تباين</span>
+                                    <i class="fas fa-eye-slash"></i>
+                                </a>
+                                <a href="#" class="settings-option contrast-dark">
+                                    <span>تباين</span>
+                                    <i class="fas fa-eye-slash"></i>
+                                </a>
+                            </div>
+                            <a href="#" class="settings-option stats-option">
+                                <span>الاحصائيات</span>
+                                <i class="fas fa-chart-line"></i>
+                            </a>
+                            <a href="#" class="settings-option logout-option">
+                                <span>خروج</span>
+                                <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-actions">
+                <button class="join-btn">إشترك معنا</button>
+                <button class="login-btn">تسجيل الدخول</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="menu-item"><a href="../index.html">الرئيسية</a></li>
+                <li class="menu-item dropdown">
+                    <a href="javascript:void(0);">نبذة عنا <img src="../assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                    <div class="dropdown-hover-area"></div>
+                    <div class="dropdown-menu">
+                        <a href="#">عن الموقع</a>
+                        <a href="#">عن الشبكة</a>
+                    </div>
+                </li>
+                <li class="menu-item dropdown">
+                    <a href="javascript:void(0);">سياساتنا <img src="../assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                    <div class="dropdown-hover-area"></div>
+                    <div class="dropdown-menu">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="../pages/terms.html">شروط الإشتراك</a>
+                    </div>
+                </li>
+                <li class="menu-item"><a href="#">جريدة أم القرى</a></li>
+                <li class="menu-item"><a href="#">خدمة الأسانيد</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">محامو المملكة</a></li>
+                <li><a href="#">بوابة الأحكام السعودية</a></li>
+                <li><a href="#">الهيئة العليا لتسوية الخلافات العمالية</a></li>
+                <li><a href="#">وزارة العمل / الأحكام والقرارات</a></li>
+                <li><span>القرار رقم 1200/1/431 لعام 1431هـ</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content" style="max-width: 1024px; margin: 0 auto; padding: 20px 15px;">
+        <!-- العنوان الرئيسي -->
+        <h1 style="color: #00a59a; font-size: 22px; text-align: center; margin: 20px 0; position: relative;">
+            المواد التشريعية المرتبطة بالحكم
+        </h1>
+        <div style="width: 50px; height: 3px; background-color: #ff7a45; margin: 0 auto 25px;"></div>
+        
+        <!-- قسم البحث -->
+        <div style="max-width: 490px; margin: 30px auto;">
+            <div style="position: relative; border: 1px solid #e0e0e0; border-radius: 25px; padding: 8px 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                <input type="text" placeholder="بحث الأحكام والقرارات السعودية..." style="width: 100%; border: none; padding: 8px 40px 8px 8px; outline: none; font-family: 'Tajawal', sans-serif; font-size: 14px; color: #333;">
+                <i class="fas fa-search" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #00a59a;"></i>
+            </div>
+        </div>
+
+        <!-- قسم الملاحظات -->
+        <div style="max-width: 800px; margin: 30px auto; text-align: right;">
+            <h3 style="color: #ff7a45; font-size: 18px; margin-bottom: 15px;">عميلنا العزيز:</h3>
+            <p style="color: #00a59a; line-height: 1.6; font-size: 14px; margin-bottom: 15px;">
+                رجاء العلم أنه في حالة عدم ظهور المحتوى لديك، يرجى مسح بيانات المتصفح من المتصفح الخاص بك وإعادة المحاولة، والمعذرة يسعدنا تواصلكم مباشرة مع قسم خدمة العملاء
+            </p>
+
+            <h3 style="color: #ff7a45; font-size: 18px; margin-bottom: 15px; margin-top: 30px;">عفواً:</h3>
+            <p style="color: #00a59a; line-height: 1.6; font-size: 14px; text-align: right;">
+                تعمدنا وضع بعض الحروف الزائدة أو المكررة أو بعض علامات الترقيم في مواضع خاصة في كل وثيقة بمعدل مدروس بهدف تمييز النص الخاص بالموقع... حيث أن كافة الحقوق محفوظة.
+            </p>
+        </div>
+
+        <!-- زر عرض النصوص -->
+        <div style="text-align: center; margin: 40px 0;">
+            <button id="showTextsBtn" style="background-color: #00a59a; color: white; border: none; border-radius: 5px; padding: 10px 40px; font-size: 16px; cursor: pointer;">
+                عرض النصوص
+            </button>
+        </div>
+
+        <!-- المواد التشريعية المرتبطة بالحكم (مخفية افتراضياً) -->
+        <div id="legislativeTextsSection" style="display: none; max-width: 800px; margin: 40px auto; background-color: #fff; border-radius: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 25px;">
+            <h2 style="color: #00a59a; font-size: 22px; text-align: center; margin-bottom: 20px;">المواد التشريعية المرتبطة بالحكم</h2>
+            
+            <p style="color: #555; font-size: 14px; text-align: right; margin-bottom: 20px;">النظام وفقاً لآخر تعديل - نظام العمل الصادر بالمرسوم الملكي رقم (م/51) بتاريخ 23/8/1426هـ</p>
+            
+            <div style="margin-bottom: 25px;">
+                <div style="background-color: #00a59a; color: white; padding: 12px 15px; border-top-right-radius: 8px; border-top-left-radius: 8px; text-align: center;">
+                    <span style="font-size: 16px; font-weight: 500;">مادة رقم ( 20 )</span>
+                </div>
+                <div style="border: 1px solid #e0e0e0; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; padding: 15px; text-align: right;">
+                    <p style="color: #555; line-height: 1.8; font-size: 14px;">
+                        لا يجوز لصاحب العمل أو العامل أو من يمثل عنه كشف سرية المعلومات (إطلاع طرف آخر أو أطراف أخرى على البيانات والمعلومات المتبادلة بينهما) لتحقيق كسب أو ضرر إلى أحد طرفي العلاقة أو الغير ولا يجوز الاحتفاظ على ملف خدمة العامل لأسباب أخلاقية أو عقائدية أو سياسية أو انتمائه لفئة معينة أو للانتماء إلى المنشأة العمالية أو نقابة عمالية أو تقديم شكوى أو تحقيق أو إقامة أو مجرد نظر دعوى ضد صاحب العمل أو اختصاص الجهة المختصة بتسوية الخلافات.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <div style="background-color: #00a59a; color: white; padding: 12px 15px; border-top-right-radius: 8px; border-top-left-radius: 8px; text-align: center;">
+                    <span style="font-size: 16px; font-weight: 500;">مادة رقم (74)</span>
+                </div>
+                <div style="border: 1px solid #e0e0e0; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; padding: 15px; text-align: right;">
+                    <p style="color: #555; line-height: 1.8; font-size: 14px; margin-bottom: 10px;">ينتهي عقد العمل في أي من الأحوال الآتية:</p>
+                    <ol style="color: #555; line-height: 1.8; font-size: 14px; padding-right: 20px; margin-bottom: 0;">
+                        <li>إذا اتفق الطرفان على إنهائه، بشرط أن تكون موافقة العامل كتابية.</li>
+                        <li>إذا انتهت المدة المحددة في العقد، ما لم يكن العقد قد تجدد صراحة وفق أحكام هذا النظام فيستمر إلى أجله.</li>
+                        <li>بناءً على إرادة أحد الطرفين في العقود غير المحددة المدة، وفقًا لما ورد في المادة الخامسة والسبعين من هذا النظام.</li>
+                        <li>بلوغ العامل سن التقاعد - وهو ستون سنة للعمال وخمسون سنة للعاملات ما لم تمتد مدة التأمين المحددة في نظام التأمينات الاجتماعية في العمل مما يتيح استمرار العامل حتى بلوغه سن التقاعد، ويجوز الاتفاق في عقد العمل أو في لائحة تنظيم العمل على استمرار العمل بعد هذه السن.</li>
+                        <li>القوة القاهرة.</li>
+                        <li>إغلاق المنشأة نهائيًا.</li>
+                        <li>انتهاء النشاط الذي يعمل فيه العامل، ما لم يتفق على غير ذلك.</li>
+                        <li>أي حالة أخرى ينص عليها نظام آخر.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 25px;">
+                <button id="closeTextsBtn" style="background-color: #00a59a; color: white; border: none; border-radius: 5px; padding: 10px 40px; font-size: 16px; cursor: pointer;">
+                    إغلاق
+                </button>
+            </div>
+        </div>
+
+        <!-- محتوى الحكم القضائي -->
+        <div style="max-width: 800px; margin: 40px auto; background-color: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 25px;">
+            <h2 style="color: #00a59a; font-size: 18px; text-align: center; margin-bottom: 20px;">الهيئة العليا التسوية العلاقات المالية - الجزء الثالث العام 1431هـ</h2>
+            
+            <div style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                <p style="color: #555; text-align: right; font-size: 13px; line-height: 1.6; margin-bottom: 10px;">ينتهي عقد المتعاقد السعودي إذا كان غير محدد المدة ببلوغ المتعاقد من الستين عاماً</p>
+                <p style="color: #555; text-align: right; font-size: 13px; line-height: 1.6; margin-bottom: 5px;">1431/1/2169 بتاريخ 28/12/1431هـ</p>
+                <p style="color: #555; text-align: right; font-size: 13px; line-height: 1.6; margin-bottom: 10px;">1431/1/1169 بتاريخ 29/6/1431هـ</p>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                <div style="flex: 1;">
+                    <p style="color: #00a59a; font-weight: 500; text-align: left; margin-bottom: 5px; direction: ltr;">رقم القرار النهائي: 1431/1/2169</p>
+                    <p style="color: #00a59a; font-weight: 500; text-align: left; margin-bottom: 5px; direction: ltr;">تاريخ القرار النهائي: 28/12/1431هـ</p>
+                </div>
+                <div style="flex: 1; text-align: right;">
+                    <h3 style="color: #555; font-size: 16px; margin-bottom: 10px;">الموضوعات</h3>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <p style="color: #555; text-align: right; line-height: 1.8; font-size: 14px; margin-bottom: 10px;">
+                    علاقات العمل - انتهاء عقد العمل - عقد عمل غير محدد المدة - بلوغ السن النظامية للتقاعد - منشأة عسكرية - متعاقد سعودي - لجنة التشغيل والصيانة - إعادة للعمل - تمديد التعاقد بعد سن الستين - سلطة تقديرية - إساءة استعمال نظام العمل - طلب تمديد مدة العقد - رد الدعوى.
+                </p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: #555; font-size: 16px; text-align: right; margin-bottom: 10px;">الأنظمة واللوائح</h3>
+                <p style="color: #555; text-align: right; line-height: 1.8; font-size: 14px; margin-bottom: 10px;">
+                    المادتان رقم (74) و(75) من نظام العمل الصادر بالمرسوم الملكي رقم (م/51) في 23/8/1426هـ
+                </p>
+                <p style="color: #555; text-align: right; line-height: 1.8; font-size: 14px; margin-bottom: 10px;">
+                    المادة رقم (45) من لائحة التشغيل والصيانة للمنشآت العسكرية.
+                </p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: #555; font-size: 16px; text-align: right; margin-bottom: 10px;">المبدأ</h3>
+                <p style="color: #555; text-align: right; line-height: 1.8; font-size: 14px; margin-bottom: 10px;">
+                    ينتهي عقد المتعاقد السعودي على بند التشغيل والصيانة إذا بلغ الستين عاماً، ويجوز تمديد عقده سنوياً بقرار مجلس الإدارة حتى إكمال سن الخامسة والستين، وتتمتع السلطة المختصة بسلطة تقديرية في مجال من السن حسبما تراه محققاً للصالح العام، دون إلزام عليها في هذا الشأن.
+                </p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: #555; font-size: 16px; text-align: right; margin-bottom: 10px;">ملخص القرار</h3>
+                <p style="color: #555; text-align: right; line-height: 1.8; font-size: 14px; margin-bottom: 10px;">
+                    المدعي حصر طلباته في إعادته للعمل - صدر قرار الهيئة الابتدائية برد مطالبة المدعي ضد الجهة المدعى عليها بالعودة للعمل - اعترض المدعي أمام الهيئة العليا - صدر قرار الهيئة العليا بتأييد قرار الهيئة الابتدائية استناداً إلى أن إنهاء خدمة العامل تم طبقاً للمادة 45 من لائحة البشر المادة أوجب أو البقاء أن الملكيات أو الإداري أن تكون أنه من لوائح الخدمة المادة (24) من نفس اللائحة تقرر أن سن التقاعد 60 سنة.
+                </p>
+            </div>
+        </div>
+
+        <!-- قسم المشاركة والتعليقات -->
+        <div style="max-width: 800px; margin: 40px auto; background-color: #f9f9f9; border: 1px solid #e6e6e6; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 25px; text-align: center;">
+            <p style="color: #555; font-size: 16px; margin-bottom: 5px;">
+                شارك في إبداء رأي فقهي او ملاحظة أو تصويب خطأ او تعليق على مادة منشورة...
+            </p>
+            <p style="color: #555; font-size: 16px; margin-bottom: 20px;">
+                شارك في موسوعة قانونية تزيد كل يوم بمشاركة ذوي الاختصاص...
+            </p>
+            
+            <button style="background-color: #00a59a; color: white; border: none; border-radius: 25px; padding: 10px 30px; font-size: 16px; margin-bottom: 30px; cursor: pointer;">
+                شارك بتعقيب أو ملاحظة أو إبلاغ عن خطأ
+            </button>
+            
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <p style="color: #00a59a; font-size: 16px; margin-bottom: 15px;">
+                    تجاوز الحماية
+                </p>
+                <div style="display: flex; gap: 20px;">
+                    <button style="background-color: #00a59a; color: white; border: none; border-radius: 5px; padding: 8px 40px; font-size: 16px; cursor: pointer;">
+                        طباعة
+                    </button>
+                    <button style="background-color: #00a59a; color: white; border: none; border-radius: 5px; padding: 8px 40px; font-size: 16px; cursor: pointer;">
+                        نسخ
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- أيقونة الدعم -->
+        <div style="position: fixed; bottom: 20px; left: 20px; width: 50px; height: 50px; background-color: #00a59a; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 100; cursor: pointer;">
+            <i class="fas fa-headset" style="font-size: 20px;"></i>
+        </div>
+    </div>
+    
+    <!-- نافذة الطباعة المنبثقة -->
+    <div id="printModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.75); z-index: 1000; direction: rtl;">
+        <div style="display: flex; width: 100%; height: 100%;">
+            <!-- معاينة قبل الطباعة - الجانب الأيسر -->
+            <div style="flex: 2; background-color: #424242; padding: 20px; display: flex; align-items: center; justify-content: center;">
+                <div style="background-color: white; width: 70%; height: 85%; box-shadow: 0 5px 15px rgba(0,0,0,0.3); overflow: hidden;">
+                    <div style="padding: 15px; font-size: 12px; color: #666; border-bottom: 1px solid #eee;">
+                        AM 11:31 5/1/25
+                    </div>
+                    <div style="padding: 20px; font-size: 14px; height: calc(100% - 50px); overflow-y: auto;">
+                        <h2 style="color: #00a59a; font-size: 16px; text-align: center; margin-bottom: 15px;">الهيئة العليا التسوية العلاقات المالية - الجزء الثالث العام 1431هـ</h2>
+                        <p style="color: #555; text-align: right; font-size: 13px; line-height: 1.6; margin-bottom: 10px;">ينتهي عقد المتعاقد السعودي إذا كان غير محدد المدة ببلوغ المتعاقد من الستين عاماً</p>
+                        <p style="color: #555; text-align: right; font-size: 13px; line-height: 1.6; margin-bottom: 5px;">1431/1/2169 بتاريخ 28/12/1431هـ</p>
+                        <p style="color: #555; text-align: right; font-size: 13px; line-height: 1.6; margin-bottom: 10px;">1431/1/1169 بتاريخ 29/6/1431هـ</p>
+                        <div style="margin-bottom: 10px;">
+                            <div style="color: #00a59a; font-size: 13px; text-align: left; direction: ltr; margin-bottom: 3px;">رقم القرار النهائي: 1431/1/2169</div>
+                            <div style="color: #00a59a; font-size: 13px; text-align: left; direction: ltr; margin-bottom: 3px;">تاريخ القرار النهائي: 28/12/1431هـ</div>
+                        </div>
+                        <h3 style="color: #555; font-size: 14px; margin-bottom: 5px;">الموضوعات</h3>
+                        <p style="color: #555; text-align: right; font-size: 12px; line-height: 1.5; margin-bottom: 10px;">
+                            علاقات العمل - انتهاء عقد العمل - عقد عمل غير محدد المدة - بلوغ السن النظامية للتقاعد - منشأة عسكرية - متعاقد سعودي - لجنة التشغيل والصيانة - إعادة للعمل - تمديد التعاقد بعد سن الستين - سلطة تقديرية - إساءة استعمال نظام العمل - طلب تمديد مدة العقد - رد الدعوى.
+                        </p>
+                        <!-- المزيد من المحتوى للعرض -->
+                        <div style="text-align: right; font-size: 12px; color: #999; position: absolute; bottom: 10px; right: 20px;">
+                            https://www.mohamoon-ksa.com
+                        </div>
+                        <div style="text-align: right; font-size: 12px; color: #999; position: absolute; bottom: 10px; left: 20px;">
+                            1/2
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- خيارات الطباعة - الجانب الأيمن -->
+            <div style="flex: 1; background-color: #eee; padding: 30px; color: #333;">
+                <h2 style="font-size: 24px; margin-bottom: 20px; font-weight: 500;">Print</h2>
+                <div style="color: #666; text-align: right; margin-bottom: 30px;">4 sheets of paper</div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 16px; margin-bottom: 15px;">Destination</h3>
+                    <div style="background-color: #fff; padding: 15px; border-radius: 5px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: center;">
+                            <img src="../assets/icons/pdf.png" alt="PDF" style="width: 24px; height: 24px; margin-right: 10px;">
+                            <span>Save to PDF</span>
+                        </div>
+                        <i class="fas fa-chevron-down" style="color: #666;"></i>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 16px; margin-bottom: 15px;">Orientation</h3>
+                    <div style="display: flex; gap: 10px;">
+                        <div style="background-color: #00bcd4; padding: 15px; border-radius: 5px; flex: 1; display: flex; align-items: center; justify-content: center; color: white;">
+                            <i class="fas fa-file-alt" style="margin-right: 10px;"></i>
+                            <span>Portrait</span>
+                        </div>
+                        <div style="background-color: #eee; padding: 15px; border-radius: 5px; flex: 1; display: flex; align-items: center; justify-content: center; border: 1px solid #ddd;">
+                            <i class="fas fa-file-alt fa-rotate-90" style="margin-right: 10px;"></i>
+                            <span>Landscape</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 16px; margin-bottom: 15px;">Pages</h3>
+                    <div style="background-color: #fff; padding: 15px; border-radius: 5px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                        <span>All</span>
+                        <i class="fas fa-chevron-down" style="color: #666;"></i>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 16px; margin-bottom: 15px;">Color mode</h3>
+                    <div style="background-color: #fff; padding: 15px; border-radius: 5px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                        <span>Color</span>
+                        <i class="fas fa-chevron-down" style="color: #666;"></i>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 10px; margin-top: 40px;">
+                    <button id="savePrintBtn" style="flex: 1; background-color: #00bcd4; color: white; border: none; border-radius: 5px; padding: 15px; font-size: 16px; cursor: pointer;">Save</button>
+                    <button id="cancelPrintBtn" style="flex: 1; background-color: #999; color: white; border: none; border-radius: 5px; padding: 15px; font-size: 16px; cursor: pointer;">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+           <!-- Footer Social - Redesigned to match image -->
+           <div style="display: flex; align-items: center; justify-content: space-between; background-color: #f5f5f5; border-radius: 30px; padding: 10px 20px; margin: 40px 0 20px;">
+            <!-- Social Media Sharing - Left Side -->
+                <!-- Last Update - Right Side -->
+                <div style="display: flex; align-items: center; color: #666; font-size: 14px;">
+                    <span>آخر تعديل 19 ذو القعدة 1444</span>
+                    <img src="../assets/icons/clock 1.png" alt="الساعة" width="16" height="16" style="margin-right: 5px;">
+                </div>
+                       <!-- Rating - Middle Right -->
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <span style="font-size: 14px; color: #333;">تقييم المحتوى</span>
+                <div style="display: flex; gap: 2px;">
+                    <img src="../assets/icons/star.png" alt="نجمة غير مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star.png" alt="نجمة غير مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                </div>
+            </div>
+            <!-- Followers Count - Middle -->
+            <div style="display: flex; align-items: center; color: #333; font-size: 14px;">
+                <span style="font-weight: bold; margin-left: 5px;">عدد المتابعين:</span>
+                <span>9130</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <span style="margin-right: 5px; font-size: 14px; color: #00a19a;">شارك على</span>
+                <a href="#" style="color: #00a19a;">                
+                    <img src="../assets/icons/f3.png" alt="فيسبوك" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/in2.png" alt="انستغرام" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/x2.png" alt="تويتر" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/ln1.png" alt="لينكد إن" width="26" height="26">
+                </a>
+            </div>   
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <!-- Main Footer -->
+        <div class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column about-column">
+                        <h3 class="footer-title">عن محامي المملكة</h3>
+                        <p class="footer-text">البوابة القانونية الشاملة للمحامين والمستشارين القانونيين بالسعودية</p>
+                        <p class="footer-text">العربية السعوية</p>
+                    </div>
+                    <div class="footer-column links-column">
+                        <h3 class="footer-title">روابط سريعة</h3>
+                        <ul class="footer-links">
+                            <li><a href="../index.html">الرئيسية</a></li>
+                            <li><a href="#">عن الموقع</a></li>
+                            <li><a href="#">الأسئلة الشائعة</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column contact-column">
+                        <h3 class="footer-title">تواصل معنا</h3>
+                        <p class="contact-item email">info@mohamoon-ksa.com</p>
+                        <p class="contact-item phone">الهاتف: xxx xxxx 11 966+</p>
+                        <p class="contact-item address">العنوان: الرياض, المملكة العربية السعودية</p>
+                    </div>
+                    <div class="footer-column social-column">
+                        <h3 class="footer-title">تابعنا</h3>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/facebook.png" alt="فيس بوك"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/insta.png" alt="إنستجرام"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/x.png" alt="تويتر"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/ln.png" alt="لينكد إن"></a>
+                        </div>
+                        <a href="#" class="contact-btn">اتصل بنا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright-text">جميع الحقوق محفوظة © 2024 محامي المملكة</div>
+                <div class="footer-bottom-links">
+                    <a href="../pages/terms.html">الشروط والأحكام</a> | 
+                    <a href="#">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/settings.js"></script>
+    <!-- نافذة النسخ المنبثقة -->
+    <div id="copyModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1000; direction: rtl;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; width: 90%; max-width: 500px; border-radius: 15px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="display: flex; justify-content: space-between; gap: 15px;">
+                    <div style="flex: 1;">
+                        <input type="text" placeholder="من" style="width: 100%; padding: 12px; border: 1px solid #e0e0e0; border-radius: 10px; font-family: 'Tajawal', sans-serif; text-align: right;">
+                    </div>
+                    <div style="flex: 1;">
+                        <input type="text" placeholder="إلى" style="width: 100%; padding: 12px; border: 1px solid #e0e0e0; border-radius: 10px; font-family: 'Tajawal', sans-serif; text-align: right;">
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <input type="radio" id="currentMaterial" name="copyType" checked>
+                        <label for="currentMaterial" style="color: #555; font-size: 14px;">المادة الحالية</label>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <input type="radio" id="allFiles" name="copyType">
+                        <label for="allFiles" style="color: #555; font-size: 14px;">الملفات</label>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 15px;">
+                    <button id="copyBtn" style="flex: 1; background-color: #00a59a; color: white; border: none; border-radius: 5px; padding: 12px; font-size: 16px; cursor: pointer;">نسخ</button>
+                    <button id="closeCopyModalBtn" style="flex: 1; background-color: #00a59a; color: white; border: none; border-radius: 5px; padding: 12px; font-size: 16px; cursor: pointer;">إغلاق النافذة</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/settings.js"></script>
+    <script src="../scripts/icons-functionality.js"></script>
+    <script>
+        document.getElementById('showTextsBtn').addEventListener('click', function() {
+            document.getElementById('legislativeTextsSection').style.display = 'block';
+        });
+
+        document.getElementById('closeTextsBtn').addEventListener('click', function() {
+            document.getElementById('legislativeTextsSection').style.display = 'none';
+        });
+
+        // إضافة وظيفة زر النسخ
+        const copyButtons = document.querySelectorAll('[style*="padding: 8px 40px; font-size: 16px;"]');
+        copyButtons.forEach(button => {
+            if (button.textContent.trim() === 'نسخ') {
+                button.addEventListener('click', function() {
+                    document.getElementById('copyModal').style.display = 'block';
+                });
+            }
+        });
+
+        // إغلاق نافذة النسخ
+        document.getElementById('closeCopyModalBtn').addEventListener('click', function() {
+            document.getElementById('copyModal').style.display = 'none';
+        });
+
+        // إضافة سلوك النسخ
+        document.getElementById('copyBtn').addEventListener('click', function() {
+            // هنا يمكن إضافة أكواد نسخ المحتوى
+            alert('تم النسخ بنجاح');
+            document.getElementById('copyModal').style.display = 'none';
+        });
+
+        // إضافة وظيفة زر الطباعة
+        const printButtons = document.querySelectorAll('[style*="padding: 8px 40px; font-size: 16px;"]');
+        printButtons.forEach(button => {
+            if (button.textContent.trim() === 'طباعة') {
+                button.addEventListener('click', function() {
+                    document.getElementById('printModal').style.display = 'block';
+                });
+            }
+        });
+
+        // إغلاق نافذة الطباعة
+        document.getElementById('cancelPrintBtn').addEventListener('click', function() {
+            document.getElementById('printModal').style.display = 'none';
+        });
+    </script>
+
+    <script src="../scripts/font-resize.js"></script>
+</body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جلسة مجلس الوزراء - محامون المملكة</title>
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- أوراق الأنماط -->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/cabinet-meeting/header.css">
+    <link rel="stylesheet" href="../styles/cabinet-meeting/footer.css">
+    <link rel="stylesheet" href="../styles/login-modal.css">
+    <link rel="stylesheet" href="../styles/home/settings.css">
+    <link rel="stylesheet" href="../styles/subpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .main-content {
+            padding: 30px 0;
+            min-height: 70vh;
+        }
+        .page-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .cabinet-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .cabinet-header h1 {
+            color: #00a59a;
+            font-size: 24px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .cabinet-header h2 {
+            color: #00a59a;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .divider {
+            width: 50px;
+            height: 3px;
+            background-color: #ff7a45;
+            margin: 0 auto 30px;
+        }
+        .source-section {
+            text-align: left;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .source-name {
+            color: #ff7a45;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .news-date {
+            color: #00a59a;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+        .news-details {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin: 20px 0;
+            border-right: 3px solid #00a59a;
+            color: #444;
+            font-size: 15px;
+        }
+        .cabinet-content {
+            line-height: 1.8;
+            font-size: 16px;
+            color: #333;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+        .cabinet-content p {
+            margin-bottom: 20px;
+        }
+        .breadcrumb {
+            padding: 15px 0;
+        }
+        .breadcrumb ul {
+            list-style: none;
+            display: flex;
+            gap: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+        .breadcrumb li a {
+            color: #00a59a;
+            text-decoration: none;
+        }
+        .breadcrumb li:not(:last-child)::after {
+            content: ">";
+            margin-right: 5px;
+            color: #ccc;
+        }
+        
+        /* Added styles for approvals section */
+        .approvals-section {
+            margin-top: 30px;
+        }
+        .approvals-section .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .approvals-section .divider-small {
+            width: 30px;
+            height: 2px;
+            background-color: #ff7a45;
+            margin: 0 auto 20px;
+        }
+        .approvals-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .approvals-list li {
+            margin-bottom: 15px;
+        }
+        .approvals-list li .approval-bullet {
+            color: #ff7a45;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="محامون المملكة" class="logo-image">
+                    </a>
+                </div>
+                <div class="top-elements">
+                    <div class="top-icons">
+                        <!-- الأسئلة الشائعة -->
+                        <a href="faq.html" class="common-questions-link">
+                            <div class="common-questions">
+                                <span class="questions-text">الأسئلة الشائعة</span>
+                                <span class="question-mark">?</span>
+                            </div>
+                        </a>
+                        
+                        <!-- الأيقونات الرئيسية -->
+                        <div class="main-icons-group">
+                            <button class="icon-btn zoom-out-btn" onclick="changeFontSize(-10)" title="تصغير النص">
+                                <img src="../assets/icons/search-zoom-out.png" alt="تصغير">
+                            </button>
+                            <button class="icon-btn zoom-in-btn" onclick="changeFontSize(10)" title="تكبير النص">
+                                <img src="../assets/icons/search-zoom-in.png" alt="تكبير">
+                            </button>
+                            <button class="icon-btn search-btn">
+                                <img src="../assets/icons/search.png" alt="بحث">
+                            </button>
+                            <button class="icon-btn location-btn">
+                                <img src="../assets/icons/location.png" alt="الموقع">
+                            </button>
+                            <button class="icon-btn call-btn">
+                                <img src="../assets/icons/call.png" alt="اتصال">
+                            </button>
+                            
+                            <button class="icon-btn settings-toggle-btn">
+                                <img src="../assets/icons/setting-2.png" alt="الإعدادات">
+                            </button>
+                            <div class="settings-menu">
+                                <a href="#" class="settings-option contrast-option">
+                                    <span>تباين</span>
+                                    <i class="fas fa-eye-slash"></i>
+                                </a>
+                                <!-- قائمة خيارات التباين الفرعية -->
+                                <div class="contrast-submenu">
+                                    <a href="#" class="settings-option contrast-light">
+                                        <span>تباين</span>
+                                        <i class="fas fa-eye-slash"></i>
+                                    </a>
+                                    <a href="#" class="settings-option contrast-dark">
+                                        <span>تباين</span>
+                                        <i class="fas fa-eye-slash"></i>
+                                    </a>
+                                </div>
+                                <a href="#" class="settings-option stats-option">
+                                    <span>الاحصائيات</span>
+                                    <i class="fas fa-chart-line"></i>
+                                </a>
+                                <a href="#" class="settings-option logout-option">
+                                    <span>خروج</span>
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-actions">
+                    <button class="join-btn">إشترك معنا</button>
+                    <button class="login-btn">تسجيل الدخول</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="menu-item"><a href="../index.html">الرئيسية</a></li>
+                <li class="menu-item dropdown">
+                    <a href="javascript:void(0);">نبذة عنا <img src="../assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                    <div class="dropdown-hover-area"></div>
+                    <div class="dropdown-menu">
+                        <a href="#">عن الموقع</a>
+                        <a href="#">عن الشبكة</a>
+                    </div>
+                </li>
+                <li class="menu-item dropdown">
+                    <a href="javascript:void(0);">سياساتنا <img src="../assets/icons/Down.png" alt="" class="dropdown-arrow"></a>
+                    <div class="dropdown-hover-area"></div>
+                    <div class="dropdown-menu">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="../pages/terms.html">شروط الإشتراك</a>
+                    </div>
+                </li>
+                <li class="menu-item"><a href="#">جريدة أم القرى</a></li>
+                <li class="menu-item"><a href="#">خدمة الأسانيد</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">محامو المملكة</a></li>
+                <li><a href="#">الملف الصحفي</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <div class="page-container">
+            <div class="cabinet-header">
+                <h1>برئاسة ولي العهد - مجلس الوزراء :</h1>
+                <h2>خطة وطنية لمكافحة تلوث البيئة البحرية في الحالات الطارئة</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="source-section">
+                <div class="source-name">جريدة أم القرى</div>
+                <div class="news-date">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>الثلاثاء 18 رمضان 1446 - 18 مارس 2025</span>
+                </div>
+            </div>
+            
+            <div class="news-details">
+                السنة : 103 - العدد: 5067 - الجمعة 1 شعبان 1446هـ الموافق 31 يناير 2023م
+            </div>
+            
+            <div class="cabinet-content">
+                <p>
+                    رأس صاحب السمو الملكي الأمير محمد بن سلمان بن عبد العزيز آل سعود ولي العهد رئيس مجلس الوزراء حفظه الله الله الجلسة التي عقدها مجلس الوزراء يوم الثلاثاء 20 رجب 1405هـ الموافق 28 يناير 2005م، في الرياض.
+                </p>
+                
+                <p>
+                    وفي مستهلها اطلع سموّ ولي العهد مجلس الوزراء على فحوى المكالمة الهاتفية، بفخامة رئيس الولايات المتحدة الأمريكية جونالد في ترمب وما دار مضمون استقباله حفظه الله دولة رئيسة وزراء الجمهورية الإيطالية جورجيا ميلوني، وما جرى خلالهما من استعراض العلاقات بين المملكة وبلديهما في مختلف المجالات إضافة إلى بحث المستجدات الإقليمية والدولية وأبرز المجلس في هذا السياق، عن التطلع إلى أن يسهم إنشاء مجلس الشراكة الاستراتيجية بين حكومتي المملكة العربية السعودية والجمهورية الإيطالية في تعزيز التواصل والتعاون الثنائي على جميع الصعد بما يحقق المصالح والمنافع المشتركة.
+                </p>
+                
+                <p>
+                    وأوضح معالي وزير الإعلام الأستاذ سلمان بن يوسف الدوسري في بيانه لوكالة الأنباء السعودية عقب الجلسة أن المجلس تناول نتائج زيارتيْ صاحب السمو وزير الخارجية على الجمهورية اللبنانية والجمهورية العربية السورية مجدداً التأكيد على وقوف المملكة إلى جانب اللبنانيّ وشعبهما الشقيقيْ، ودعم الجهود الرامية إلى استعادة مكانتهما الطبيعية في محيطهما العربي والدولي. وأشاد معالي الوزراء بما حققته عليه مشاركة وفد المملكة في الاجتماع السنوي للمنتدى الاقتصادي العالمي بمدينة دافوس السورية من مضامين أعلنت التقدم المستمر في تحقيق مستهدفات الرؤية السعودية 2030، وأبرز المبادرات والإسهامات الداعية لإعادة صياغة منهج الاقتصاد العالمي ودعم الابتكار التحويل وإطلاق الإمكانات البشرية.
+                </p>
+                
+                <p>
+                    وثمن المجلس الإعلان عن استضافة المملكة الاجتماع الدولي للمنتدى الاقتصادي العالمي بشكل دوري، تأكيداً على ريادتها بوصفها مركزاً مالياً للحوار الدولي، ودورها المتنامي في تشكيل معالم الأجندة العالمية التنمية، وترسيخ العمل متعدد الأطراف من أجل تحقيق الازدهار للجميع واطلع المجلس على الموضوعات المدرجة على جدول أعماله من بينها موضوعات اشترك مجلس الشورى في دراستها، كما اطلع على ما انتهى إليه كل من مجلسي الشؤون السياسية والأمنية والشؤون الاقتصادية والتنمية ، واللجنة العامة لمجلس الوزراء وهيئة الخبراء بمجلس الوزراء في شأنها. كما اطلع مجلس الوزراء على عدد من الموضوعات العامة المدرجة على جدول أعماله من بينها تقارير سنوية لوزارتي الصحة والإعلام، وهيئة كفاءة الإنفاق والمشروعات الحكومية وهيئة تطوير منطقة عسير وبنك التنمية الاجتماعية، والمركز الوطني لقياس أداء الأجهزة العامة.
+                </p>
+            </div>
+            
+            <!-- قسم الموافقات الدولية -->
+            <div class="approvals-section">
+                <h3 class="section-title">موافقات</h3>
+                <div class="divider-small"></div>
+                
+                <ul class="approvals-list">
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        الموافقة على مذكرة تفاهم بين حكومة المملكة العربية السعودية وحكومة جمهورية الفلبين للتعاون في مجال الطاقة.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        الموافقة على مذكرة تفاهم بين وزارة الرياضة في المملكة العربية السعودية والهيئة العامة للرياضة في مملكة البحري للتعاون في مجال الرياضة.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        الموافقة على مذكرة تفاهم في مجال الأمن السيبراني بين حكومة المملكة العربية السعودية وحكومة جمهورية جيبوتي.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        الموافقة على مذكرة تعاون في مجال المشاريع الصغيرة والمتوسطة بين كل من الهيئة العامة للمنشآت الصغيرة والمتوسطة في المملكة العربية السعودية (منشآت)، وهيئة تنمية المنشآت الصغيرة والمتوسطة (سميدا) التابعة لوزارة الصناعة والإنتاج بحكومة جمهورية باكستان الإسلامية.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        الموافقة على مذكرة تعاون في مجال الملكية الفكرية بين الهيئة السعودية للملكية الفكرية في المملكة العربية السعودية، والمديرية العامة للملكية الفكرية التابعة لوزارة القانون وحقوق الإنسان في جمهورية إندونيسيا.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        الموافقة على مذكرة تفاهم للتعاون في مجال اللغة العربية بين مجمع الملك سلمان العالمي للغة العربية في المملكة العربية السعودية وجامعة الفارابي الوطنية في جمهورية كازاخستان.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        الموافقة على ضوابط شراء واستئجار الجهات الحكومية للمركبات.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        الموافقة على الخطة الوطنية لمكافحة تلوث البيئة البحرية بالزيت والمواد الضارة الأخرى في الحالات الطارئة.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        اعتماد الحسابات الختامية: هيئة تطوير بوابة الدرعية والهيئة العامة للصناعات العسكرية، وهيئة تطوير منطقة عسير وبنك التنمية الاجتماعية، والمركز الوطني لقياس أداء الأجهزة العامة.
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- قسم التفويضات -->
+            <div class="approvals-section">
+                <h3 class="section-title">تفويضات</h3>
+                <div class="divider-small"></div>
+                
+                <ul class="approvals-list">
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        التفويض صاحب السمو الملكي لرئيس مجلس إدارة دارة الملك عبد العزيز أو من ينيبه بالتوقيع على مشروع مذكرة تعاون بين دارة الملك عبد العزيز في المملكة العربية السعودية، ووكالة الأرشيف الفيدرالي في روسيا الاتحادية.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        تفويض صاحب السمو الملكي وزير الداخلية أو من ينيبه بالتباحث مع الجانب الصيني في شأن مشروع اتفاقية تعاون في مجال استعمال واستبدال رخص القيادة بين حكومة المملكة العربية السعودية، وحكومة جمهورية الصين الشعبية، والتوقيع عليه.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        التفويض صاحب السمو وزير الخارجية أو من ينيبه بالتباحث مع الجانب المقدوني الشمالي في شأن مشروع اتفاقية عامة للتعاون بين حكومة المملكة العربية السعودية وحكومة جمهورية مقدونيا الشمالية، والتوقيع عليه.
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- قسم الترقيات -->
+            <div class="approvals-section">
+                <h3 class="section-title">ترقيات</h3>
+                <div class="divider-small"></div>
+                
+                <ul class="approvals-list">
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        الموافقة على ترقيات بالمرتبة الرابعة عشرة، ووظيفة (وزير مفوض)، وذلك على النحو التالي:
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        ترقية سعود بن عبد المحسن بن محمد السراء إلى وظيفة (مستشار أعمال) بالمرتبة الرابعة عشرة بوزارة الداخلية.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        ترقية محمد بن سعد بن رجاء العصيمي إلى وظيفة (مستشار قانوني) بالمرتبة الرابعة عشرة بوزارة الداخلية.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        ترقية عبدالله بن إبراهيم بن محمد الدوجي إلى وظيفة مدير مكتب بالمرتبة الرابعة عشرة بديوان المظالم.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        ترقية الآتية أسماؤهم إلى وظيفة (وزير مفوض) بوزارة الخارجية:
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        الدكتور عطا الله بن جمود بن ربيع السبيعي العنزي.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        لدى بنت فهد بن عبدالله آل شثبان.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        زرين بنت حمد بن عبدالله الشميل.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        الدكتور فهاد بن عيد بن مشعان الشويحلي الرشيدي.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        الدكتور عبدالله بن عبيد بن مطر الشميلي الشمري.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        محمد بن مطلق بن لافي الفرك العنزي.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        دري بنت خالد بن فهد العبين.
+                    </li>
+                    
+                    <li>
+                        <span class="approval-bullet">•</span>
+                        رياض بن عبد الله بن صياح اللحيدا.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+           <!-- Footer Social - Redesigned to match image -->
+           <div style="display: flex; align-items: center; justify-content: space-between; background-color: #f5f5f5; border-radius: 30px; padding: 10px 20px; margin: 40px 0 20px;">
+            <!-- Social Media Sharing - Left Side -->
+                <!-- Last Update - Right Side -->
+                <div style="display: flex; align-items: center; color: #666; font-size: 14px;">
+                    <span>آخر تعديل 19 ذو القعدة 1444</span>
+                    <img src="../assets/icons/clock 1.png" alt="الساعة" width="16" height="16" style="margin-right: 5px;">
+                </div>
+                       <!-- Rating - Middle Right -->
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <span style="font-size: 14px; color: #333;">تقييم المحتوى</span>
+                <div style="display: flex; gap: 2px;">
+                    <img src="../assets/icons/star.png" alt="نجمة غير مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star.png" alt="نجمة غير مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                    <img src="../assets/icons/star2.png" alt="نجمة مفعلة" width="16" height="16">
+                </div>
+            </div>
+            <!-- Followers Count - Middle -->
+            <div style="display: flex; align-items: center; color: #333; font-size: 14px;">
+                <span style="font-weight: bold; margin-left: 5px;">عدد المتابعين:</span>
+                <span>9130</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <span style="margin-right: 5px; font-size: 14px; color: #00a19a;">شارك على</span>
+                <a href="#" style="color: #00a19a;">                
+                    <img src="../assets/icons/f3.png" alt="فيسبوك" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/in2.png" alt="انستغرام" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/x2.png" alt="تويتر" width="26" height="26">
+                </a>
+                <a href="#" style="color: #00a19a;">
+                    <img src="../assets/icons/ln1.png" alt="لينكد إن" width="26" height="26">
+                </a>
+            </div>   
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <!-- Main Footer -->
+        <div class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column about-column">
+                        <h3 class="footer-title">عن محامي المملكة</h3>
+                        <p class="footer-text">البوابة القانونية الشاملة للمحامين والمستشارين القانونيين بالسعودية</p>
+                        <p class="footer-text">العربية السعوية</p>
+                    </div>
+                    <div class="footer-column links-column">
+                        <h3 class="footer-title">روابط سريعة</h3>
+                        <ul class="footer-links">
+                            <li><a href="../index.html">الرئيسية</a></li>
+                            <li><a href="#">عن الموقع</a></li>
+                            <li><a href="#">الأسئلة الشائعة</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column contact-column">
+                        <h3 class="footer-title">تواصل معنا</h3>
+                        <p class="contact-item email">info@mohamoon-ksa.com</p>
+                        <p class="contact-item phone">الهاتف: xxx xxxx 11 966+</p>
+                        <p class="contact-item address">العنوان: الرياض, المملكة العربية السعودية</p>
+                    </div>
+                    <div class="footer-column social-column">
+                        <h3 class="footer-title">تابعنا</h3>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/facebook.png" alt="فيس بوك"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/insta.png" alt="إنستجرام"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/x.png" alt="تويتر"></a>
+                            <a href="#" class="footer-social-icon"><img src="../assets/icons/ln.png" alt="لينكد إن"></a>
+                        </div>
+                        <a href="#" class="contact-btn">اتصل بنا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright-text">جميع الحقوق محفوظة © 2024 محامي المملكة</div>
+                <div class="footer-bottom-links">
+                    <a href="../pages/terms.html">الشروط والأحكام</a> | 
+                    <a href="#">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/settings.js"></script>
+
+    <script src="../scripts/font-resize.js"></script>
+</body>
+</html>

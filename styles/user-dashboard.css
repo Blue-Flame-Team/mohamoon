@@ -1,0 +1,111 @@
+/**
+ * أنماط لوحة المستخدم - محامون المملكة
+ */
+
+.user-dashboard-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    direction: rtl;
+}
+
+.user-dashboard-modal.show {
+    display: block;
+}
+
+.dashboard-content {
+    background-color: #444;
+    margin: 15% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+.dashboard-title {
+    color: #ced4da;
+    margin: 10px 0 20px;
+    font-size: 1.5rem;
+}
+
+.dashboard-frame-label {
+    color: #ced4da;
+    font-size: 0.8rem;
+    margin: 10px 0;
+}
+
+.dashboard-buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.dashboard-button {
+    background-color: #2b3a63;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.dashboard-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.logout-button {
+    background-color: #d9534f;
+    margin: 20px auto;
+    width: 70%;
+}
+
+.dashboard-close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dashboard-close:hover {
+    color: #fff;
+}
+
+/* تأثيرات التحويم */
+.dashboard-button:hover {
+    opacity: 0.9;
+}
+
+/* استجابة للهواتف */
+@media only screen and (max-width: 600px) {
+    .dashboard-content {
+        margin: 25% auto;
+        width: 95%;
+    }
+    
+    .dashboard-buttons-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .logout-button {
+        width: 90%;
+    }
+}
