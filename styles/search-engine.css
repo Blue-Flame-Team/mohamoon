@@ -1,4 +1,4 @@
-﻿/* محرك البحث العام - تنسيق الصفحة */
+/* ???? ????? ????? - ????? ?????? */
 .search-engine-container {
     /* background-color: white; */
     border-radius: 10px;
@@ -24,7 +24,7 @@
     margin-top: 10px;
 }
 
-/* أزرار التبويبات */
+/* ????? ????????? */
 .search-tabs {
     display: flex;
     justify-content: center;
@@ -35,7 +35,7 @@
     overflow-x: auto;
 }
 
-/* أزرار التبويبات داخل محتوى التبويبات */
+/* ????? ????????? ???? ????? ????????? */
 .tab-content .search-tabs {
     position: relative;
     z-index: 5;
@@ -43,7 +43,7 @@
     margin-bottom: 20px;
 }
 
-/* عندما تكون التبويبات داخل محتوى التبويبات، لا يتم إخفاؤها */
+/* ????? ???? ????????? ???? ????? ?????????? ?? ??? ??????? */
 .search-tabs-in-content {
     display: flex !important;
     margin-top: 30px;
@@ -153,7 +153,7 @@
     direction: rtl;
 }
 
-/* محتويات التبويبات */
+/* ??????? ????????? */
 .tab-content {
     display: none;
 }
@@ -162,7 +162,7 @@
     display: block;
 }
 
-/* حقل البحث */
+/* ??? ????? */
 .search-input-container {
     width: 100%;
     margin-bottom: 25px;
@@ -190,7 +190,7 @@
     color: #999;
 }
 
-/* خيارات البحث */
+/* ?????? ????? */
 .search-options {
     display: flex;
     justify-content: space-between;
@@ -248,7 +248,7 @@
     margin: 0;
 }
 
-/* مجال البحث */
+/* ???? ????? */
 .search-scope {
     margin-bottom: 30px;
     text-align: right;
@@ -313,7 +313,7 @@
     left: 0;
 }
 
-/* أسلوب باحث أرقام الوثائق */
+/* ????? ???? ????? ??????? */
 .document-number-note {
     text-align: right;
     margin-bottom: 20px;
@@ -400,7 +400,7 @@
     background-color: #f5f5f5;
 }
 
-/* زر البحث */
+/* ?? ????? */
 .search-button-container {
     text-align: center;
     margin-top: 30px;
@@ -434,7 +434,7 @@
     background-color: #00897b;
 }
 
-/* تنسيقات باحث الأحكام السعودية */
+/* ??????? ???? ??????? ???????? */
 #saudi-judgments-search-content {
     text-align: right;
 }
@@ -467,7 +467,7 @@
     text-align: right;
 }
 
-/* فورم البحث للأحكام السعودية */
+/* ???? ????? ??????? ???????? */
 .saudi-judgments-search-form {
     display: flex;
     flex-direction: column;
@@ -561,7 +561,7 @@
     margin-top: 10px;
 }
 
-/* باحث الملف الصحفي */
+/* ???? ????? ?????? */
 .main-search-header {
     text-align: center;
     margin-bottom: 20px;
@@ -732,7 +732,7 @@
     margin-bottom: 20px;
 }
 
-/* تنسيقات الأزرار الأفقية في باحث أرقام الوثائق */
+/* ??????? ??????? ??????? ?? ???? ????? ??????? */
 .horizontal-tabs {
     display: flex;
     flex-wrap: wrap;
@@ -768,9 +768,9 @@
     border-color: #009999;
 }
 
-/* تجاوب مع الشاشات الصغيرة */
+/* ????? ?? ??????? ??????? */
 @media (max-width: 768px) {
-    /* Container الرئيسي */
+    /* Container ??????? */
     .search-engine-container {
         padding: 20px 15px !important;
         margin: 10px auto !important;
@@ -780,7 +780,7 @@
         box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
     }
     
-    /* العنوان الرئيسي */
+    /* ??????? ??????? */
     .search-engine-title {
         font-size: 24px !important;
         font-weight: 700 !important;
@@ -790,7 +790,7 @@
         font-family: 'Droid Arabic Kufi', sans-serif !important;
     }
     
-    /* تعليمات البحث */
+    /* ??????? ????? */
     .search-instructions {
         text-align: center !important;
         margin-bottom: 20px !important;
@@ -826,7 +826,7 @@
         font-family: 'Droid Arabic Kufi', sans-serif !important;
     }
     
-    /* التبويبات */
+    /* ????????? */
     .search-tabs {
         display: flex !important;
         flex-wrap: wrap !important;
@@ -868,7 +868,7 @@
         box-shadow: 0 4px 12px rgba(0,165,154,0.3) !important;
     }
     
-    /* حقل البحث */
+    /* ??? ????? */
     .search-input-container {
         margin: 20px 0 !important;
         width: 100% !important;
@@ -902,7 +902,7 @@
         font-family: 'Droid Arabic Kufi', sans-serif !important;
     }
     
-    /* خيارات البحث */
+    /* ?????? ????? */
     .search-options {
         background: white !important;
         padding: 20px !important;
@@ -956,7 +956,7 @@
         margin-right: 10px !important;
     }
     
-    /* مجال البحث */
+    /* ???? ????? */
     .search-scope {
         background: white !important;
         padding: 20px !important;
@@ -1018,7 +1018,7 @@
         margin: 0 !important;
     }
     
-    /* زر البحث */
+    /* ?? ????? */
     .search-button-container {
         margin-top: 25px !important;
         width: 100% !important;
@@ -1051,7 +1051,7 @@
         transform: translateY(0) !important;
     }
     
-    /* تبويبات أفقية */
+    /* ??????? ????? */
     .tabs-horizontal {
         flex-direction: column;
         gap: 10px;
@@ -1075,11 +1075,11 @@
     }
 }
 
-/* تنسيقات قسم نتائج البحث */
+/* ??????? ??? ????? ????? */
 .search-results-container {
     background-color: #f8f8f8;
     padding: 30px 0;
-    display: none; /* إخفاء قسم نتائج البحث افتراضيًا */
+    display: none; /* ????? ??? ????? ????? ????????? */
 }
 
 .search-results {
@@ -1090,7 +1090,7 @@
     justify-items: center;
 }
 
-/* بطاقة نتيجة البحث */
+/* ????? ????? ????? */
 .search-result-card {
     background: #fff;
     border-radius: 12px !important;
@@ -1170,7 +1170,7 @@
     background-color: #126d6a !important;
 }
 
-/* أرقام الصفحات */
+/* ????? ??????? */
 .pagination {
     display: flex;
     justify-content: space-between;

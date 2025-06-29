@@ -1,4 +1,4 @@
-﻿/* Latest Updates Section Styles */
+/* Latest Updates Section Styles */
 .latest-updates-section {
     padding: 170px 0 60px;
     background-color: white;
@@ -201,7 +201,7 @@
         color: #666;
     }
     
-    /* عرض بطاقة واحدة فقط في الموبايل */
+    /* ??? ????? ????? ??? ?? ???????? */
     .slider-container {
         display: flex;
         overflow: hidden;
@@ -269,7 +269,7 @@
         height: 20px;
     }
     
-    /* نقاط التنقل في الموبايل */
+    /* ???? ?????? ?? ???????? */
     .updates-nav-dots {
         justify-content: center;
         gap: 10px;
@@ -297,13 +297,13 @@
         padding: 0 20px;
     }
     
-    /* تنسيق أيقونة جميع الأخبار */
+    /* ????? ?????? ???? ??????? */
     .list-icon {
         font-size: 18px;
         margin-left: 8px;
     }
     
-    /* تحسين النص في البطاقات */
+    /* ????? ???? ?? ???????? */
     .card-text .text-white {
         font-weight: 600;
         line-height: 1.3;
@@ -315,17 +315,17 @@
         margin-top: 4px;
     }
     
-    /* تحسين معلومات البطاقة */
+    /* ????? ??????? ??????? */
     .info-item span {
         font-weight: 500;
     }
     
-    /* انتقال سلس بين البطاقات */
+    /* ?????? ??? ??? ???????? */
     .update-card {
         transition: opacity 0.3s ease;
     }
     
-    /* حواف مدورة للصورة */
+    /* ???? ????? ?????? */
     .card-image,
     .card-image img {
         border-radius: 16px 16px 0 0 !important;

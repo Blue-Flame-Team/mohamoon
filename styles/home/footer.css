@@ -1,4 +1,4 @@
-﻿/* Footer */
+/* Footer */
 /* .main-footer {
     background-color: #00827a;
     padding: 40px 0 0;
@@ -53,7 +53,7 @@
     text-align: right;
 }
 
-/* عمود روابط سريعة */
+/* ???? ????? ????? */
 .links-column {
     width: 200px;
     margin-left: 0;
@@ -97,7 +97,7 @@
     font-size: var(--font-sm);
 }
 
-/* عمود تواصل معنا */
+/* ???? ????? ???? */
 .contact-column {
     width: 250px;
     margin-left: 0;
@@ -111,7 +111,7 @@
     direction: rtl;
 }
 
-/* عمود التواصل الاجتماعي */
+/* ???? ??????? ????????? */
 .social-column {
     width: 200px;
     margin-left: 0;
@@ -247,7 +247,7 @@
     padding: 0 !important;
 }
 
-/* تصميم متجاوب */
+/* ????? ?????? */
 @media (max-width: 1200px) {
     .footer-content {
         padding: 0 40px;
@@ -292,7 +292,7 @@
         margin-bottom: 0 !important;
     }
     
-    /* قواعد قوية لضمان التوسيط */
+    /* ????? ???? ????? ??????? */
     .main-footer .footer-content,
     .main-footer .footer-content *,
     .main-footer .about-column,
@@ -302,7 +302,7 @@
         text-align: center !important;
     }
     
-    /* جميع الأعمدة */
+    /* ???? ??????? */
     .about-column,
     .links-column,
     .contact-column,
@@ -312,7 +312,7 @@
         margin-bottom: 30px;
     }
     
-    /* جميع العناوين - قواعد قوية */
+    /* ???? ???????? - ????? ???? */
     .main-footer .footer-title,
     .main-footer .social-title,
     .main-footer h1,
@@ -338,7 +338,7 @@
         font-size: var(--font-xl) !important;
     }
     
-    /* جميع النصوص - قواعد قوية */
+    /* ???? ?????? - ????? ???? */
     .main-footer .footer-text,
     .main-footer .contact-item,
     .main-footer p,
@@ -354,7 +354,7 @@
         width: 100% !important;
     }
     
-    /* الروابط - قواعد قوية */
+    /* ??????? - ????? ???? */
     .main-footer .footer-links,
     .main-footer .links-column .footer-links,
     .main-footer ul {
@@ -391,7 +391,7 @@
         margin: 0 auto !important;
     }
     
-    /* الأيقونات الاجتماعية */
+    /* ????????? ?????????? */
     .social-icons {
         justify-content: center !important;
         gap: 15px !important;
@@ -413,7 +413,7 @@
         filter: brightness(0) invert(1) !important;
     }
     
-    /* زر الاتصال */
+    /* ?? ??????? */
     .contact-btn-container {
         display: flex !important;
         justify-content: center !important;
@@ -451,7 +451,7 @@
         filter: none !important;
     }
     
-    /* حقوق النشر */
+    /* ???? ????? */
     .copyright {
         background-color: #00716E !important;
         margin-top: 0 !important;
@@ -515,7 +515,7 @@
         padding: 0 !important;
     }
     
-    /* قاعدة شاملة نهائية لضمان التوسيط */
+    /* ????? ????? ?????? ????? ??????? */
     .main-footer .footer-content div,
     .main-footer .footer-content span,
     .main-footer .footer-content p,
@@ -537,18 +537,18 @@ text-align: center !important;
 color: #2D3748 !important;
     }
     
-    /* ضمان عدم وجود تأثير للنصوص العربية والـ direction */
+    /* ???? ??? ???? ????? ?????? ??????? ???? direction */
     .main-footer .footer-content * {
         unicode-bidi: embed !important;
     }
     
-    /* قاعدة قوية للتغلب على أي direction خارجي */
+    /* ????? ???? ?????? ??? ?? direction ????? */
     .main-footer,
     .main-footer * {
         direction: ltr !important;
     }
     
-    /* قاعدة أقوى للنصوص العربية في الفوتر */
+    /* ????? ???? ?????? ??????? ?? ?????? */
     .main-footer .footer-content,
     .main-footer .footer-content p,
     .main-footer .footer-content h3,
@@ -561,7 +561,7 @@ color: #2D3748 !important;
         margin-right: auto !important;
     }
     
-    /* قواعد خاصة لمعلومات الاتصال والبريد الإلكتروني */
+    /* ????? ???? ???????? ??????? ??????? ?????????? */
     .main-footer .contact-item {
         direction: ltr !important;
         text-align: center !important;
@@ -570,7 +570,7 @@ color: #2D3748 !important;
         writing-mode: horizontal-tb !important;
     }
     
-    /* ضمان أن كل شيء في الفوتر موسط حتى لو كان نص مختلط */
+    /* ???? ?? ?? ??? ?? ?????? ???? ??? ?? ??? ?? ????? */
     .main-footer [dir="rtl"],
     .main-footer [dir="ltr"] {
         text-align: center !important;
@@ -580,7 +580,7 @@ color: #2D3748 !important;
 }
 
 
-/* إخفاء شريط التمرير الجانبي مع بقاء إمكانية التمرير */
+/* ????? ???? ??????? ??????? ?? ???? ??????? ??????? */
 body, html {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* Internet Explorer 10+ */

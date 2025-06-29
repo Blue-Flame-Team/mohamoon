@@ -1,4 +1,4 @@
-﻿/* Footer Styles */
+/* Footer Styles */
 
 :root {
     --primary-color: #00a19a;
@@ -549,13 +549,13 @@ body.dark-contrast .copyright-text {
         margin: 20px auto !important;
     }
     
-    /* إخفاء عناصر التقييم وعدد الأصوات في الموبايل */
+    /* ????? ????? ??????? ???? ??????? ?? ???????? */
     .social-share-section > div > div:nth-child(2),
     .social-share-section > div > div:nth-child(3) {
         display: none !important;
     }
     
-    /* تنسيق نص آخر تعديل في الموبايل */
+    /* ????? ?? ??? ????? ?? ???????? */
     .social-share-section > div > div:first-child span {
         font-family: 'Droid Arabic Kufi', sans-serif !important;
         font-weight: 400 !important;
@@ -565,7 +565,7 @@ body.dark-contrast .copyright-text {
         text-align: right !important;
     }
     
-    /* تنسيق قسم شارك على في الموبايل */
+    /* ????? ??? ???? ??? ?? ???????? */
     .social-share-section > div > div:last-child {
         display: flex !important;
         align-items: center !important;
@@ -583,21 +583,21 @@ body.dark-contrast .copyright-text {
         margin-right: 3px !important;
     }
     
-    /* تحجيم أيقونات وسائل التواصل الاجتماعي في الموبايل */
+    /* ????? ??????? ????? ??????? ????????? ?? ???????? */
     .social-share-section > div > div:last-child a img {
         width: 17.59px !important;
         height: 17.59px !important;
     }
 }
 
-/* إخفاء Social Share Section في الديسكتوب - معطل */
+/* ????? Social Share Section ?? ????????? - ???? */
 /* @media (min-width: 769px) {
     .social-share-section {
         display: none !important;
     }
 } */
 
-/* إخفاء السكرول بار في جميع العناصر */
+/* ????? ??????? ??? ?? ???? ??????? */
 * {
     scrollbar-width: none !important; /* Firefox */
     -ms-overflow-style: none !important; /* IE and Edge */

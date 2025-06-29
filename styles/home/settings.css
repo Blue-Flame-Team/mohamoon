@@ -1,4 +1,4 @@
-﻿/* تنسيقات قائمة الإعدادات والتباين */
+/* ??????? ????? ????????? ???????? */
 
 .settings-menu {
     position: absolute;
@@ -62,7 +62,7 @@
     color: #0d9488;
 }
 
-/* Estilos para el menú de configuraciones */
+/* Estilos para el men� de configuraciones */
 .settings-menu {
     position: absolute;
     top: 40px;
@@ -127,12 +127,12 @@
     font-size: var(--font-lg);
 }
 
-/* Estilos adicionales para la visualización del menú */
+/* Estilos adicionales para la visualizaci�n del men� */
 .settings-menu.show {
     display: block;
 }
 
-/* Estilos para el submenú de contraste */
+/* Estilos para el submen� de contraste */
 .contrast-submenu {
     display: none;
     margin-top: 5px;
@@ -151,9 +151,9 @@
     background-color: #000;
 }
 
-/* نمط الوضع الداكن - تبديل المتغيرات */
+/* ??? ????? ?????? - ????? ????????? */
 body:not(.home-page).dark-mode {
-    /* تحويل جميع الألوان الخضراء بدرجاتها المختلفة إلى اللون الأسود */
+    /* ????? ???? ??????? ??????? ???????? ???????? ??? ????? ?????? */
     --primary-color: #000000 !important;
     --secondary-color: #000000 !important;
     --dark-blue: #000000 !important;
@@ -167,13 +167,13 @@ body:not(.home-page).dark-mode .content-area {
     color: #e0e0e0;
 }
 
-/* الناف بار والتوب بار لا يتأثران */
+/* ????? ??? ?????? ??? ?? ??????? */
 body.dark-mode .top-bar,
 body.dark-mode .navbar {
     background: transparent;
 }
 
-/* تحويل جميع الألوان الخضراء بدرجاتها المختلفة إلى اللون الأسود */
+/* ????? ???? ??????? ??????? ???????? ???????? ??? ????? ?????? */
 body:not(.home-page).dark-mode [style*="#00937B"],
 body:not(.home-page).dark-mode [style*="#00937b"],
 body:not(.home-page).dark-mode [style*="#17a891"],
@@ -238,7 +238,7 @@ body:not(.home-page).dark-mode .recent-title {
     color: #000000 !important;
 
 }
-/* نمط اللون الأسود في CSS */
+/* ??? ????? ?????? ?? CSS */
 body:not(.home-page).dark-mode .main-footer,
 body:not(.home-page).dark-mode .teal-color,
 body:not(.home-page).dark-mode .teal-bg,
@@ -261,7 +261,7 @@ body:not(.home-page).dark-mode .search-button button {
     border-color: #000000 !important;
 }
 
-/* نمط الوضع الفاتح - تبديل المتغيرات */
+/* ??? ????? ?????? - ????? ????????? */
 body:not(.home-page).light-mode {
     --black: #17a891 !important;
 }
@@ -275,7 +275,7 @@ body:not(.home-page).light-mode *[style*="rgb(0,0,0)"]:not(h5.terms-subtitle) {
     border-color: rgb(0, 147, 123) !important;
 }
 
-/* نمط اللون الأسود في CSS */
+/* ??? ????? ?????? ?? CSS */
 body:not(.home-page).light-mode .black-bg,
 body:not(.home-page).light-mode .btn-dark,
 body:not(.home-page).light-mode .dark-section,
@@ -287,7 +287,7 @@ body:not(.home-page).light-mode .black-text {
     border-color: rgb(0, 147, 123) !important;
 }
 
-/* تنسيق حاوية زر الإعدادات */
+/* ????? ????? ?? ????????? */
 .main-icons-group {
     position: relative;
 }

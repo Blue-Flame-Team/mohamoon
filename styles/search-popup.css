@@ -1,4 +1,4 @@
-﻿/* Search Popup Styling */
+/* Search Popup Styling */
 .search-popup-overlay {
     position: fixed;
     top: 0;
@@ -63,14 +63,14 @@
 .search-popup-button.search {
     background-color: #00a59a;
     border-radius: 8.96px;
-    width: 123px; /* العرض المطلوب لزر البحث */
+    width: 123px; /* ????? ??????? ??? ????? */
     padding: 8px 40px 8px 40px;
 }
 
 .search-popup-button.engine {
     background-color: #e67e22;
     border-radius: 8.96px;
-    width: 186px; /* العرض المطلوب لزر محرك البحث */
+    width: 186px; /* ????? ??????? ??? ???? ????? */
     margin-right: 5px; /* Changed from margin-right to margin-left for left alignment */
 }
 
